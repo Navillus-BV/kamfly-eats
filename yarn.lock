@@ -1313,6 +1313,11 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
+alpinejs@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-2.4.1.tgz#49f0d38bada7193ac168a0a1fb24ec52ea5e04ac"
+  integrity sha512-uaZCQ7I729Qf44eDKLXpzI3wiI16Nz6XU4cVnZER9+LBeZ/32laNJbjIxxx1etmRxamS+dbxvd/14BptrsaKYQ==
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -2088,11 +2093,6 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001093:
   version "1.0.30001096"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001096.tgz#5a4541af5317dc21f91f5b24d453030a35f919c0"
   integrity sha512-PFTw9UyVfbkcMEFs82q8XVlRayj7HKvnhu5BLcmjGpv+SNyiWasCcWXPGJuO0rK0dhLRDJmtZcJ+LHUfypbw1w==
-
-canvas-confetti@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.2.0.tgz#5591764e1126adb08710d20bc9ba63842a3d8ee6"
-  integrity sha512-0B49O9CfLciAYz4hriu9pvWNGkCtVcpvyNFKWZI+JVWJM5nJTMg5MX3cFzatyeYcOL6bR1Jw3yhZKbgt03O8/Q==
 
 caseless@~0.12.0:
   version "0.12.0"

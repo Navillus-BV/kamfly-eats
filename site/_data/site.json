@@ -5,6 +5,7 @@
   "author": "Kamfly.io",
   "images": {
     "social": "",
-    "favicon": "/favicon.svg"
+    "favicon": "static/favicon.svg",
+    "logo": "/static/logo.svg"
   }
 }
