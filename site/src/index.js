@@ -1,10 +1,16 @@
 import 'alpinejs'
 
-window.mobileMenu = function() {
+window.mobileMenu = function () {
   return {
     show: false,
-    open() { this.show = true },
-    close() { this.show = false },
-    toggle() { this.show = !this.show }
+    open() {
+      this.show = true
+    },
+    close() {
+      this.show = false
+    },
+    toggle() {
+      this.show = !this.show
+    },
   }
 }

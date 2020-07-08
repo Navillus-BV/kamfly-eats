@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addFilter('dateDisplay', (dateObj, format = 'LLL d, y') => {
     return DateTime.fromJSDate(dateObj, {
-      zone: 'utc'
+      zone: 'utc',
     }).toFormat(format)
   })
 
@@ -51,7 +51,7 @@ module.exports = function (eleventyConfig) {
     input: 'static',
     output: '_output',
     include: ['/uploads/blocks/*.+(jpg|jpeg|png)'],
-    sizes: [224, 448, 896]
+    sizes: [224, 448, 896],
   })
   eleventyConfig.addPlugin(seoPlugin, {
     title: site.name,
@@ -60,13 +60,13 @@ module.exports = function (eleventyConfig) {
     author: site.author,
     image: site.images.social,
     ogtype: 'website',
-    options: { titleDivider: '|' }
+    options: { titleDivider: '|' },
   })
   eleventyConfig.addPlugin(manifestPlugin, {
     output: '_output',
     name: site.name,
     short_name: site.name,
-    icon: site.images.favicon
+    icon: site.images.favicon,
   })
 
   return {

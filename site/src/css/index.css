@@ -1,55 +1,56 @@
-@import "./normalize.css";
-@import "./layouts/index.css";
-@import "./partials/index.css";
+@import './normalize.css';
+@import './layouts/index.css';
+@import './partials/index.css';
 
 :root {
   --color-primary-100: #ffffff;
-  --color-primary-200: #0D7BBF;
-  --color-primary-300: #0B6CA7;
-  --color-primary-500: #03178C;
-  --color-primary-600: #03188C;
-  --color-primary-800: #020D4B;
-  --color-secondary-500: #34E0F8;
-  --color-foreground-100: #E6EAFE;
-  --color-foreground-300: #ADB4DA;
-  --color-foreground-500: #8795AB;
-  --color-foreground-700: #393E46;
+  --color-primary-200: #0d7bbf;
+  --color-primary-300: #0b6ca7;
+  --color-primary-500: #03178c;
+  --color-primary-600: #03188c;
+  --color-primary-800: #020d4b;
+  --color-secondary-500: #34e0f8;
+  --color-foreground-100: #e6eafe;
+  --color-foreground-300: #adb4da;
+  --color-foreground-500: #8795ab;
+  --color-foreground-700: #393e46;
   --color-foreground-800: #222831;
 }
 
 svg {
-    fill: currentColor;
-  }
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  ul, ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .btn {
-    display: block;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0.75rem 1.5rem;
-    border-width: 0;
-    line-height: 1.375rem;
-    white-space: nowrap;
-  }
-  
-  .btn--primary {
-    color: var(--color-foreground-800);
-    background-color: var(--color-secondary-500);
-  }
-  
-  .btn--hollow {
-    background-color: var(--color-primary-100);
-    border-width: 3px;
-    border-color: var(--color-secondary-500);
-  }
+  fill: currentColor;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-width: 0;
+  line-height: 1.375rem;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  color: var(--color-foreground-800);
+  background-color: var(--color-secondary-500);
+}
+
+.btn--hollow {
+  background-color: var(--color-primary-100);
+  border-width: 3px;
+  border-color: var(--color-secondary-500);
+}
