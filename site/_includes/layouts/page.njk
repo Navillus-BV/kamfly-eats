@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+---
+
+{% if hero %}
+{% include 'partials/hero.njk' %}
+{% endif %}
+
+{{ layoutContent | safe }}

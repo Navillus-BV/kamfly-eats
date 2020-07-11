@@ -1,0 +1,165 @@
+---
+title: Services
+hero:
+  title: Don’t settle for a copy and paste website
+  subtitle: Book a free strategy call and we’ll figure out your next step, together.
+  cta:
+    title: BOOK YOUR CALL
+    url: /power
+layout: layouts/page.njk
+eleventyNavigation:
+  key: Services
+  order: 3
+---
+
+{% import 'macros/blocks.njk' as blocks %}
+
+{% call blocks.imageBlock('You know your customers love your product.', '', { src: '/uploads/blocks/customer-in-cafe.jpg', alt: 'online shopping customer in a cafe' }, undefined, false) %}
+<p>The results of your business speak for themselves, but you’re not sure why your website keeps getting in the way.</p>
+<p>You KNOW that growth is right around the corner... you just need a site that can maximize your potential.</p>
+{% endcall %}
+
+{% call blocks.imageBlock('Starting a website is easy, scaling is harder.', '', { src: '/uploads/blocks/server-room.jpg', alt: 'website design sketch notebook' }, undefined, true) %}
+<p>We see it all the time with our clients.</p>
+
+<ul>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    <p>Your DIY website was the perfect start.  That first sale was a huge win, <strong>but now the site is starting to crack under the pressure.</strong></p>
+  </li>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    <p>You spend hours looking for answers, but things are still broken, and <strong>you’re having to choose between focusing on your business and fixing tech issues.</strong></p>
+  </li>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    <p>You are preparing to launch a major marketing push, but <strong>your online sales have hit a wall.</strong></p>
+  </li>
+</ul>
+{% endcall %}
+
+{% call blocks.imageBlock('How We’re Different...', '', { src: '/uploads/blocks/website-design-sketch.jpg', alt: 'website design sketch notebook' }, undefined, false) %}
+<p>At Kamfly, we design and build every website from the ground up.  We never stamp out a website using a generic template.</p>
+<p>We bring the experience necessary to build a great website, but it’s your business.  We want to get to know your culture, your values, and your customers.</p>
+<h4><strong>Every project is <em>different</em>.  The <em>solutions</em> should be, too.</strong></h4>
+{% endcall %}
+
+{% call blocks.imageBlock('Our website services are perfect for you if...', '', { src: '/uploads/blocks/website-design.jpg', alt: 'website design sketch notebook' }, undefined, true) %}
+<ul>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    Your online presense is vital to your business’s success
+  </li>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    Your business model is proven and you’re ready to take things to the next level
+  </li>
+  <li>
+    <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+    You’re ready for a website that stands out in the crowd of cookie cutter templates
+  </li>
+</ul>
+{% endcall %}
+
+{% call blocks.featuresBlock('How we work...', '', '') %}
+  {% call blocks.featuresItem('Plan', '/static/pencil.svg') %}
+    <span>Together, we clarify your marketing strategy and how your website can help grow your business.</span>
+  {% endcall %}
+
+  {% call blocks.featuresItem('Design', '/static/computer.svg') %}
+    <span>We get to work designing and creating your website, checking in with you throughout the process.</span>
+  {% endcall %}
+
+  {% call blocks.featuresItem('Launch', '/static/beers.svg') %}
+    <span>I walk you through the website, show you how to make updates, and we go live!</span>
+  {% endcall %}
+{% endcall %}
+
+{% call blocks.pricingBlock('Packages We Offer') %}
+  {% call blocks.pricingItem('Basic', 'Starting at $6,500', { href: '/power', text: 'I WANT THIS'}, false) %}
+    {% call blocks.pricingItemFeature('/static/website.svg', false) %}
+      <span><strong>Custom static website</strong> that speaks to your audience and helps them buy from you</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/location.svg', false) %}
+      <span><strong>Customer journey strategy</strong> for designing a smooth and positive buying experience</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/stars.svg', false) %}
+      <span><strong>Brand fonts and colors</strong> so you can build a consistent visual brand online</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/gear.svg', true) %}
+      <span><strong>Admin portal with CMS</strong> for updating all the text and images on your site</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/chat.svg', true) %}
+      <span><strong>Personalized website training</strong> to make sure you have full control over your website</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/photograph.svg', true) %}
+      <span><strong>Stock photography curating</strong> to save you hours of finding and optimizing free images</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/pencil.svg', true) %}
+      <span><strong>Copywriting for all pages</strong> so you can tell me your story instead of staring at a blank screen</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/blocks.svg', true) %}
+      <span><strong>Complete UI toolkit</strong> so you have full control to create new pages with on-brand components right from your admin page</span>
+    {% endcall %}
+  {% endcall %}
+
+  {% call blocks.pricingItem('Pro', 'Starting at $10,000', { href: '/power', text: 'SIGN ME UP'}, true) %}
+    {% call blocks.pricingItemFeature('/static/website.svg', false) %}
+      <span><strong>Custom static website</strong> that speaks to your audience and helps them buy from you</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/location.svg', false) %}
+      <span><strong>Customer journey strategy</strong> for designing a smooth and positive buying experience</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/stars.svg', false) %}
+      <span><strong>Brand fonts and colors</strong> so you can build a consistent visual brand online</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/gear.svg', false) %}
+      <span><strong>Admin portal with CMS</strong> for updating all the text and images on your site</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/chat.svg', false) %}
+      <span><strong>Personalized website training</strong> to make sure you have full control over your website</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/photograph.svg', false) %}
+      <span><strong>Stock photography curating</strong> to save you hours of finding and optimizing free images</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/pencil.svg', true) %}
+      <span><strong>Copywriting for all pages</strong> so you can tell me your story instead of staring at a blank screen</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/blocks.svg', true) %}
+      <span><strong>Complete UI toolkit</strong> so you have full control to create new pages with on-brand components right from your admin page</span>
+    {% endcall %}
+  {% endcall %}
+
+  {% call blocks.pricingItem('Custom', 'Starting at $18,500', { href: '/power', text: 'LET\'S GET STARTED'}, false) %}
+    {% call blocks.pricingItemFeature('/static/website.svg', false) %}
+      <span><strong>Custom static website</strong> that speaks to your audience and helps them buy from you</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/location.svg', false) %}
+      <span><strong>Customer journey strategy</strong> for designing a smooth and positive buying experience</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/stars.svg', false) %}
+      <span><strong>Brand fonts and colors</strong> so you can build a consistent visual brand online</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/gear.svg', false) %}
+      <span><strong>Admin portal with CMS</strong> for updating all the text and images on your site</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/chat.svg', false) %}
+      <span><strong>Personalized website training</strong> to make sure you have full control over your website</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/photograph.svg', false) %}
+      <span><strong>Stock photography curating</strong> to save you hours of finding and optimizing free images</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/pencil.svg', false) %}
+      <span><strong>Copywriting for all pages</strong> so you can tell me your story instead of staring at a blank screen</span>
+    {% endcall %}
+    {% call blocks.pricingItemFeature('/static/blocks.svg', false) %}
+      <span><strong>Complete UI toolkit</strong> so you have full control to create new pages with on-brand components right from your admin page</span>
+    {% endcall %}
+  {% endcall %}
+{% endcall %}
+
+{% call blocks.imageBlock('Hop on a quick call with us.', 'How Do We Get Started?', { src: '/uploads/blocks/video-call.jpg', alt: 'person with a notebook on a video call' }, { href: '/power', text: 'BOOK YOUR CALL' }, false) %}
+<p>Let’s talk about where your business is now, where you’re heading in the next 6 months, and how your website can help you hit those goals.</p>
+<p>If we agree it’s a good fit, we can go ahead and start discussing your website launch timeline.</p>
+<p>Even if we decide it isn’t the right time for us to work together, you’ll walk away with a clear picture of how your online presence fits in to your business goals and what your next steps are.</p>
+{% endcall %}

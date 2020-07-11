@@ -1,0 +1,87 @@
+---
+title: About
+hero:
+  title: As an online business, you can reach your customers anywhere
+  subtitle: We got into the web design game for exactly that reason.  Now that you’re here, let’s chat.
+  cta:
+    title: BOOK YOUR CALL
+    url: /power
+layout: layouts/page.njk
+eleventyNavigation:
+  key: About
+  order: 2
+---
+
+{% import 'macros/blocks.njk' as blocks %}
+
+{% call blocks.imageBlock('You went from a great idea to a successful business.', 'YOU DID IT!', { src: '/uploads/blocks/mobile-website-finished.jpg', alt: 'website being used on a mobile phone' }, { href: '/services', text: 'LET US HELP' }, false) %}
+    <p>Not everybody makes it this far.  You’ve already beaten the odds, but you know it’s time to take the next step.</p>
+    <p>So - where do you go from here?</p>
+{% endcall %}
+
+{% call blocks.imageBlock('You made a freakin website.', 'WHAT\'S NEXT?', { src: '/uploads/blocks/programming-source-code.jpg', alt: 'website source code' }, { href: '/services', text: 'SEE PACKAGES' }, true) %}
+    <p>It wasn’t easy, but building your own website and making sales online is a huge accomplishment that you should be proud of.</p>
+    <p>But you’re also feeling:</p>
+
+    <ul>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Frustrated with tech issues
+    </li>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Disappointed with how difficult it is to customize the site for your evolving brand
+    </li>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Concerned that your site won’t hold up to your next big marketing campaign
+    </li>
+    </ul>
+{% endcall %}
+
+{% call blocks.imageBlock('Especially when you’re trying to do it on your own.', 'IT ISN\'T EASY', { src: '/uploads/blocks/website-analytics.jpg', alt: 'website analytics' }, undefined, false) %}
+    <p>I see it all the time with my clients.</p>
+    <p>Many felt it wasn’t too bad at first, there are plenty of tutorials online to get a website up and running.  But as soon as they needed to tweak a few things they felt hung out to dry.</p>
+    <p>As an entrepreneur, it can be deflating, and frankly scary, to think that technical difficulties could get between you and your customers.</p>
+{% endcall %}
+
+{% call blocks.imageBlock('Let us help you get where you want to go.', '', { src: '/uploads/blocks/website-design.jpg', alt: 'website design sketch notebook' }, { href: '/power', text: 'BOOK YOUR POWER HOUR' }, true) %}
+    <p>We create websites for online businesses like yours so you can focus on serving your customers.</p>
+    <p>We have helped clients:</p>
+
+    <ul>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Attract more sales while lowering operating costs
+    </li>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Increase brand recognition
+    </li>
+    <li>
+        <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+        Take ownership of their data and their future
+    </li>
+    </ul>
+{% endcall %}
+
+{% call blocks.imageBlock('We’ll make sure your website...', '', { src: '/uploads/blocks/website-design-sketch.jpg', alt: 'website design sketch' }, { href: '/services', text: 'SEE OUR SERVICES' }, false) %}
+      <ul>
+        <li>
+          <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+          Makes a strong first impression
+        </li>
+        <li>
+          <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+          Represents your brand, values, and culture
+        </li>
+        <li>
+          <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+          Shows new customers what makes you different
+        </li>
+        <li>
+          <span>{{ '/static/icon-close.svg' | svgContents('uiblock__itemicon') | safe }}</span>
+          Inspires people to buy from you and spread the word
+        </li>
+      </ul>
+{% endcall %}

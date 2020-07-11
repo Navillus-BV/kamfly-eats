@@ -12,5 +12,8 @@ window.mobileMenu = function () {
     toggle() {
       this.show = !this.show
     },
+    isOpen() {
+      return this.show
+    },
   }
 }
