@@ -11,6 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Bitter&display=swap" rel="stylesheet">
 
     {{ {} | manifest | safe }}
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "description": "",
+        "image": "{{ site.images.social | url }}"
+      }
+    </script>
   </head>
   <body class="body">
     {% include "partials/header.njk" %}

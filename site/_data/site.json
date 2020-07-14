@@ -5,7 +5,7 @@
   "author": "Kamfly.io",
   "email": "info@kamfly.io",
   "images": {
-    "social": "",
+    "social": "https://www.kamfly.io/kamfly-share.png",
     "favicon": "static/favicon.svg",
     "logo": "/static/logo.svg"
   }
