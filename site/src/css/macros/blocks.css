@@ -10,8 +10,8 @@
 .uiblock__image,
 .uiblock__body {
   position: relative;
-  background-color: var(--color-primary-800);
-  color: var(--color-foreground-100);
+  background-color: var(--color-dark-700);
+  color: var(--color-light-100);
   padding: 0 2rem;
 }
 
@@ -25,18 +25,13 @@
   padding: 3rem 0;
 }
 
-.uiblock--flip .uiblock__image,
-.uiblock--flip .uiblock__body {
-  background-color: var(--color-primary-600);
-}
-
 .uiblock__image::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-primary-100);
+  background-color: var(--color-light-100);
   height: 3rem;
   transform: scale3d(1.05, 1.05, 1);
 }
@@ -51,12 +46,12 @@
 .uiblock__title {
   font-size: 1.5rem;
   line-height: 1.375;
-  font-weight: 700;
   margin-bottom: 2rem;
 }
 
 .uiblock__subtitle {
-  color: var(--color-foreground-300);
+  color: var(--color-light-100);
+  opacity: 0.75;
   margin-bottom: 0.25rem;
   letter-spacing: 0.1em;
 }
@@ -66,7 +61,7 @@
 }
 
 .uiblock__content h4 em {
-  color: var(--color-secondary-500);
+  color: var(--color-light-500);
   font-size: 1.25rem;
   font-style: normal;
 }
@@ -78,7 +73,7 @@
 .uiblock__itemicon {
   height: 1.25rem;
   width: 1.25rem;
-  margin: 0.25rem 0.5rem 0;
+  margin: 0.5rem;
 }
 
 .uiblock__content li {
@@ -110,8 +105,7 @@
 }
 
 .features__title {
-  font-size: 1.5;
-  font-weight: 700;
+  font-size: 1.5rem;
   line-height: 1.375;
   margin-bottom: 0.5rem;
 }
@@ -119,7 +113,8 @@
 .features__subtitle {
   font-size: 1.125rem;
   letter-spacing: 0.1em;
-  color: var(--color-foreground-500);
+  color: var(--color-dark-800);
+  opacity: 0.5;
   margin-bottom: 0.25rem;
 }
 
@@ -142,7 +137,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  border: 3px solid var(--color-primary-300);
+  border: 3px solid var(--color-light-500);
 }
 
 .feature__image svg {
@@ -152,6 +147,7 @@
 
 .feature__title {
   font-size: 1.5rem;
+  font-weight: 900;
   margin-top: 1rem;
 }
 
@@ -178,7 +174,7 @@
 
 .pricing__title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.375;
 }
 
@@ -189,12 +185,12 @@
   align-items: center;
   max-width: 32rem;
   margin: 0 auto;
-  border: 2px solid var(--color-primary-200);
+  border: 2px solid var(--color-light-300);
   padding-bottom: 2rem;
 }
 
 .pricing__item.pricing__item--highlighted {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-light-500);
   z-index: 10;
 }
 
@@ -203,10 +199,10 @@
   position: absolute;
   top: 0;
   left: 50%;
-  font-size: 0.75rem;
-  font-weight: 700;
-  background-color: var(--color-primary-400);
-  color: var(--color-foreground-100);
+  font-size: 0.875rem;
+  font-weight: 900;
+  background-color: var(--color-light-500);
+  color: var(--color-dark-800);
   border-radius: 9999px;
   padding: 0.25rem 1rem;
   transform: translate3d(-50%, -50%, 0);
@@ -215,27 +211,25 @@
 .pricing__itemheader {
   width: 100%;
   padding: 2rem 1rem;
-  background-color: var(--color-primary-200);
+  background-color: var(--color-light-300);
   text-align: center;
-  color: var(--color-foreground-800);
+  color: var(--color-dark-800);
   font-size: 1.5rem;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
 .pricing__item--highlighted .pricing__itemheader {
-  background-color: var(--color-primary-300);
-  color: var(--color-foreground-100);
+  background-color: var(--color-light-500);
 }
 
 .pricing__features {
   width: auto;
-  padding: 0 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .pricing__feature {
   display: flex;
-  margin: 1rem 0;
+  padding: 1rem 0;
 }
 
 .pricing__feature--excluded {
@@ -266,7 +260,7 @@
 
 .booking__title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.375;
   margin-bottom: 2rem;
 }
@@ -274,7 +268,7 @@
 @media (min-width: 640px) {
   /* ImageBlock */
   .uiblock {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   /* FeaturesBlock */
@@ -288,7 +282,7 @@
 
   /* BookingBlock */
   .booking {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
 }
 
@@ -296,7 +290,7 @@
   /* ImageBlock */
   .uiblock {
     flex-direction: row;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 
   .uiblock.uiblock--flip {
@@ -353,14 +347,14 @@
 
   /* BookingBlock */
   .booking {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
 }
 
 @media (min-width: 1024px) {
   /* ImageBlock */
   .uiblock {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
 
   .uiblock__image {
@@ -368,7 +362,7 @@
   }
 
   .uiblock__body {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
 
   /* PricingBlock */
@@ -384,18 +378,18 @@
 
   /* BookingBlock */
   .booking {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
 }
 
 @media (min-width: 1280px) {
   /* ImageBlock */
   .uiblock {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 
   /* BookingBlock */
   .booking {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 }

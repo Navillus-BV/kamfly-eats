@@ -58,7 +58,7 @@
   {% endif %}
 
   {% if title %}
-  <h3 class='feature__title'>{{ title }}</h3>
+  <h5 class='feature__title'>{{ title }}</h5>
   {% endif %}
 
   <div class='feature__content'>
@@ -72,7 +72,7 @@
   <div class='pricing'>
     {% if title %}
     <div class='pricing__header'>
-      <h3 class='pricing__title'>{{ title }}</h3>
+      <h4 class='pricing__title'>{{ title }}</h4>
     </div>
     {% endif %}
 
@@ -85,7 +85,7 @@
 <div class='pricing__item{% if highlighted %} pricing__item--highlighted{% endif %}'>
   {% if title %}
   <div class='pricing__itemheader'>
-    <h3>{{ title }}</h3>
+    <h5>{{ title }}</h5>
   </div>
   {% endif %}
 
@@ -94,7 +94,7 @@
   </ul>
   
   {% if pricing %}
-  <h4 class='pricing__price'>{{ pricing }}</h4>
+  <h6 class='pricing__price'>{{ pricing }}</h6>
   {% endif %}
 
   {% if cta %}

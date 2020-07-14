@@ -1,6 +1,6 @@
 .header {
-  background-color: var(--color-primary-500);
-  color: var(--color-primary-100);
+  background-color: var(--color-dark-700);
+  color: var(--color-light-100);
   padding: 0.5rem 1rem 0.5rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .header__sidenav {
-  height: calc(100% - 7rem);
+  height: calc(100% - 3rem);
   position: fixed;
   left: 0;
   right: 0;
@@ -35,9 +35,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-primary-500);
+  background-color: var(--color-dark-700);
   opacity: 0;
-  transform: transform3d(0, 2rem, 0);
+  transform: translate3d(0, 2rem, 0);
   transition: opacity ease-in-out 300ms, transform ease-in-out 300ms;
   pointer-events: none;
   will-change: opacity, transform;
@@ -77,12 +77,12 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: var(--color-primary-100);
+  background-color: var(--color-light-100);
 }
 
 .hamburger-box {
   height: calc(1rem + 4px);
-  width: var(2rem);
+  width: 2rem;
   position: relative;
   display: inline-block;
 }
@@ -98,7 +98,7 @@
   transition-timing-function: ease;
   height: 2px;
   width: 2rem;
-  background-color: var(--color-primary-100);
+  background-color: var(--color-light-100);
   position: absolute;
   border-radius: 9999px;
   transition: transform ease-in-out 150ms;

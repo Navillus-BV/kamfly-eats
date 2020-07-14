@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "about/index.html",
-    "revision": "837115f1cdd9c2d5c626109ca47e7c72"
+    "revision": "a944e04c7584aee10b22067fe41391da"
   },
   {
     "url": "beers.svg",
@@ -65,6 +65,18 @@ self.__precacheManifest = [
   {
     "url": "gear.svg",
     "revision": "f40e837f9cec2afb292a715f23e01e37"
+  },
+  {
+    "url": "hero-background-2.svg",
+    "revision": "9d94c2ef059ce8d5055b6b19273d1a65"
+  },
+  {
+    "url": "hero-background-portrait.svg",
+    "revision": "41f08df4b4eaf70862335899f214c218"
+  },
+  {
+    "url": "hero-background.svg",
+    "revision": "9d94c2ef059ce8d5055b6b19273d1a65"
   },
   {
     "url": "hero-polygon-1.svg",
@@ -112,7 +124,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "fe0caf8ecf8138bb3290f2971270edfc"
+    "revision": "9d9ee550cae8563a0c80831d48aace35"
   },
   {
     "url": "location.svg",
@@ -136,15 +148,15 @@ self.__precacheManifest = [
   },
   {
     "url": "power/index.html",
-    "revision": "9e46cfe409902fd87ea0e893afc7ca68"
+    "revision": "9fbf3a2073ddca43d43cfbde7903ac4d"
   },
   {
     "url": "privacy/index.html",
-    "revision": "f4d20a2da3915ae5131105c8fac91913"
+    "revision": "cfe5b0c8b5ef12de72c3d16eca7eeedc"
   },
   {
     "url": "services/index.html",
-    "revision": "35bc6e2202f092252c87e90caa32bdf4"
+    "revision": "2c924a8ff1ba5c23cd9882bf436add61"
   },
   {
     "url": "stars.svg",
@@ -152,187 +164,11 @@ self.__precacheManifest = [
   },
   {
     "url": "terms/index.html",
-    "revision": "e0e09ab0942a587b989fce36573c1bf2"
+    "revision": "4d32b7de518417438c0b8e0167a6b5f0"
   },
   {
     "url": "uploads/blocks/checklist.jpg",
     "revision": "957087d9994a4bcc3db5df471a2c9ab6"
-  },
-  {
-    "url": "uploads/blocks/customer-in-cafe-224.jpg",
-    "revision": "ab06d0638f938aa54a857d27e7642062"
-  },
-  {
-    "url": "uploads/blocks/customer-in-cafe-3419.jpg",
-    "revision": "2f4058c23c04bc78619d44fa5005f7aa"
-  },
-  {
-    "url": "uploads/blocks/customer-in-cafe-448.jpg",
-    "revision": "40ecbb4e545f14131004c42783b3ad24"
-  },
-  {
-    "url": "uploads/blocks/customer-in-cafe-896.jpg",
-    "revision": "40a6687a1efc3a8d6f6cc386cd812eca"
-  },
-  {
-    "url": "uploads/blocks/customer-in-cafe.jpg",
-    "revision": "2f4058c23c04bc78619d44fa5005f7aa"
-  },
-  {
-    "url": "uploads/blocks/mobile-website-finished-224.jpg",
-    "revision": "09685214dd3e891611ac32fc8d2f43ce"
-  },
-  {
-    "url": "uploads/blocks/mobile-website-finished-3561.jpg",
-    "revision": "8f3d0f5fa32d2f80bbe51eb5dddfd72f"
-  },
-  {
-    "url": "uploads/blocks/mobile-website-finished-448.jpg",
-    "revision": "ba92a8723efb24e63eb3f98997e48d75"
-  },
-  {
-    "url": "uploads/blocks/mobile-website-finished-896.jpg",
-    "revision": "9316249c68855592bd1c4e0efe874147"
-  },
-  {
-    "url": "uploads/blocks/mobile-website-finished.jpg",
-    "revision": "8f3d0f5fa32d2f80bbe51eb5dddfd72f"
-  },
-  {
-    "url": "uploads/blocks/programming-source-code-224.jpg",
-    "revision": "4d1238b1e3352599c1c72b6a70a9c695"
-  },
-  {
-    "url": "uploads/blocks/programming-source-code-3840.jpg",
-    "revision": "4e079083baf752956eb2e100c47168ef"
-  },
-  {
-    "url": "uploads/blocks/programming-source-code-448.jpg",
-    "revision": "76e929f0b7b52e8d608c80ad3706ad27"
-  },
-  {
-    "url": "uploads/blocks/programming-source-code-896.jpg",
-    "revision": "4fa76bdcb14b18557cd9fd552a2f53e3"
-  },
-  {
-    "url": "uploads/blocks/programming-source-code.jpg",
-    "revision": "4e079083baf752956eb2e100c47168ef"
-  },
-  {
-    "url": "uploads/blocks/server-room-2220.jpg",
-    "revision": "26c29f56624746010f6112fa5a33efa7"
-  },
-  {
-    "url": "uploads/blocks/server-room-224.jpg",
-    "revision": "1154c2ae362bab9386dd58248c574339"
-  },
-  {
-    "url": "uploads/blocks/server-room-448.jpg",
-    "revision": "3d2060f742cee7b8359147f9c0ca4ac4"
-  },
-  {
-    "url": "uploads/blocks/server-room-896.jpg",
-    "revision": "d781c24df68a57e98e6108897f6ac90a"
-  },
-  {
-    "url": "uploads/blocks/server-room.jpg",
-    "revision": "26c29f56624746010f6112fa5a33efa7"
-  },
-  {
-    "url": "uploads/blocks/tony-224.jpg",
-    "revision": "78a233ee20fb48d33af33e532b0a7661"
-  },
-  {
-    "url": "uploads/blocks/tony-3000.jpg",
-    "revision": "cf9eb627cbcf31b9276b254a9f3dba7c"
-  },
-  {
-    "url": "uploads/blocks/tony-448.jpg",
-    "revision": "794bcf192b5d33d91d6f2ecf7af9878a"
-  },
-  {
-    "url": "uploads/blocks/tony-896.jpg",
-    "revision": "68a3d5e86320604a9555b412abc184e0"
-  },
-  {
-    "url": "uploads/blocks/tony.jpg",
-    "revision": "cf9eb627cbcf31b9276b254a9f3dba7c"
-  },
-  {
-    "url": "uploads/blocks/video-call-224.jpg",
-    "revision": "af3f5b7aa57387201236140c6107c563"
-  },
-  {
-    "url": "uploads/blocks/video-call-448.jpg",
-    "revision": "ff802ee7031126447fec411b33ff3aee"
-  },
-  {
-    "url": "uploads/blocks/video-call-4912.jpg",
-    "revision": "37541e3781ef49fc3a377058b36a4a52"
-  },
-  {
-    "url": "uploads/blocks/video-call-896.jpg",
-    "revision": "2295f92b3c54651051a74eddb160d59b"
-  },
-  {
-    "url": "uploads/blocks/website-analytics-224.jpg",
-    "revision": "1157ec15c1c875904fbbd08383c3af0a"
-  },
-  {
-    "url": "uploads/blocks/website-analytics-3778.jpg",
-    "revision": "11cd8bbcb7841ced6ff726e2ba227243"
-  },
-  {
-    "url": "uploads/blocks/website-analytics-448.jpg",
-    "revision": "49d129b9b2c603152c78f5732417a1f3"
-  },
-  {
-    "url": "uploads/blocks/website-analytics-896.jpg",
-    "revision": "5af6a1e54021e10df299dea2262c9734"
-  },
-  {
-    "url": "uploads/blocks/website-analytics.jpg",
-    "revision": "11cd8bbcb7841ced6ff726e2ba227243"
-  },
-  {
-    "url": "uploads/blocks/website-design-224.jpg",
-    "revision": "9e497734ff9cf5f22e9ff753567adc29"
-  },
-  {
-    "url": "uploads/blocks/website-design-448.jpg",
-    "revision": "ba0e197abbad411d597e0be1ebe9e463"
-  },
-  {
-    "url": "uploads/blocks/website-design-4912.jpg",
-    "revision": "7fa91889d37659ed84f63219d5de6345"
-  },
-  {
-    "url": "uploads/blocks/website-design-896.jpg",
-    "revision": "8b0165e93bf635cf82171c2b571c2069"
-  },
-  {
-    "url": "uploads/blocks/website-design-sketch-224.jpg",
-    "revision": "f548d8a0d8b5c629d4c359b3678c1076"
-  },
-  {
-    "url": "uploads/blocks/website-design-sketch-2667.jpg",
-    "revision": "c2a29601d1aff444b76cd293ebd9ce00"
-  },
-  {
-    "url": "uploads/blocks/website-design-sketch-448.jpg",
-    "revision": "5c3ea531919853b973d4ca5fc27c4336"
-  },
-  {
-    "url": "uploads/blocks/website-design-sketch-896.jpg",
-    "revision": "57f11593cb43f545efc4c0ccf10d15fc"
-  },
-  {
-    "url": "uploads/blocks/website-design-sketch.jpg",
-    "revision": "c2a29601d1aff444b76cd293ebd9ce00"
-  },
-  {
-    "url": "uploads/blocks/website-design.jpg",
-    "revision": "7fa91889d37659ed84f63219d5de6345"
   },
   {
     "url": "website.svg",
