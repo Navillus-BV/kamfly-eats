@@ -12,17 +12,17 @@
   position: relative;
   background-color: var(--color-dark-700);
   color: var(--color-light-100);
-  padding: 0 2rem;
 }
 
 .uiblock__image img {
+  padding: 0 2rem;
   position: relative;
 }
 
 .uiblock__body {
   display: flex;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
 }
 
 .uiblock__image::before {
