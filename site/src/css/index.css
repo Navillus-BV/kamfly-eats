@@ -14,7 +14,7 @@
   --color-light-700: #6ABA63;
 
   --font-content: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-header: "Paytone One", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-header: Bitter, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 *, :before, :after {

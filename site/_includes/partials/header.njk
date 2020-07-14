@@ -1,6 +1,6 @@
 <header class='header' x-data='mobileMenu()'>
   <div class='header__container'>
-    <a href='{{ "/" | url }}' alt='Home' class='header__brand'>
+    <a href='{{ "/" | url }}' alt='{{ site.name }}' class='header__brand'>
       {{ site.images.logo | svgContents('header__logo') | safe }}
     </a>
 
@@ -8,7 +8,7 @@
       {% include 'partials/navigation.njk' %}
     </div>
 
-    <button class='hamburger hamburger--squeeze header__hamburger' type='button' :class="{ 'is-active': isOpen() }" @click='toggle'>
+    <button aria-label='Open Menu' class='hamburger hamburger--squeeze header__hamburger' type='button' :class="{ 'is-active': isOpen() }" @click='toggle'>
       <span class='hamburger-box'>
         <span class='hamburger-inner'></span>
       </span>

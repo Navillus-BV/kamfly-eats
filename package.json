@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.6",
-    "@navillus/eleventy-plugin-image": "^1.0.10",
+    "@navillus/eleventy-plugin-image": "^1.0.11",
     "@navillus/eleventy-plugin-manifest": "^1.0.4",
     "alpinejs": "^2.4.1",
     "eleventy-plugin-pwa": "^1.0.8",

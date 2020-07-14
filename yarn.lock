@@ -940,10 +940,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@navillus/eleventy-plugin-image@^1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@navillus/eleventy-plugin-image/-/eleventy-plugin-image-1.0.10.tgz#25755ace847e072612b963b1283648e992cbc3e2"
-  integrity sha512-Adj2GR2Yp9D79Vf0RG5OjBOjgVkM3dw+Cse6JjKqOL0XrZTlH5outx+DXJQAja6m+qZLTne4OR1bd33UxHHDkQ==
+"@navillus/eleventy-plugin-image@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@navillus/eleventy-plugin-image/-/eleventy-plugin-image-1.0.11.tgz#ae0b1b8e57a651527dce48d3c66d9ab0143d0860"
+  integrity sha512-yFT7fE8Vgl7cWyQLhy6U+pRikLJErnCoIqph6C3RbsHZR0lN37DWbP2sSwhEp0dUYhPMyOAljESkfgCayIs2QA==
   dependencies:
     glob "^7.1.6"
     jsdom "^16.2.2"
