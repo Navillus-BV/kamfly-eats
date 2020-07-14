@@ -1,7 +1,6 @@
 const navigationPlugin = require('@11ty/eleventy-navigation')
 const imagePlugin = require('@navillus/eleventy-plugin-image')
 const manifestPlugin = require('@navillus/eleventy-plugin-manifest')
-const pwaPlugin = require('eleventy-plugin-pwa')
 const seoPlugin = require('eleventy-plugin-seo')
 const svgContentsPlugin = require('eleventy-plugin-svg-contents')
 const { DateTime } = require('luxon')
@@ -50,7 +49,6 @@ module.exports = function (eleventyConfig) {
    * @link https://www.11ty.devo/docs/plugins/
    */
   eleventyConfig.addPlugin(navigationPlugin)
-  eleventyConfig.addPlugin(pwaPlugin)
   eleventyConfig.addPlugin(svgContentsPlugin)
   eleventyConfig.addPlugin(seoPlugin, {
     title: site.name,

@@ -6,15 +6,11 @@
 
     {% seo "" %}
 
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link rel="stylesheet" type="text/css" href="/_dist_/css/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Paytone+One&display=swap" rel="stylesheet">
 
     {{ {} | manifest | safe }}
-
-    <script>
-      if ("serviceWorker" in navigator)
-        navigator.serviceWorker.register("/service-worker.js");
-    </script>
   </head>
   <body class="body">
     {% include "partials/header.njk" %}
