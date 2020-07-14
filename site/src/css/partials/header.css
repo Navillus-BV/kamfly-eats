@@ -163,6 +163,16 @@
   .header__logo {
     height: 2rem;
   }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.25rem 2rem;
+  }
+
+  .btn.header__cta {
+    margin-left: 4rem;
+  }
 
   .header__navigation:not(.header__navigation--mobile) {
     flex: 1 1 0%;
@@ -176,15 +186,5 @@
   .hamburger.header__hamburger,
   .header__sidenav {
     display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    padding: 1.25rem 2rem;
-  }
-
-  .btn.header__cta {
-    margin-left: 4rem;
   }
 }
