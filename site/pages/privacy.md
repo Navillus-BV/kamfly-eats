@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+permalink: privacy/
 last_updated: 2020-05-03
 layout: layouts/legal.njk
 ---

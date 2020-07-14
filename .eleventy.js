@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/data-deep-merge/#data-deep-merge
    */
+  eleventyConfig.setDataDeepMerge(true)
 
   /**
    * Add custom watch targets
