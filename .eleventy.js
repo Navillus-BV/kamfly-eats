@@ -1,16 +1,12 @@
 const navigationPlugin = require('@11ty/eleventy-navigation')
-const imagePlugin = require('@navillus/eleventy-plugin-image')
-const manifestPlugin = require('@navillus/eleventy-plugin-manifest')
 const seoPlugin = require('eleventy-plugin-seo')
 const svgContentsPlugin = require('eleventy-plugin-svg-contents')
 const { DateTime } = require('luxon')
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
-const markdownItToc = require('markdown-it-table-of-contents')
-const slugify = require('slugify')
+const cssmin = require('./src/utils/cssmin')
+const jsmin = require('./src/utils/jsmin')
 
-const build = require('./site/_data/build')
-const site = require('./site/_data/site.json')
+const build = require('./src/_data/build')
+const site = require('./src/_data/site.json')
 
 module.exports = function (eleventyConfig) {
   /**
@@ -25,13 +21,14 @@ module.exports = function (eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/config/#add-your-own-watch-targets
    */
+  eleventyConfig.addWatchTarget('./assets')
 
   /**
    * Passthrough file copy
    *
    * @link https://www.11ty.dev/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy({ static: '/' })
+  eleventyConfig.addPassthroughCopy({ assets: '/' })
 
   /**
    * Add filters
@@ -43,6 +40,8 @@ module.exports = function (eleventyConfig) {
       zone: 'utc',
     }).toFormat(format)
   })
+  eleventyConfig.addFilter('cssmin', cssmin)
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin)
 
   /**
    * Add plugins
@@ -60,62 +59,6 @@ module.exports = function (eleventyConfig) {
     ogtype: 'website',
     options: { titleDivider: '|' },
   })
-  eleventyConfig.addPlugin(manifestPlugin, {
-    output: '_output',
-    name: site.name,
-    short_name: site.name,
-    icon: site.images.favicon,
-  })
-  if (build.prod) {
-    eleventyConfig.addPlugin(imagePlugin, {
-      input: 'static',
-      output: '_output',
-      include: ['/uploads/blocks/*.+(jpg|jpeg|png)'],
-      sizes: [224, 448, 896],
-    })
-  }
-
-  /**
-   * Override default markdown library
-   */
-  function removeExtraText(s) {
-    let newStr = String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, '')
-    newStr = newStr.replace(/⚠️/g, '')
-    newStr = newStr.replace(/[?!]/g, '')
-    newStr = newStr.replace(/<[^>]*>/g, '')
-    return newStr
-  }
-
-  function markdownItSlugify(s) {
-    return slugify(removeExtraText(s), { lower: true, remove: /[:’'`,]/g })
-  }
-
-  const md = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  })
-    .use(markdownItAnchor, {
-      permalink: true,
-      slugify: markdownItSlugify,
-      permalinkBefore: false,
-      permalinkClass: 'direct-link',
-      permalinkSymbol: '',
-      level: [1, 2, 3, 4]
-    })
-    .use(markdownItToc, {
-      includeLevel: [2, 3],
-      slugify: markdownItSlugify,
-      format: function (header) {
-        return removeExtraText(header)
-      },
-      transformLink: function (link) {
-        // remove backticks from markdown code
-        return link.replace(/\%60/g, '')
-      }
-    })
-
-  eleventyConfig.setLibrary('md', md)
 
   return {
     templateFormats: ['md', 'njk', 'html', '11ty.js'],
@@ -124,10 +67,7 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
 
     dir: {
-      input: 'site',
-      includes: '_includes',
-      output: '_output',
-      data: '_data',
+      input: 'src',
     },
   }
 }

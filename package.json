@@ -1,31 +1,19 @@
 {
+  "name": "kamfly-io",
+  "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf _output",
-    "start": "yarn clean && snowpack dev",
-    "build": "yarn clean && snowpack build",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
-    "format": "prettier --write .",
-    "lint": "prettier --check ."
+    "clean": "rimraf _site",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-navigation": "^0.1.6",
-    "@navillus/eleventy-plugin-image": "^1.0.11",
-    "@navillus/eleventy-plugin-manifest": "^1.0.4",
-    "alpinejs": "^2.4.1",
-    "eleventy-plugin-pwa": "^1.0.8",
-    "eleventy-plugin-seo": "^0.5.0",
+    "csso": "^4.0.3",
+    "eleventy-plugin-seo": "^0.5.1",
     "eleventy-plugin-svg-contents": "^0.7.0",
-    "luxon": "^1.24.1",
-    "markdown-it": "^11.0.0",
-    "markdown-it-anchor": "^5.3.0",
-    "markdown-it-table-of-contents": "^0.4.4",
-    "slugify": "^1.4.4"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@snowpack/plugin-parcel": "^1.3.0",
-    "prettier": "^2.0.0",
+    "luxon": "^1.25.0",
     "rimraf": "^3.0.2",
-    "snowpack": "^2.5.0"
+    "terser": "^5.3.1"
   }
 }

@@ -1,4 +1,2 @@
-_output
-.build
-build
+_site
 node_modules

@@ -1,0 +1,156 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+
+<section class="container">
+    <div class="hero">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</h1>
+
+        <a class="btn btn--primary" href="/signup">Get Started</a>
+    </div>
+
+    <div class="block block--img-left">
+        <img class="block__img" src="/images/shopping.png"/>
+        <div class="block__content">
+            <h2 class="block__title">Reach more customers online.</h2>
+            <p class="block__body">From locally owned cafes to restaurants with multiple locations, we have tools to help anyone start accepting online orders. Create a digital menu for a touchless customer experience, and easily enable online ordering.</p>
+            <a class="link block__link" href="/demo">See it in action</a>
+        </div>
+    </div>
+
+    <div class="block block--img-right">
+        <img class="block__img" src="/images/CMS.png"/>
+        <div class="block__content">
+            <h2 class="block__title">Own your customer experience.</h2>
+            <p class="block__body">Your brand should be front and center in every customer experience. Your food and service speak for themselves, don’t let that go to waste. You want customers returning to you for their next order, not an app with hundreds of other restaurants.</p>
+            <a class="link block__link" href="/get-started">Find out how to get started</a>
+        </div>
+    </div>
+
+    <div class="block block--img-left">
+        <img class="block__img" src="/images/piggy-bank.png"/>
+        <div class="block__content">
+            <h2 class="block__title">Protect your profits.</h2>
+            <p class="block__body">Running a restaurant was hard enough before Covid-19, now is not the time to pay as much as 30% of total sales to sell online. Our mission is to empower restaurants to succeed in a changing world while keeping fees at a fraction of the competition.</p>
+            <a class="link block__link" href="/pricing">See our pricing</a>
+        </div>
+    </div>
+
+    <div class="block block--alt">
+        <div class="block__content">
+            <h2 class="block__title">Features to meet all of your needs.</h2>
+            <p class="block__body">We offer an easy to use, complete solution for managing your restaurant’s menus and online ordering.</p>
+        </div>
+        <div class="features">
+            <div class="features__item">
+                {{ "/assets/currencies.svg" | svgContents("feature__icon") | safe }}
+                <h4 class="feature__title">Multi-Currency & Localization</h4>
+            </div>
+            <div class="features__item">
+                {{ "/assets/group.svg" | svgContents("feature__icon") | safe }}
+                <h4 class="feature__title">Customer Dashboard</h4>
+            </div>
+            <div class="features__item">
+                {{ "/assets/clipboard.svg" | svgContents("feature__icon") | safe }}
+                <h4 class="feature__title">Menu Management</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="block__content">
+            <h2 class="block__title">Accept every kind of payment.</h2>
+            <p class="block__body">We have partnered with Snipcart to offer a full e-commerce experience for your restaurant. Take payments online safely and securly with the most used payment services around the world.</p>
+            <a class="link block__link" href="https://snipcart.com" target="_blank">Learn more about Snipcart.</a>
+            <a class="link block__link" href="https://snipcart.com/list-ecommerce-payment-gateways" target="_blank">See payment processing options.</a>
+        </div>
+    </div>
+
+    <div class="block block--alt">
+        <div class="block__content">
+            <h2 class="block__title">Kamfly Premium Plans.</h2>
+            <p class="block__body">We offer fair, scalable pricing plans to fit your restaurant’s needs.</p>
+        </div>
+
+        <div class="pricing">
+            <div class="pricing__plan">
+                <h3 class="plan__title">Standard</h3>
+                <p class="plan__price">
+                    <strong>30</strong>
+                    <span>/ month</span>
+                    <br>
+                    <em>per location</em>
+                </p>
+
+                <hr>
+
+                <ul class="plan__features">
+                    <li class="plan__feature">Custom online menus</li>
+                    <li class="plan__feature">QR codes for contactless menus</li>
+                    <li class="plan__feature">Use your logos and accent color</li>
+                    <li class="plan__feature">Admin site for updating your menus</li>
+                    <li class="plan__feature">Unlimited number of locations</li>
+                </ul>
+
+                <a class="btn btn--hollow" href="/get-started?plan=standard">get started</a>
+            </div>
+            <div class="pricing__plan pricing__plan--highlighted">
+                <h3 class="plan__title">Pro</h3>
+                <p class="plan__price">
+                    <strong>50</strong>
+                    <span>/ month</span>
+                    <br>
+                    <em>per location</em>
+                </p>
+                <p>+</p>
+                <p class="plan__price">
+                    <strong>2%</strong>
+                    <span>/ transaction</span>
+                    <br>
+                    <em>+ Payment gateway fees</em>
+                </p>
+
+                <hr>
+
+                <ul class="plan__features">
+                    <li class="plan__feature">
+                        <strong>All Standard plan features</strong>
+                    </li>
+                    <li class="plan__feature">Online ordering via Snipcart</li>
+                    <li class="plan__feature">Customer accounts</li>
+                    <li class="plan__feature">Customer dashboard</li>
+                    <li class="plan__feature">Online ordering analytics</li>
+                </ul>
+
+                <a class="btn btn--primary" href="/get-started?plan=standard">get started</a>
+            </div>
+            <div class="pricing__plan">
+                <h3 class="plan__title">Custom</h3>
+                <p class="plan__price">
+                    <strong>ASK</strong>
+                    <span>/ contact us</span>
+                    <br>
+                    <em>for details</em>
+                </p>
+
+                <hr>
+
+                <ul class="plan__features">
+                    <li class="plan__feature">Integration with your point-of-sale system</li>
+                    <li class="plan__feature">Build and design your custom site</li>
+                    <li class="plan__feature">Online & social media marketing</li>
+                    <li class="plan__feature">Search engine optimiation</li>
+                </ul>
+
+                <a class="btn btn--hollow" href="/get-started?plan=standard">get started</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <div class="block__content">
+            <h2 class="block__title">Get insights from e-commerce experts.</h2>
+            <p class="block__content">Join our email list to receive advice from other business owners, support articles, tips from industry experts, and more.</p>
+        </div>
+    </section>

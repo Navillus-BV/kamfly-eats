@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% seo "" %}
+
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="crossorigin">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+        {% set css %}
+        {% include "assets/css/normalize.css" %}
+        {% include "assets/css/main.css" %}
+        {% endset %}
+        <style>
+            {{css | cssmin | safe}}
+        </style>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "WebSite",
+                "name": "{{ site.name }}",
+                "url": "{{ site.url }}",
+                "description": "",
+                "image": "{{ site.images.social | url }}"
+            }
+        </script>
+    </head>
+    <body>
+        {% include "partials/header.njk" %}
+
+        <main>
+            {{ content | safe }}
+        </main>
+
+        {% set js %}
+        {% include "assets/js/main.js" %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe }}
+        </script>
+    </body>
+</html>
