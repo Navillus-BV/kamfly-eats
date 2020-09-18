@@ -11,7 +11,7 @@ permalink: /
         <source media="(min-width: 374px)" type="image/png" data-srcset="{{ src | imgSrc(447) }}, {{ src | imgSrc(894) }} 2x">
         <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
         <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
-        <img class="block__img lazyload blur-up" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}">
+        <img class="block__img lazyload blur-up" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
     </picture>
 {% endmacro %}
 
@@ -67,15 +67,15 @@ permalink: /
             <div class="features">
                 <div class="features__item">
                     {{ "/assets/currencies.svg" | svgContents("feature__icon") | safe }}
-                    <h4 class="feature__title">Multi-Currency & Localization</h4>
+                    <h3 class="feature__title">Multi-Currency & Localization</h3>
                 </div>
                 <div class="features__item">
                     {{ "/assets/group.svg" | svgContents("feature__icon") | safe }}
-                    <h4 class="feature__title">Customer Dashboard</h4>
+                    <h3 class="feature__title">Customer Dashboard</h3>
                 </div>
                 <div class="features__item">
                     {{ "/assets/clipboard.svg" | svgContents("feature__icon") | safe }}
-                    <h4 class="feature__title">Menu Management</h4>
+                    <h3 class="feature__title">Menu Management</h3>
                 </div>
             </div>
         </div>
