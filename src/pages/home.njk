@@ -3,6 +3,18 @@ layout: layouts/base.njk
 permalink: /
 ---
 
+{% macro blockImage(src, title) %}
+    <picture>
+        <source media="(min-width: 592px)" type="image/webp" data-srcset="{{ src | imgSrc(560, false, true) }}, {{ src | imgSrc(1120, false, true) }} 2x">
+        <source media="(min-width: 592px)" type="image/png" data-srcset="{{ src | imgSrc(560) }}, {{ src | imgSrc(1120) }} 2x">
+        <source media="(min-width: 374px)" type="image/webp" data-srcset="{{ src | imgSrc(447, false, true) }}, {{ src | imgSrc(894, false, true) }} 2x">
+        <source media="(min-width: 374px)" type="image/png" data-srcset="{{ src | imgSrc(447) }}, {{ src | imgSrc(894) }} 2x">
+        <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
+        <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
+        <img class="block__img lazyload blur-up" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}">
+    </picture>
+{% endmacro %}
+
 <article class="container">
     <div class="hero">
         <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut</h1>
@@ -12,7 +24,8 @@ permalink: /
 
     <section>
         <div class="block block--img-left">
-            <img class="block__img" src="/images/shopping.png"/>
+            <!-- <noscript> <img class="block__img" src="{{ '/images/blocks/shopping.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/shopping.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu and online ordering system"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/shopping.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/shopping.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu and online ordering system"/> -->
+            {{ blockImage("/images/blocks/shopping.png", "Screenshots of Kamfly's menu and online ordering system") }}
             <div class="block__content">
                 <h2 class="block__title">Reach more customers online.</h2>
                 <p class="block__body">From locally owned cafes to restaurants with multiple locations, we have tools to help anyone start accepting online orders. Create a digital menu for a touchless customer experience, and easily enable online ordering.</p>
@@ -23,7 +36,8 @@ permalink: /
 
     <section>
         <div class="block block--img-right">
-            <img class="block__img" src="/images/CMS.png"/>
+            <!--<noscript> <img class="block__img" src="{{ '/images/blocks/cms.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/cms.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu management system"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/cms.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/cms.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu management system"/> -->
+            {{ blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
             <div class="block__content">
                 <h2 class="block__title">Own your customer experience.</h2>
                 <p class="block__body">Your brand should be front and center in every customer experience. Your food and service speak for themselves, don’t let that go to waste. You want customers returning to you for their next order, not an app with hundreds of other restaurants.</p>
@@ -34,7 +48,8 @@ permalink: /
 
     <section>
         <div class="block block--img-left">
-            <img class="block__img" src="/images/piggy-bank.png"/>
+            <!--<noscript> <img class="block__img" src="{{ '/images/blocks/piggy-bank.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/piggy-bank.png' | imgSrcset(680) }}" alt="Pink piggy bank with coins in and around it"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/piggy-bank.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/piggy-bank.png' | imgSrcset(680) }}" alt="Pink piggy bank with coins in and around it"/> -->
+            {{ blockImage("/images/blocks/piggy-bank.png", "Pink piggy bank with coins in and around it") }}
             <div class="block__content">
                 <h2 class="block__title">Protect your profits.</h2>
                 <p class="block__body">Running a restaurant was hard enough before Covid-19, now is not the time to pay as much as 30% of total sales to sell online. Our mission is to empower restaurants to succeed in a changing world while keeping fees at a fraction of the competition.</p>

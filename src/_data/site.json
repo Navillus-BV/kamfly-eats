@@ -6,7 +6,7 @@
   "email": "info@kamfly.io",
   "images": {
     "social": "https://www.kamfly.io/images/kamfly-share.png",
-    "favicon": "assets/favicon.svg",
+    "favicon": "/assets/favicon.svg",
     "logo": "/assets/logo.svg"
   }
 }

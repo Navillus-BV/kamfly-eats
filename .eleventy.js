@@ -4,6 +4,9 @@ const svgContentsPlugin = require('eleventy-plugin-svg-contents')
 const { DateTime } = require('luxon')
 const cssmin = require('./src/utils/cssmin')
 const jsmin = require('./src/utils/jsmin')
+const imgSrc = require('./src/utils/imgSrc')
+const imgSrcset = require('./src/utils/imgSrcset')
+const lqip = require('./src/utils/lqip')
 
 const build = require('./src/_data/build')
 const site = require('./src/_data/site.json')
@@ -28,7 +31,10 @@ module.exports = function (eleventyConfig) {
    *
    * @link https://www.11ty.dev/docs/copy/
    */
-  eleventyConfig.addPassthroughCopy({ assets: '/' })
+  eleventyConfig.addPassthroughCopy({
+    assets: '/',
+    '.cache': '/',
+  })
 
   /**
    * Add filters
@@ -42,6 +48,9 @@ module.exports = function (eleventyConfig) {
   })
   eleventyConfig.addFilter('cssmin', cssmin)
   eleventyConfig.addNunjucksAsyncFilter('jsmin', jsmin)
+  eleventyConfig.addFilter('imgSrc', imgSrc)
+  eleventyConfig.addFilter('imgSrcset', imgSrcset)
+  eleventyConfig.addFilter('lqip', lqip)
 
   /**
    * Add plugins
