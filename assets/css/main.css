@@ -372,7 +372,7 @@ section:last-of-type {
   top: -0.125rem;
   left: 50%;
   font-size: var(--text-sm);
-  font-weight: 900;
+  font-weight: bold;
   background-color: var(--primary);
   color: var(--fg-alt);
   border-radius: var(--radius-full);
