@@ -315,11 +315,8 @@ section:last-of-type {
   list-style-type: none;
 }
 
-.header__navlist > *:not(:last-child) {
-  margin-right: var(--spacing-8);
-}
-
 .header__navlink {
+  display: inline-block;
   white-space: nowrap;
   color: var(--fg);
   text-decoration: none;
@@ -386,21 +383,22 @@ section:last-of-type {
 }
 
 .hero {
-  max-width: 50rem;
+  max-width: 55rem;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 var(--spacing-12);
+  text-align: center;
 }
 
 .hero > *:not(:last-child) {
   margin-bottom: var(--spacing-12);
 }
 
-.hero h1 {
-  text-align: center;
+.hero__subtitle {
+  font-size: var(--text-lg);
 }
 
 .features {
@@ -701,6 +699,14 @@ section:last-of-type {
     justify-content: initial;
     align-items: initial;
     font-size: var(--text-base);
+  }
+
+  .header__navlist > *:not(:last-child) {
+    margin-right: var(--spacing-8);
+  }
+
+  .header__navlink {
+    padding: 0;
   }
 
   .hamburger.header__hamburger,
