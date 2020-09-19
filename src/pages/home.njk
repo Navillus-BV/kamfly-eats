@@ -27,7 +27,6 @@ permalink: /
 
     <section>
         <div class="block block--img-left">
-            <!-- <noscript> <img class="block__img" src="{{ '/images/blocks/shopping.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/shopping.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu and online ordering system"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/shopping.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/shopping.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu and online ordering system"/> -->
             {{ blockImage("/images/blocks/shopping.png", "Screenshots of Kamfly's menu and online ordering system") }}
             <div class="block__content">
                 <h2 class="block__title">Reach more customers online.</h2>
@@ -39,7 +38,6 @@ permalink: /
 
     <section>
         <div class="block block--img-right">
-            <!--<noscript> <img class="block__img" src="{{ '/images/blocks/cms.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/cms.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu management system"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/cms.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/cms.png' | imgSrcset(680) }}" alt="Screenshots of Kamfly's menu management system"/> -->
             {{ blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
             <div class="block__content">
                 <h2 class="block__title">Own your customer experience.</h2>
@@ -51,7 +49,6 @@ permalink: /
 
     <section>
         <div class="block block--img-left">
-            <!--<noscript> <img class="block__img" src="{{ '/images/blocks/piggy-bank.png' | imgSrc(680) }}" srcset="{{ '/images/blocks/piggy-bank.png' | imgSrcset(680) }}" alt="Pink piggy bank with coins in and around it"/> </noscript> <img class="block__img lazyload blur-up" src="{{ '/images/blocks/piggy-bank.png' | lqip(64) }}" data-srcset="{{ '/images/blocks/piggy-bank.png' | imgSrcset(680) }}" alt="Pink piggy bank with coins in and around it"/> -->
             {{ blockImage("/images/blocks/piggy-bank.png", "Pink piggy bank with coins in and around it") }}
             <div class="block__content">
                 <h2 class="block__title">Protect your profits.</h2>
@@ -106,7 +103,7 @@ permalink: /
                 <div class="pricing__plan">
                     <h3 class="plan__title">Standard</h3>
                     <p class="plan__price">
-                        <strong>30</strong>
+                        <strong>25</strong>
                         <span>/ month</span>
                         <br>
                         <em>per location</em>
@@ -127,7 +124,7 @@ permalink: /
                 <div class="pricing__plan pricing__plan--highlighted">
                     <h3 class="plan__title">Pro</h3>
                     <p class="plan__price">
-                        <strong>50</strong>
+                        <strong>190</strong>
                         <span>/ month</span>
                         <br>
                         <em>per location</em>
@@ -184,6 +181,17 @@ permalink: /
                 <h2 class="block__title">Get insights from e-commerce experts.</h2>
                 <p class="block__content">Join our email list to receive advice from other business owners, support articles, tips from industry experts, and more.</p>
             </div>
+            <form name="mailinglist" method="POST" data-netlify="true">
+                <div class="form__input">
+                    <label for="name">Your Name</label>
+                    <input id="name" name="name" type="text" required="required">
+                </div>
+                <div class="form__input">
+                    <label for="email">Your Email Address</label>
+                    <input id="email" name="email" type="text" required="required">
+                </div>
+                <button type="submit" class="btn btn--primary">Sign Up</div>
+            </form>
         </div>
     </section>
 </article>
