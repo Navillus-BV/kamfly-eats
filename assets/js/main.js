@@ -8,6 +8,7 @@
     // open menu
     menuToggle.addEventListener('click', function () {
       document.body.classList.toggle('off-nav-is-active')
+      menuToggle.classList.toggle('is-active')
       mobileMenu.classList.toggle('header__sidenav--open')
       mobileMenu.style.maxHeight = mobileMenu.style.maxHeight
         ? null
@@ -23,7 +24,8 @@
         window.innerWidth >= 1024
       ) {
         document.body.classList.remove('off-nav-is-active')
-        document.body.classList.remove('header__sidenav--open')
+        menuToggle.classList.toggle('is-active')
+        mobileMenu.classList.remove('header__sidenav--open')
         mobileMenu.style.maxHeight = null
         menuToggle.setAttribute('aria-expanded', false)
       }
