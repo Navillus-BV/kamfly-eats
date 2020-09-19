@@ -153,6 +153,10 @@ textarea {
   flex: 1 0 0px;
 }
 
+form .honeypot {
+  display: none;
+}
+
 button[type='submit'] {
   align-self: flex-start;
 }
