@@ -4,6 +4,7 @@ const svgContentsPlugin = require('eleventy-plugin-svg-contents')
 const { DateTime } = require('luxon')
 const cssmin = require('./src/utils/cssmin')
 const jsmin = require('./src/utils/jsmin')
+const htmlmin = require('./src/utils/htmlmin')
 const imgSrc = require('./src/utils/imgSrc')
 const imgSrcset = require('./src/utils/imgSrcset')
 const lqip = require('./src/utils/lqip')
@@ -55,7 +56,7 @@ module.exports = function (eleventyConfig) {
   /**
    * Add plugins
    *
-   * @link https://www.11ty.devo/docs/plugins/
+   * @link https://www.11ty.dev/docs/plugins/
    */
   eleventyConfig.addPlugin(navigationPlugin)
   eleventyConfig.addPlugin(svgContentsPlugin)
@@ -68,6 +69,13 @@ module.exports = function (eleventyConfig) {
     ogtype: 'website',
     options: { titleDivider: '|' },
   })
+
+  /**
+   * Add transforms
+   *
+   * @link https://www.11ty.dev/docs/transforms/
+   */
+  eleventyConfig.addTransform('htmlmin', htmlmin)
 
   return {
     templateFormats: ['md', 'njk', 'html', '11ty.js'],
