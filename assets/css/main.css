@@ -413,12 +413,6 @@ section:last-of-type {
     'image'
     'content';
 }
-.block--img-right.block--flip,
-.block--img-left.block--flip {
-  grid-template-areas:
-    'content'
-    'image';
-}
 
 .block__img {
   grid-area: image;
@@ -938,14 +932,6 @@ section:last-of-type {
   .block__link {
     grid-template-columns: repeat(2, 1fr);
     text-align: start;
-  }
-  .block--img-right,
-  .block--img-right.block--flip {
-    grid-template-areas: 'content image';
-  }
-  .block--img-left,
-  .block--img-left.block--flip {
-    grid-template-areas: 'image content';
   }
 
   .block__img {
