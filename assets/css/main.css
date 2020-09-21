@@ -933,6 +933,12 @@ section:last-of-type {
     grid-template-columns: repeat(2, 1fr);
     text-align: start;
   }
+  .block--img-right {
+    grid-template-areas: 'content image';
+  }
+  .block--img-left {
+    grid-template-areas: 'image content';
+  }
 
   .block__img {
     margin: 0;
@@ -1043,12 +1049,17 @@ section:last-of-type {
 
 .modal-content {
   padding: 48px 16px;
+  text-align: start;
 }
 
-.modal-content h1,
-h2,
-h3 {
+.modal-content h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
   margin-top: var(--spacing-4);
+}
+
+.modal-content p:not(:last-child) {
+  margin-top: var(--spacing-2);
 }
 
 .modal-close {
