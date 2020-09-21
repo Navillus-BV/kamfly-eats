@@ -257,6 +257,10 @@ th:last-child {
   max-width: 448px;
 }
 
+.pricing__comparison th[colspan='2'] {
+  padding-bottom: var(--spacing-6);
+}
+
 .pricing__logo {
   height: 1.25rem;
   vertical-align: middle;
@@ -357,6 +361,8 @@ button[type='submit'] {
 }
 
 .link {
+  background: transparent;
+  border: none;
   font-size: var(--text-base);
   line-height: var(--leading-xl);
   font-weight: bold;
