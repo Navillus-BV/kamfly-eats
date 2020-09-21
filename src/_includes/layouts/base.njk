@@ -12,6 +12,9 @@
         {% include "assets/css/normalize.css" %}
         {% include "assets/css/fonts.css" %}
         {% include "assets/css/main.css" %}
+        {% if layout_css %}
+            {% include layout_css %}
+        {% endif %}
         {% endset %}
         <style>
             {{css | cssmin | safe}}

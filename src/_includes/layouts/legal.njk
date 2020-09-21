@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+layout_css: assets/css/legal.css
+---
+
+<div class='legal'>
+    {% if last_updated %}
+        {% set date = last_updated | dateDisplay %}
+        <div class='legal__last-updated'>Last Updated:
+            {{ date }}</div>
+    {% endif %}
+
+    {{ layoutContent | safe }}
+</div>
