@@ -8,17 +8,19 @@
         <div class="header__middle">
             <ul class="header__navlist">
                 <li class="header__navitem">
-                    <a class="header__navlink" href="/how-it-works">how it works</a>
+                    <a class="header__navlink" href="/how-it-works/">how it works</a>
                 </li>
                 <li class="header__navitem">
-                    <a class="header__navlink" href="/pricing">pricing</a>
+                    <a class="header__navlink" href="/pricing/">pricing</a>
                 </li>
                 <li class="header__navitem">
-                    <a class="header__navlink" href="/contact">contact</a>
+                    <a class="header__navlink" href="/contact/">contact</a>
                 </li>
             </ul>
         </div>
         <div class="header__right">
+            <a class="header__signup btn btn--primary btn--small" href="/get-started/">Sign Up</a>
+
             <button id="header-menu-toggle" aria-label="Open Menu" class="hamburger hamburger--squeeze header__hamburger">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -42,5 +44,7 @@
                 <a class="header__navlink" href="/contact">contact</a>
             </li>
         </ul>
+
+        <a class="header__cta btn btn--primary" href="{{ '/get-started' | url }}">Sign Up</a>
     </aside>
 </header>

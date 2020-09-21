@@ -144,6 +144,156 @@ textarea {
   margin-bottom: var(--spacing-8);
 }
 
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type='range'] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: var(--border-lg) solid var(--primary);
+  height: 1em;
+  width: 1em;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  cursor: pointer;
+  margin-top: -0.25em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type='range']::-moz-range-thumb {
+  border: var(--border-lg) solid var(--primary);
+  height: 1em;
+  width: 1em;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type='range']::-ms-thumb {
+  border: var(--border-lg) solid var(--primary);
+  height: 1em;
+  width: 1em;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.5em;
+  cursor: pointer;
+  background: var(--bg-alt);
+  border-radius: 0.25em;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: var(--bg-alt);
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 0.5em;
+  cursor: pointer;
+  background: var(--bg-alt);
+  border-radius: 0.25em;
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  height: 0.5em;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 1em 0;
+  color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+  background: var(--primary);
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: var(--bg-alt);
+}
+input[type='range']::-ms-fill-upper {
+  background: var(--bg-alt);
+}
+input[type='range']:focus::-ms-fill-upper {
+  background: var(--primary);
+}
+
+th:first-child {
+  text-align: start;
+}
+
+th:last-child {
+  text-align: end;
+}
+
+.pricing__comparison {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 448px;
+}
+
+.pricing__logo {
+  height: 1.25rem;
+  vertical-align: middle;
+  margin: var(--spacing-2) 0;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.slider__value {
+  background: var(--primary);
+  display: inline-block;
+  color: var(--fg-alt);
+  font-weight: bold;
+  font-size: var(--text-sm);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.slider__value:after {
+  content: '';
+  position: absolute;
+  border-top: 0.5rem solid var(--primary);
+  border-left: 0.25rem solid transparent;
+  border-right: 0.25rem solid transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .form__row {
   display: flex;
   flex-direction: column;
@@ -188,6 +338,7 @@ button[type='submit'] {
   font-size: var(--text-lg);
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   color: var(--fg);
   background: transparent;
   border-radius: var(--radius-sm);
@@ -199,6 +350,10 @@ button[type='submit'] {
 .btn--hollow {
   border-color: var(--primary);
   color: var(--primary);
+}
+.btn--small {
+  font-size: var(--text-base);
+  padding: var(--spacing-2) var(--spacing-6);
 }
 
 .link {
@@ -258,6 +413,10 @@ section:last-of-type {
   object-fit: contain;
 }
 
+.block__img > *:not(:last-child) {
+  margin-bottom: var(--spacing-6);
+}
+
 .block__content {
   grid-area: content;
   display: flex;
@@ -285,7 +444,6 @@ section:last-of-type {
   max-width: 1440px;
   margin: 0 auto;
   padding: var(--spacing-4);
-  border-bottom: var(--border-sm) solid var(--bg-alt);
 }
 
 .header__nav > .header__middle {
@@ -294,6 +452,7 @@ section:last-of-type {
 
 .header__nav {
   display: flex;
+  align-items: center;
 }
 
 .header__nav > * {
@@ -340,6 +499,10 @@ section:last-of-type {
   text-decoration: none;
   padding: var(--spacing-2);
   text-transform: capitalize;
+}
+
+.header__signup {
+  display: none;
 }
 
 .header__sidenav {
@@ -746,6 +909,10 @@ section:last-of-type {
     display: none;
   }
 
+  .header__signup {
+    display: initial;
+  }
+
   .block {
     gap: var(--spacing-20);
   }
@@ -763,6 +930,10 @@ section:last-of-type {
   }
 
   .block__img {
+    margin: 0;
+  }
+
+  .pricing__comparison {
     margin: 0;
   }
 

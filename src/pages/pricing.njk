@@ -2,6 +2,138 @@
 title: Pricing
 layout: layouts/base.njk
 permalink: /pricing/
+layout_script: assets/js/pricing.js
 ---
 
-<article class="container"></article>
+<article class="container">
+    <section>
+        <div class="block block--img-left">
+            <div class="block__img">
+                <p class="block__body">What’s your estimated monthly revenue from online sales?</p>
+
+                <table class="pricing__comparison">
+                    <tr>
+                        <th colspan="2">
+                            <div class="slider" min="1000" max="25000" step="500" value="10000"></div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>{{ site.images.logo | svgContents("pricing__logo") | safe }}</th>
+                        <th>
+                            <p class="plan__price">
+                                <strong id="kamfly-price">€ 300</strong>
+                                <span>/ month</span>
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</th>
+                        <th>
+                            <p class="plan__price">
+                                <strong id="thuisbezorgd-price">€ 1.300</strong>
+                                <span>/ month</span>
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</th>
+                        <th>
+                            <p class="plan__price">
+                                <strong id="ubereats-price">€ 1.500</strong>
+                                <span>/ month</span>
+                            </p>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="block__content">
+                <h2 class="block__title">Protect your profits.</h2>
+                <p class="block__body">Every restaurant should be able to offer online ordering without giving up their profit margin. Some of our compeition charge as much as 15% of TOTAL sales, but it doesn’t have to be that expensive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt">
+        <div class="block">
+            <div class="block__content">
+                <h2 class="block__title">Kamfly Premium Plans.</h2>
+                <p class="block__body">We offer fair, scalable pricing plans to fit your restaurant’s needs.</p>
+            </div>
+
+            <div class="pricing">
+                <div class="pricing__plan">
+                    <h3 class="plan__title">Standard</h3>
+                    <p class="plan__price">
+                        <strong>€ 25</strong>
+                        <span>/ month</span>
+                        <br>
+                        <em>per location</em>
+                    </p>
+
+                    <hr>
+
+                    <ul class="plan__features">
+                        <li class="plan__feature">Custom online menus</li>
+                        <li class="plan__feature">QR codes for contactless menus</li>
+                        <li class="plan__feature">Use your logos and accent color</li>
+                        <li class="plan__feature">Admin site for updating your menus</li>
+                        <li class="plan__feature">Unlimited number of locations</li>
+                    </ul>
+
+                    <a class="btn btn--hollow" href="/get-started?plan=standard">get started</a>
+                </div>
+                <div class="pricing__plan pricing__plan--highlighted">
+                    <h3 class="plan__title">Pro</h3>
+                    <p class="plan__price">
+                        <strong>€ 100</strong>
+                        <span>/ month</span>
+                        <br>
+                        <em>per location</em>
+                    </p>
+                    <p>+</p>
+                    <p class="plan__price">
+                        <strong>2%</strong>
+                        <span>/ transaction</span>
+                        <br>
+                        <em>+ Payment gateway fees</em>
+                    </p>
+
+                    <hr>
+
+                    <ul class="plan__features">
+                        <li class="plan__feature">
+                            <strong>All Standard plan features</strong>
+                        </li>
+                        <li class="plan__feature">Online ordering via Snipcart</li>
+                        <li class="plan__feature">Customer accounts</li>
+                        <li class="plan__feature">Customer dashboard</li>
+                        <li class="plan__feature">Online ordering analytics</li>
+                    </ul>
+
+                    <a class="btn btn--primary" href="/get-started?plan=pro">get started</a>
+                </div>
+                <div class="pricing__plan">
+                    <h3 class="plan__title">Custom</h3>
+                    <p class="plan__price">
+                        <strong>ASK</strong>
+                        <span>/ contact us</span>
+                        <br>
+                        <em>for details</em>
+                    </p>
+
+                    <hr>
+
+                    <ul class="plan__features">
+                        <li class="plan__feature">Integration with your point-of-sale system</li>
+                        <li class="plan__feature">Build and design your custom site</li>
+                        <li class="plan__feature">Online & social media marketing</li>
+                        <li class="plan__feature">Search engine optimiation</li>
+                    </ul>
+
+                    <a class="btn btn--hollow" href="/get-started?plan=custom">get started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

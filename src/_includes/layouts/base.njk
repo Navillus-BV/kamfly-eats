@@ -47,6 +47,9 @@
         {% set js %}
         {% include "assets/js/lazysizes.min.js" %}
         {% include "assets/js/main.js" %}
+        {% if layout_script %}
+            {% include layout_script %}
+        {% endif %}
         {% endset %}
         <script>
             {{ js | jsmin | safe }}
