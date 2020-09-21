@@ -5,6 +5,8 @@ permalink: /pricing/
 layout_script: assets/js/pricing.js
 ---
 
+{% import "macros/blocks.njk" as blocks %}
+
 <article class="container">
     <div class="hero">
         <h1>Kick the margin moochers to the curb</h1>
@@ -139,6 +141,26 @@ layout_script: assets/js/pricing.js
 
                     <a class="btn btn--hollow" href="/get-started?plan=custom">get started</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="block block--img-left">
+            {{ blocks.blockImage("/images/blocks/food-delivery.jpg", "Delivery driver picking up an order") }}
+            <div class="block__content">
+                <h2 class="block__title">What about food delivery?</h2>
+                <p class="block__body">Our mission is to provide the online experience that your customers want. You know your business, your team, and your brand and we want you to be empowered with the control of the full customer experience. Our goal is to provide a polished online ordering experience at a price that allows you to create jobs for delivery drivers that represent your business.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt">
+        <div class="block block--img-right">
+            {{ blocks.blockImage("/images/blocks/menus.png", "Kamfly menus showing the light and dark theme options") }}
+            <div class="block__content">
+                <h2 class="block__title">Kamfly grows with your business.</h2>
+                <p class="block__body">Not ready to offer online ordering? No problem! With our Standard plan you will get an online menu that looks great on every device and can replace paper menus with QR codes. Update your menu without reprinting, and when you're ready it only takes a few steps to enable online ordering.</p>
             </div>
         </div>
     </section>

@@ -1,0 +1,14 @@
+{% macro blockImage(src, title) %}
+    <picture>
+        <source media="(min-width: 592px)" type="image/webp" data-srcset="{{ src | imgSrc(560, false, true) }}, {{ src | imgSrc(1120, false, true) }} 2x">
+        <source media="(min-width: 592px)" type="image/png" data-srcset="{{ src | imgSrc(560) }}, {{ src | imgSrc(1120) }} 2x">
+        <source media="(min-width: 374px)" type="image/webp" data-srcset="{{ src | imgSrc(447, false, true) }}, {{ src | imgSrc(894, false, true) }} 2x">
+        <source media="(min-width: 374px)" type="image/png" data-srcset="{{ src | imgSrc(447) }}, {{ src | imgSrc(894) }} 2x">
+        <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
+        <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
+        <noscript>
+            <img class="block__img" srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" alt="{{ title }}"/>
+        </noscript>
+        <img class="block__img lazyload blur-up" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
+    </picture>
+{% endmacro %}
