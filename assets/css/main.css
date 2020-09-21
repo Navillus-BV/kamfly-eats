@@ -424,7 +424,7 @@ section:last-of-type {
 }
 
 .block__img > *:not(:last-child) {
-  margin-bottom: var(--spacing-6);
+  margin-bottom: var(--spacing-4);
 }
 
 .block__content {
@@ -879,6 +879,10 @@ section:last-of-type {
     max-width: 20rem;
     height: 20rem;
     padding: var(--spacing-16);
+  }
+
+  .block__img > *:not(:last-child) {
+    margin-bottom: var(--spacing-6);
   }
 
   .feature__icon {
