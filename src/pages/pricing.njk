@@ -19,81 +19,6 @@ permalink: /pricing/
             <h1>Kick the margin moochers to the curb.</h1>
         </div>
 
-        <section>
-            <div class="block block--img-left">
-                <div class="block__img">
-                    <p class="block__body">What’s your estimated monthly revenue from online sales?</p>
-
-                    <table class="pricing__comparison">
-                        <tr>
-                            <th colspan="2">
-                                <div class="slider" min="1000" max="25000" step="500" value="10000"></div>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>{{ site.images.logo | svgContents("pricing__logo") | safe }}</th>
-                            <th>
-                                <p class="plan__price">
-                                    <strong id="kamfly-price">€ 300</strong>
-                                    <span>/ month</span>
-                                </p>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</th>
-                            <th>
-                                <p class="plan__price">
-                                    <strong id="thuisbezorgd-price">€ 1.300</strong>
-                                    <span>/ month</span>
-                                </p>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</th>
-                            <th>
-                                <p class="plan__price">
-                                    <strong id="ubereats-price">€ 1.500</strong>
-                                    <span>/ month</span>
-                                </p>
-                            </th>
-                        </tr>
-                    </table>
-
-                    <a class="link block__link modal-trigger" aria-controls="modal-01" href="#">How this is calculated</a>
-                    <div id="modal-01" class="modal">
-                        <div class="modal-inner">
-                            <button class="modal-close modal-close-trigger" aria-label="close"></button>
-                            <div class="modal-content">
-                                <h2>How the price comparisons are calculated</h2>
-                                <p>Price comparisons are based on the latest publicly available pricing data.</p>
-
-                                <h3>Kamfly Prices</h3>
-                                <p>Our prices are calculated based on the Pro plan. Payment gateway are not included in the comparison estimate as they depend on the payment processor and payment service used.
-                                    <a href="https://snipcart.com/list-ecommerce-payment-gateways" target="_blank">Visit Snipcart</a>
-                                    for more details on the supported payment gateways.</p>
-
-                                <h3>Thuisbezorgd Prices</h3>
-                                <p>Thuisbezorgd charges 13% of total sales through their platform, there is no additional monthly fee. They increased their rates to 13% in 2019 but annouced that they
-                                    <a href="https://twinklemagazine.nl/2019/08/jitse-groen-commissie/index.xml" target="_blank" rel="nofollow noopener">have no plans</a>
-                                    to increase rates further.</p>
-
-                                <h3>Uber Eats Prices</h3>
-                                <p>For all pickup orders or orders using the restaurants' own delivery drivers,
-                                    <a href="https://restaurants.ubereats.com/us/en/pricing/" target="_blank" rel="nofollow noopener">Uber Eats charges 15%</a>
-                                    of total sales through their platform. An additional 15% is charged when restaurants opt-in to use Uber Eats' delivery service - we did not include the additional 15% fee in this comparison since we do not offer a comparable delivery service.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block__content">
-                    <h2 class="block__title">Protect your profits.</h2>
-                    <p class="block__body">Every restaurant should be able to offer online ordering without giving up their profit margin. Some of our compeition charge as much as 15% of TOTAL sales, but it doesn’t have to be that expensive.</p>
-                    <a class="link block__link" href="/get-started/">Get Started</a>
-                </div>
-            </div>
-        </section>
-
         <section class="alt">
             <div class="block">
                 <div class="block__content">
@@ -101,78 +26,20 @@ permalink: /pricing/
                     <p class="block__body">We offer fair, scalable pricing plans to fit your restaurant’s needs.</p>
                 </div>
 
-                <div class="pricing">
-                    <div class="pricing__plan">
-                        <h3 class="plan__title">Standard</h3>
-                        <p class="plan__price">
-                            <strong>€ 25</strong>
-                            <span>/ month</span>
-                            <br>
-                            <em>per location</em>
-                        </p>
+                {% include "partials/plans.njk" %}
+            </div>
+        </section>
 
-                        <hr>
+        <section>
+            <div class="block block--img-left">
+                <div class="block__img">
+                    {% include "partials/price-comparison.njk" %}
+                </div>
 
-                        <ul class="plan__features">
-                            <li class="plan__feature">Custom online menus</li>
-                            <li class="plan__feature">QR codes for contactless menus</li>
-                            <li class="plan__feature">Use your logos and accent color</li>
-                            <li class="plan__feature">Admin site for updating your menus</li>
-                            <li class="plan__feature">Unlimited number of locations</li>
-                        </ul>
-
-                        <a class="btn btn--hollow" href="/get-started?plan=standard">get started</a>
-                    </div>
-                    <div class="pricing__plan pricing__plan--highlighted">
-                        <h3 class="plan__title">Pro</h3>
-                        <p class="plan__price">
-                            <strong>€ 100</strong>
-                            <span>/ month</span>
-                            <br>
-                            <em>per location</em>
-                        </p>
-                        <p>+</p>
-                        <p class="plan__price">
-                            <strong>2%</strong>
-                            <span>/ transaction</span>
-                            <br>
-                            <em>+ Payment gateway fees</em>
-                        </p>
-
-                        <hr>
-
-                        <ul class="plan__features">
-                            <li class="plan__feature">
-                                <strong>All Standard plan features</strong>
-                            </li>
-                            <li class="plan__feature">Online ordering via Snipcart</li>
-                            <li class="plan__feature">Customer accounts</li>
-                            <li class="plan__feature">Customer dashboard</li>
-                            <li class="plan__feature">Online ordering analytics</li>
-                        </ul>
-
-                        <a class="btn btn--primary" href="/get-started?plan=pro">get started</a>
-                    </div>
-                    <div class="pricing__plan">
-                        <h3 class="plan__title">Custom</h3>
-                        <p class="plan__price">
-                            <strong>ASK</strong>
-                            <span>/ contact us</span>
-                            <br>
-                            <em>for details</em>
-                        </p>
-
-                        <hr>
-
-                        <ul class="plan__features">
-                            <li class="plan__feature">Integration with your point-of-sale system</li>
-                            <li class="plan__feature">Build and design your custom site</li>
-                            <li class="plan__feature">Online & social media marketing</li>
-                            <li class="plan__feature">Search engine optimiation</li>
-                        </ul>
-
-                        <a class="btn btn--hollow" href="/get-started?plan=custom">get started</a>
-                    </div>
+                <div class="block__content">
+                    <h2 class="block__title">Protect your profits.</h2>
+                    <p class="block__body">Every restaurant should be able to offer online ordering without giving up their profit margin. Some of our compeition charge as much as 15% of TOTAL sales, but it doesn’t have to be that expensive.</p>
+                    <a class="link block__link" href="/get-started/">Get started</a>
                 </div>
             </div>
         </section>
