@@ -933,7 +933,8 @@ section:last-of-type {
 
   .block--img-right,
   .block--img-left,
-  .block__link {
+  .block--img-right .block__link,
+  .block--img-left .block__link {
     grid-template-columns: repeat(2, 1fr);
     text-align: start;
   }
