@@ -1,49 +1,52 @@
 ---
 title: Get Started
-layout: layouts/base.njk
 permalink: /get-started/
 ---
 
-<article class="container">
-    <section>
-        <div class="block">
-            <div class="block__content">
-                <h2 class="block__title">Ready to get started?</h2>
-                <p class="block__content">
-                    Let's chat! We will email you shortly to setup a time for a call to answer your questions, demo Kamfly, and find out how we can best help your business.
-                </p>
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <article class="container">
+        <section>
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Ready to get started?</h2>
+                    <p class="block__content">
+                        Let's chat! We will email you shortly to setup a time for a call to answer your questions, demo Kamfly, and find out how we can best help your business.
+                    </p>
+                </div>
+                <form name="get-started" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <p class="honeypot">
+                        <label>Don’t fill this out if you're human:
+                            <input name="bot-field"/></label>
+                    </p>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="name">Your Name *</label>
+                            <input id="name" name="name" type="text" required="required">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="email">Your Email Address *</label>
+                            <input id="email" name="email" type="text" required="required">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="website">Your Current Website (optional)</label>
+                            <input id="website" name="website" type="text">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="comments">Comments (optional)</label>
+                            <textarea id="comments" name="comments" rows="6"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Submit</div>
+                </form>
             </div>
-            <form name="get-started" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                <p class="honeypot">
-                    <label>Don’t fill this out if you're human:
-                        <input name="bot-field"/></label>
-                </p>
-                <div class="form__row">
-                    <div class="form__input">
-                        <label for="name">Your Name *</label>
-                        <input id="name" name="name" type="text" required="required">
-                    </div>
-                </div>
-                <div class="form__row">
-                    <div class="form__input">
-                        <label for="email">Your Email Address *</label>
-                        <input id="email" name="email" type="text" required="required">
-                    </div>
-                </div>
-                <div class="form__row">
-                    <div class="form__input">
-                        <label for="website">Your Current Website (optional)</label>
-                        <input id="website" name="website" type="text">
-                    </div>
-                </div>
-                <div class="form__row">
-                    <div class="form__input">
-                        <label for="comments">Comments (optional)</label>
-                        <textarea id="comments" name="comments" rows="6"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn--primary">Submit</div>
-            </form>
-        </div>
-    </section>
-</article>
+        </section>
+    </article>
+{% endblock %}

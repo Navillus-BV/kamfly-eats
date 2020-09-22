@@ -12,13 +12,12 @@
         {% include "assets/css/normalize.css" %}
         {% include "assets/css/fonts.css" %}
         {% include "assets/css/main.css" %}
-        {% if layout_css %}
-            {% include layout_css %}
-        {% endif %}
         {% endset %}
         <style>
             {{css | cssmin | safe}}
         </style>
+
+        {% block styles %}{% endblock %}
 
         <script type="application/ld+json">
             {
@@ -42,7 +41,7 @@
         {% include "partials/header.njk" %}
 
         <main>
-            {{ content | safe }}
+            {% block content %}{% endblock %}
         </main>
 
         {% include "partials/footer.njk" %}
@@ -57,5 +56,6 @@
         <script>
             {{ js | jsmin | safe }}
         </script>
+        {% block scripts %}{% endblock %}
     </body>
 </html>
