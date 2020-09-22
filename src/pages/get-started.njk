@@ -5,6 +5,19 @@ permalink: /get-started/
 
 {% extends "layouts/base.njk" %}
 
+{% block scripts %}
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const plan = urlParams.get('plan')
+        if (!!plan) {
+            const formField = document.getElementById('plan')
+            if (formField) {
+                formField.value = plan
+            }
+        }
+    </script>
+{% endblock %}
+
 {% block content %}
     <article class="container">
         <section>
@@ -20,6 +33,7 @@ permalink: /get-started/
                         <label>Don’t fill this out if you're human:
                             <input name="bot-field"/></label>
                     </p>
+                    <input class="honeypot" id="plan" name="plan" type="text"/>
                     <div class="form__row">
                         <div class="form__input">
                             <label for="name">Your Name *</label>

@@ -626,6 +626,42 @@ section:last-of-type {
   font-size: var(--text-lg);
 }
 
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.steps > *:not(:last-child) {
+  margin-bottom: var(--spacing-8);
+}
+
+.steps__item {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.steps__item > *:not(:last-child) {
+  margin-bottom: var(--spacing-6);
+}
+
+.steps__counter {
+  color: var(--primary);
+  font-size: var(--text-4xl);
+  height: var(--spacing--20);
+  width: var(--spacing-20);
+  line-height: calc(var(--spacing-20) - var(--spacing-2));
+  border: var(--spacing-1) solid var(--primary);
+  border-radius: var(--radius-full);
+}
+
 .pricing {
   display: flex;
   flex-direction: column;
@@ -842,6 +878,10 @@ section:last-of-type {
   .features__item > *:not(:last-child) {
     margin-bottom: var(--spacing-8);
   }
+
+  .steps__item > *:not(:last-child) {
+    margin-bottom: var(--spacing-8);
+  }
 }
 
 @media (min-width: 480px) {
@@ -875,14 +915,14 @@ section:last-of-type {
     font-size: var(--text-xl);
   }
 
+  .block__img > *:not(:last-child) {
+    margin-bottom: var(--spacing-6);
+  }
+
   .features__item {
     max-width: 20rem;
     height: 20rem;
     padding: var(--spacing-16);
-  }
-
-  .block__img > *:not(:last-child) {
-    margin-bottom: var(--spacing-6);
   }
 
   .feature__icon {
@@ -890,6 +930,21 @@ section:last-of-type {
   }
 
   .feature__title {
+    font-size: var(--text-xl);
+  }
+
+  .steps__item {
+    padding: var(--spacing-16);
+  }
+
+  .steps__counter {
+    font-size: var(--text-5xl);
+    height: var(--spacing-24);
+    width: var(--spacing-24);
+    line-height: calc(var(--spacing-24) - var(--spacing-2));
+  }
+
+  .steps__title {
     font-size: var(--text-xl);
   }
 }
@@ -963,6 +1018,7 @@ section:last-of-type {
 
   .features {
     flex-direction: row;
+    align-items: stretch;
   }
 
   .features > *:not(:last-child) {
@@ -974,6 +1030,21 @@ section:last-of-type {
     max-width: 100%;
     height: auto;
     flex: 1 1 0px;
+    padding: var(--spacing-16) var(--spacing-8);
+  }
+
+  .steps {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .steps > *:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: var(--spacing-20);
+  }
+
+  .steps__item {
+    flex: 1;
     padding: var(--spacing-16) var(--spacing-8);
   }
 
