@@ -105,43 +105,47 @@ class Slider {
   init() {
     console.log('SLIDER: init')
 
-    this._triggers = {}
+    try {
+      this._triggers = {}
 
-    this.labelElem = document.createElement('label')
-    this.labelElem.setAttribute('for', 'slider')
-    this.labelElem.innerText = this.elem.dataset.label
-    this.labelElem.classList.add('sr-only')
+      this.labelElem = document.createElement('label')
+      this.labelElem.setAttribute('for', 'slider')
+      this.labelElem.innerText = this.elem.dataset.label
+      this.labelElem.classList.add('sr-only')
 
-    this.inputElem = document.createElement('input')
-    this.inputElem.type = 'range'
-    this.inputElem.id = 'slider'
-    this.inputElem.classList.add('slider__input')
-    this.inputElem.min = this.elem.hasAttribute('min')
-      ? parseInt(this.elem.getAttribute('min'))
-      : this.config.min
-    this.inputElem.max = this.elem.hasAttribute('max')
-      ? parseInt(this.elem.getAttribute('max'))
-      : this.config.max
-    this.inputElem.step = this.elem.hasAttribute('step')
-      ? parseInt(this.elem.getAttribute('step'))
-      : this.config.step
-    this.inputElem.value = this.elem.hasAttribute('value')
-      ? parseInt(this.elem.getAttribute('value'))
-      : this.config.value
+      this.inputElem = document.createElement('input')
+      this.inputElem.type = 'range'
+      this.inputElem.id = 'slider'
+      this.inputElem.classList.add('slider__input')
+      this.inputElem.min = this.elem.hasAttribute('min')
+        ? parseInt(this.elem.getAttribute('min'))
+        : this.config.min
+      this.inputElem.max = this.elem.hasAttribute('max')
+        ? parseInt(this.elem.getAttribute('max'))
+        : this.config.max
+      this.inputElem.step = this.elem.hasAttribute('step')
+        ? parseInt(this.elem.getAttribute('step'))
+        : this.config.step
+      this.inputElem.value = this.elem.hasAttribute('value')
+        ? parseInt(this.elem.getAttribute('value'))
+        : this.config.value
 
-    this.valueElem = document.createElement('div')
-    this.valueElem.classList.add('slider__value')
-    this.valueElem.innerText = this.config.format(this.value)
+      this.valueElem = document.createElement('div')
+      this.valueElem.classList.add('slider__value')
+      this.valueElem.innerText = this.config.format(this.value)
 
-    this.elem.appendChild(this.valueElem)
-    this.elem.appendChild(this.inputElem)
-    this.elem.appendChild(this.labelElem)
+      this.elem.appendChild(this.valueElem)
+      this.elem.appendChild(this.inputElem)
+      this.elem.appendChild(this.labelElem)
 
-    document.addEventListener('DOMContentLoaded', this.update.bind(this))
-    this.inputElem.addEventListener('input', this.update.bind(this))
-    window.addEventListener('resize', this.update.bind(this))
+      document.addEventListener('DOMContentLoaded', this.update.bind(this))
+      this.inputElem.addEventListener('input', this.update.bind(this))
+      window.addEventListener('resize', this.update.bind(this))
 
-    this.update()
+      this.update()
+    } catch (err) {
+      console.log('SLIDER: error', err)
+    }
   }
 
   get value() {
