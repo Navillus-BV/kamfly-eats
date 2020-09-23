@@ -86,6 +86,8 @@
 
 class Slider {
   constructor(options) {
+    console.log('+++ SLIDER +++')
+
     this.config = Slider.mergeSettings(options)
 
     this.elem =
@@ -101,6 +103,8 @@ class Slider {
   }
 
   init() {
+    console.log('SLIDER: init')
+
     this._triggers = {}
 
     this.labelElem = document.createElement('label')
@@ -149,6 +153,8 @@ class Slider {
   }
 
   updateValue() {
+    console.log('SLIDER: update', this.value)
+
     this.valueElem.innerText = this.config.format(this.value)
     const newValue = Number(
       (this.value - this.inputElem.min) /
@@ -200,6 +206,8 @@ window.Slider = Slider
 
 class PriceComparison {
   constructor() {
+    console.log('+++ PRICECOMPARISON +++')
+
     this.kamflyPriceElem = document.getElementById('kamfly-price')
     this.thuisbezordPriceElem = document.getElementById('thuisbezorgd-price')
     this.uberEatsPriceElem = document.getElementById('ubereats-price')
@@ -208,6 +216,8 @@ class PriceComparison {
   }
 
   init() {
+    console.log('PriceComparison: init')
+
     this.slider = new window.Slider({
       format: (value) => {
         return new Intl.NumberFormat('nl-NL', {
@@ -224,6 +234,8 @@ class PriceComparison {
   }
 
   update() {
+    console.log('PriceComparison: update', this.slider.value)
+
     this.updateKamfly()
     this.updateThuisbezorgd()
     this.updateUberEats()
