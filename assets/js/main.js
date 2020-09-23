@@ -103,8 +103,14 @@ class Slider {
   init() {
     this._triggers = {}
 
+    this.labelElem = document.createElement('label')
+    this.labelElem.setAttribute('for', 'slider')
+    this.labelElem.innerText = this.elem.dataset.label
+    this.labelElem.classList.add('sr-only')
+
     this.inputElem = document.createElement('input')
     this.inputElem.type = 'range'
+    this.inputElem.id = 'slider'
     this.inputElem.classList.add('slider__input')
     this.inputElem.min = this.elem.hasAttribute('min')
       ? parseInt(this.elem.getAttribute('min'))
@@ -125,6 +131,7 @@ class Slider {
 
     this.elem.appendChild(this.valueElem)
     this.elem.appendChild(this.inputElem)
+    this.elem.appendChild(this.labelElem)
 
     document.addEventListener('DOMContentLoaded', this.update.bind(this))
     this.inputElem.addEventListener('input', this.update.bind(this))
