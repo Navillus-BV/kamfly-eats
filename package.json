@@ -15,6 +15,7 @@
     "csso": "^4.0.3",
     "eleventy-plugin-seo": "^0.5.1",
     "eleventy-plugin-svg-contents": "^0.7.0",
+    "favicons": "^6.2.0",
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "html-minifier": "^4.0.0",

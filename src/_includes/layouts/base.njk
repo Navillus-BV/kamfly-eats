@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/favicon.ico">
         {% seo "" %}
+        {% include "partials/favicon.njk" %}
 
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="crossorigin">
 
@@ -22,10 +22,11 @@
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org/",
-                "@type": "WebSite",
-                "name": "{{ site.name }}",
-                "url": "{{ site.url }}",
-                "description": "",
+                "@type": "Organization",
+                "@id": "{{ site.url }}" "url": "{{ site.url }}",
+                "sameAs": [],
+                "logo": "{{ site.url }}{{ site.images.logo }}" "name": "{{ site.name }}",
+                "description": "{{ site.description }}",
                 "image": "{{ site.images.social | url }}"
             }
         </script>
