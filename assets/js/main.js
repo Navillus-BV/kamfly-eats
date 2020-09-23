@@ -227,7 +227,7 @@ class PriceComparison {
         return new Intl.NumberFormat('nl-NL', {
           style: 'currency',
           currency: 'EUR',
-          currencyDisplay: 'narrowSymbol',
+          currencyDisplay: 'symbol',
         })
           .format(value)
           .replace(/\D00(?=\D*$)/, '')
