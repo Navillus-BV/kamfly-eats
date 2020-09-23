@@ -86,8 +86,6 @@
 
 class Slider {
   constructor(options) {
-    console.log('+++ SLIDER +++')
-
     this.config = Slider.mergeSettings(options)
 
     this.elem =
@@ -103,49 +101,43 @@ class Slider {
   }
 
   init() {
-    console.log('SLIDER: init')
+    this._triggers = {}
 
-    try {
-      this._triggers = {}
+    this.labelElem = document.createElement('label')
+    this.labelElem.setAttribute('for', 'slider')
+    this.labelElem.innerText = this.elem.dataset.label
+    this.labelElem.classList.add('sr-only')
 
-      this.labelElem = document.createElement('label')
-      this.labelElem.setAttribute('for', 'slider')
-      this.labelElem.innerText = this.elem.dataset.label
-      this.labelElem.classList.add('sr-only')
+    this.inputElem = document.createElement('input')
+    this.inputElem.type = 'range'
+    this.inputElem.id = 'slider'
+    this.inputElem.classList.add('slider__input')
+    this.inputElem.min = this.elem.hasAttribute('min')
+      ? parseInt(this.elem.getAttribute('min'))
+      : this.config.min
+    this.inputElem.max = this.elem.hasAttribute('max')
+      ? parseInt(this.elem.getAttribute('max'))
+      : this.config.max
+    this.inputElem.step = this.elem.hasAttribute('step')
+      ? parseInt(this.elem.getAttribute('step'))
+      : this.config.step
+    this.inputElem.value = this.elem.hasAttribute('value')
+      ? parseInt(this.elem.getAttribute('value'))
+      : this.config.value
 
-      this.inputElem = document.createElement('input')
-      this.inputElem.type = 'range'
-      this.inputElem.id = 'slider'
-      this.inputElem.classList.add('slider__input')
-      this.inputElem.min = this.elem.hasAttribute('min')
-        ? parseInt(this.elem.getAttribute('min'))
-        : this.config.min
-      this.inputElem.max = this.elem.hasAttribute('max')
-        ? parseInt(this.elem.getAttribute('max'))
-        : this.config.max
-      this.inputElem.step = this.elem.hasAttribute('step')
-        ? parseInt(this.elem.getAttribute('step'))
-        : this.config.step
-      this.inputElem.value = this.elem.hasAttribute('value')
-        ? parseInt(this.elem.getAttribute('value'))
-        : this.config.value
+    this.valueElem = document.createElement('div')
+    this.valueElem.classList.add('slider__value')
+    this.valueElem.innerText = this.config.format(this.value)
 
-      this.valueElem = document.createElement('div')
-      this.valueElem.classList.add('slider__value')
-      this.valueElem.innerText = this.config.format(this.value)
+    this.elem.appendChild(this.valueElem)
+    this.elem.appendChild(this.inputElem)
+    this.elem.appendChild(this.labelElem)
 
-      this.elem.appendChild(this.valueElem)
-      this.elem.appendChild(this.inputElem)
-      this.elem.appendChild(this.labelElem)
+    document.addEventListener('DOMContentLoaded', this.update.bind(this))
+    this.inputElem.addEventListener('input', this.update.bind(this))
+    window.addEventListener('resize', this.update.bind(this))
 
-      document.addEventListener('DOMContentLoaded', this.update.bind(this))
-      this.inputElem.addEventListener('input', this.update.bind(this))
-      window.addEventListener('resize', this.update.bind(this))
-
-      this.update()
-    } catch (err) {
-      console.log('SLIDER: error', err)
-    }
+    this.update()
   }
 
   get value() {
@@ -157,8 +149,6 @@ class Slider {
   }
 
   updateValue() {
-    console.log('SLIDER: update', this.value)
-
     this.valueElem.innerText = this.config.format(this.value)
     const newValue = Number(
       (this.value - this.inputElem.min) /
@@ -210,8 +200,6 @@ window.Slider = Slider
 
 class PriceComparison {
   constructor() {
-    console.log('+++ PRICECOMPARISON +++')
-
     this.kamflyPriceElem = document.getElementById('kamfly-price')
     this.thuisbezordPriceElem = document.getElementById('thuisbezorgd-price')
     this.uberEatsPriceElem = document.getElementById('ubereats-price')
@@ -220,8 +208,6 @@ class PriceComparison {
   }
 
   init() {
-    console.log('PriceComparison: init')
-
     this.slider = new window.Slider({
       format: (value) => {
         return new Intl.NumberFormat('nl-NL', {
@@ -238,8 +224,6 @@ class PriceComparison {
   }
 
   update() {
-    console.log('PriceComparison: update', this.slider.value)
-
     this.updateKamfly()
     this.updateThuisbezorgd()
     this.updateUberEats()
@@ -264,7 +248,7 @@ class PriceComparison {
     return new Intl.NumberFormat('nl-NL', {
       style: 'currency',
       currency: 'EUR',
-      currencyDisplay: 'narrowSymbol',
+      currencyDisplay: 'symbol',
     })
       .format(value)
       .replace(/\D00(?=\D*$)/, '')
