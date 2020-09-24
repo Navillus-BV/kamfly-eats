@@ -82,6 +82,10 @@
       closeModals()
     }
   })
+
+  window.addEventListener('hashchange', function () {
+    closeModals()
+  })
 })()
 
 class Slider {
