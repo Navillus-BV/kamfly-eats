@@ -3,6 +3,7 @@ title: Terms and Conditions
 permalink: /terms/
 last_updated: 2020-05-03
 layout: layouts/legal.njk
+eleventyExcludeFromCollections: true
 ---
 
 Please read these terms and conditions before using Our Service.
