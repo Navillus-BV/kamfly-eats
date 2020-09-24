@@ -2,5 +2,7 @@
 permalink: /robots.txt/
 eleventyExcludeFromCollections: true
 ---
-User-agent: * Disallow: Sitemap:
-{{ site.url }}/sitemap.xml
+
+User-agent: \*
+Disallow:
+Sitemap: {{ site.url }}/sitemap.xml
