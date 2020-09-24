@@ -19,7 +19,7 @@
             </ul>
         </div>
         <div class="header__right">
-            {% if not page.url == "/get-started/" %}
+            {% if page.url != "/get-started/" %}
                 <a class="header__signup btn btn--primary btn--small" href="/get-started/">Sign Up</a>
             {% endif %}
 
