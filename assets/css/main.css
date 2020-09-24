@@ -320,7 +320,7 @@ th:last-child {
 
 .slider__label {
   margin-top: var(--spacing-4);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: normal;
   text-align: center;
   width: 100%;
@@ -957,10 +957,12 @@ section:last-of-type {
     grid-template-columns: repeat(2, 1fr);
     text-align: start;
   }
-  .block--img-right {
+  .block--img-right,
+  .block--img-right.block--flip {
     grid-template-areas: 'content image';
   }
-  .block--img-left {
+  .block--img-left,
+  .block--img-left.block--flip {
     grid-template-areas: 'image content';
   }
 
