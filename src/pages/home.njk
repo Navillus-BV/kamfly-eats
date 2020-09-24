@@ -1,0 +1,98 @@
+---
+title: Home
+permalink: /
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block scripts %}
+    <script>
+        new window.PriceComparison()
+    </script>
+{% endblock %}
+
+{% import "macros/blocks.njk" as blocks %}
+
+{% block content %}
+    <article class="container">
+        <div class="hero">
+            <h1>Your restaurant. Your future. Your call.</h1>
+
+            <p class="hero__subtitle">The digital experience your customers want. The freedom you deserve.</p>
+
+            <a class="btn btn--primary" href="/get-started/">Get Started</a>
+        </div>
+
+        <section>
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/shopping.png", "Screenshots of Kamfly's menu and online ordering system") }}
+                <div class="block__content">
+                    <h2 class="block__title">Reach more customers online.</h2>
+                    <p class="block__body">From locally owned cafes to large-scale franchise operations, we have tools to help you take your restaurant business online. Create a digital menu for a touchless customer experience, and easily enable online ordering.</p>
+                    <button class="link block__link" href="https://demo.kamfly.io/" target="_blank">See it in action</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-right">
+                {{ blocks.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
+                <div class="block__content">
+                    <h2 class="block__title">Own your customer experience.</h2>
+                    <p class="block__body">Your brand should be front and center in every customer interaction. Your food and service speak for themselves - don't waste your efforts competing with hundreds of other restaurants on someone else's app.</p>
+                    <a class="link block__link" href="/get-started/">Find out how to get started</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-left">
+                <div class="block__img">
+                    {% include "partials/price-comparison.njk" %}
+                </div>
+
+                <div class="block__content">
+                    <h2 class="block__title">Protect your profits.</h2>
+                    <p class="block__body">At Kamfly, we think restaurants should be able to offer online ordering without sacrificing their margins. Some of our competitors charge fees up to 15% of TOTAL sales... We think your business deserves better.</p>
+                    <a class="link block__link" href="/pricing/">See our pricing</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Focus on the stuff that matters.</h2>
+                    <p class="block__body">Kamfly gives you an easy-to-use platform with the features you need so you can give your customers the experience they want.</p>
+                </div>
+                <div class="features">
+                    <div class="features__item">
+                        {{ "/assets/clipboard.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Menu Management</h3>
+                    </div>
+                    <div class="features__item">
+                        {{ "/assets/group.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Online Ordering</h3>
+                    </div>
+                    <div class="features__item">
+                        {{ "/assets/currencies.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Multi-Currency & Localization</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/snipcart-logo.png", "Snipcart logo", true) }}
+                <div class="block__content">
+                    <h2 class="block__title">Accept every kind of payment.</h2>
+                    <p class="block__body">We partner with Snipcart to enable a full e-commerce experience for your restaurant - including safe and secure online transactions with trusted payment service providers around the world.</p>
+                    <a class="link block__link" href="/how-it-works/#snipcart">Learn more about Snipcart</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section> <div class="block"> <div class="block__content"> <h2 class="block__title">Get insights from e-commerce experts.</h2> <p class="block__content">Join our email list to receive advice from other business owners, support articles, tips from industry experts, and more.</p> </div> <form name="mailinglist" method="POST" data-netlify="true"> <div class="form__input"> <label for="name">Your Name</label> <input id="name" name="name" type="text" required="required"> </div> <div class="form__input"> <label for="email">Your Email Address</label> <input id="email" name="email" type="text" required="required"> </div> <button type="submit" class="btn btn--primary">Sign Up</div> </form> </div> </section> -->
+    </article>
+{% endblock %}

@@ -1,0 +1,67 @@
+---
+title: Pricing
+permalink: /pricing/
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block scripts %}
+    <script>
+        new window.PriceComparison()
+    </script>
+{% endblock %}
+
+{% import "macros/blocks.njk" as blocks %}
+
+{% block content %}
+    <article class="container">
+        <div class="hero">
+            <h1>Kick the margin moochers to the curb.</h1>
+        </div>
+
+        <section>
+            <div class="block block--img-left">
+                <div class="block__img">
+                    {% include "partials/price-comparison.njk" %}
+                </div>
+
+                <div class="block__content">
+                    <h2 class="block__title">Protect your profits.</h2>
+                    <p class="block__body">At Kamfly, we think restaurants should be able to offer online ordering without sacrificing their margins. Some of our competitors charge fees up to 15% of TOTAL sales... We think your business deserves better.</p>
+                    <a class="link block__link" href="/get-started/">Get started</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt" id="plans">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Kamfly Premium Plans</h2>
+                    <p class="block__body">We offer fair, scalable pricing plans to fit your restaurant’s needs.</p>
+                </div>
+
+                {% include "partials/plans.njk" %}
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-right">
+                {{ blocks.blockImage("/images/blocks/menus.png", "Kamfly menus showing the light and dark theme options") }}
+                <div class="block__content">
+                    <h2 class="block__title">Kamfly grows with your business.</h2>
+                    <p class="block__body">Not ready to offer online ordering? No problem! With our Standard Plan, you get an online menu that looks great on every device and replaces paper menus with QR codes. Use this feature to update your menu anytime without having to reprint, and it only takes a few steps to enable online ordering when you're ready.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/food-delivery.jpg", "Delivery driver picking up an order") }}
+                <div class="block__content">
+                    <h2 class="block__title">What about food delivery?</h2>
+                    <p class="block__body">Our mission is to provide the online experience that your customers want. You know your business, your team, and your brand and we want you to be empowered with full control of the customer experience. Our goal is to provide you with a polished online presence at a price that allows you to create jobs for delivery drivers that represent your business.</p>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% seo "" %}
+        {% include "partials/favicon.njk" %}
+
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="crossorigin">
+
+        {% set css %}
+        {% include "assets/css/normalize.css" %}
+        {% include "assets/css/fonts.css" %}
+        {% include "assets/css/main.css" %}
+        {% endset %}
+        <style>
+            {{css | cssmin | safe}}
+        </style>
+
+        {% block styles %}{% endblock %}
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "Organization",
+                "@id": "{{ site.url }}" "url": "{{ site.url }}",
+                "sameAs": [],
+                "logo": "{{ site.url }}{{ site.images.logo }}" "name": "{{ site.name }}",
+                "description": "{{ site.description }}",
+                "image": "{{ site.images.social | url }}"
+            }
+        </script>
+    </head>
+    <body class="no-js">
+        <script>
+            document
+                .body
+                .classList
+                .remove("no-js")
+        </script>
+
+        {% include "partials/header.njk" %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include "partials/footer.njk" %}
+
+        {% set js %}
+        {% include "assets/js/lazysizes.min.js" %}
+        {% include "assets/js/main.js" %}
+        {% if layout_script %}
+            {% include layout_script %}
+        {% endif %}
+        {% endset %}
+        <script>
+            {{ js | jsmin | safe }}
+        </script>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

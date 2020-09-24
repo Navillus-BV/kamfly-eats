@@ -1,0 +1,112 @@
+---
+title: How It Works
+permalink: /how-it-works/
+---
+
+{% extends "layouts/base.njk" %}
+
+{% import "macros/blocks.njk" as blocks %}
+
+{% block content %}
+    <article class="container">
+        <div class="hero">
+            <h1>Online made easy.</h1>
+
+            <p class="hero__subtitle">Self-managed digital restaurant solutions without the headaches.</p>
+
+            <a class="btn btn--primary" href="/get-started/">Get Started</a>
+        </div>
+
+        <section class="alt">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Getting started with Kamfly is a piece of cake.</h2>
+                    <p class="block__body">We handle the initial set-up, partner with you to connect your preferred payment processor, and walk you through exactly what to expect when orders start coming in.</p>
+                </div>
+                <div class="steps">
+                    <div class="steps__item">
+                        <h2 class="steps__counter">1</h2>
+                        <h3 class="steps__title">Get in touch</h3>
+                        <p class="steps__body">We'll find a time for a quick call to give you a demo and answer any questions you may have.</p>
+                    </div>
+                    <div class="steps__item">
+                        <h2 class="steps__counter">2</h2>
+                        <h3 class="steps__title">Get set up</h3>
+                        <p class="steps__body">Our team will partner with you to ensure a smooth set-up and launch.</p>
+                    </div>
+                    <div class="steps__item">
+                        <h2 class="steps__counter">3</h2>
+                        <h3 class="steps__title">Go live!</h3>
+                        <p class="steps__body">We'll give you a demo of your solution and make sure everything is just the way you want it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
+                <div class="block__content">
+                    <h2 class="block__title">Managing your menus.</h2>
+                    <p class="block__body">We provide you with an admin dashboard where you can update all the details for your restaurant and your fully responsive, SEO-optimized, WCGA 2.0 accessibility-compliant menus whenever you want.</p>
+                    <a class="link block__link" href="/get-started/">Get started now</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block--img-right">
+                {{ blocks.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
+                <div class="block__content">
+                    <h2 class="block__title">Managing your online orders.</h2>
+                    <p class="block__body">Don't miss a beat with our
+                        <a href="/pricing/#plans">Pro Plan's</a>
+                        online ordering. Order notifications will be emailed to you and show up in your Admin Dashboard in real time. Already using a point-of-sale system? No problem! Let us know what system you are using today - we're always looking to add new point-of-sale integrations to Kamfly.</p>
+                    <a class="link block__link" href="/get-started/">Contact us to learn more</a>
+                </div>
+            </div>
+        </section>
+        <section class="alt">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Taking care of business.</h2>
+                    <p class="block__body">Kamfly offers powerful business features to keep you out of the weeds.</p>
+                </div>
+                <div class="features">
+                    <div class="features__item">
+                        {{ "/assets/taxes.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Tax Management</h3>
+                    </div>
+                    <div class="features__item">
+                        {{ "/assets/discounts.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Customer Discounts</h3>
+                    </div>
+                    <div class="features__item">
+                        {{ "/assets/payment-gateways.svg" | svgContents("feature__icon") | safe }}
+                        <h3 class="feature__title">Payment Gateways</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="snipcart">
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/snipcart-logo.png", "Snipcart logo", true) }}
+                <div class="block__content">
+                    <h2 class="block__title">What is Snipcart?</h2>
+                    <p class="block__body">Snipcart is an online shopping cart platform that offers a secure, global e-commerce experience for you and your customers. They simplify the checkout experience for your customers by allowing them to create an account with your restaurant for easy future ordering, and they give you access to detailed analytics to help you keep them coming back.</p>
+                    <a class="link block__link" href="https://snipcart.com/" target="_blank" rel="noopener">Learn more about Snipcart</a>
+                    <a class="link block__link" href="https://snipcart.com/list-ecommerce-payment-gateways" target="_blank" rel="noopener">See payment processing options</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="block block--img-right">
+                {{ blocks.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
+                <div class="block__content">
+                    <h2 class="block__title">Why we trust Snipcart.</h2>
+                    <p class="block__body">Our mission at Kamfly is to empower your restaurant to reach more customers through optimized online ordering. Snipcart is an e-commerce expert focused on security, flexibility, and seamless integration with payment processors. This partnership enables us to provide you with comprehensive, digital solutions that won't break the bank.</p>
+                    <a class="link block__link" href="/get-started/">Contact us to find out more</a>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}

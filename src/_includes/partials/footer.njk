@@ -1,0 +1,14 @@
+<footer class='footer'>
+    <div class='footer__content'>
+        {{ site.images.logo | svgContents('footer__logo') | safe }}
+
+        <span>©{{ build.now | dateDisplay('yyyy') }}
+            Navillus B.V.</span>
+
+        <div class='footer__links'>
+            <a class='footer__link' href="/privacy/">Privacy Policy</a>
+            <a class="footer__link" href="/terms/">Terms & Conditions</a>
+            <a class='footer__link' href="/contact/">Contact</a>
+        </div>
+    </div>
+</footer>

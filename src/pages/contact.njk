@@ -1,0 +1,53 @@
+---
+title: Contact
+permalink: /contact/
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <article class="container">
+        <section>
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Send us an email.</h2>
+                    <p class="block__content">
+                        <span>Just fill out the form below or email us here:
+                            <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+                        </span>
+                    </p>
+                </div>
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <p class="honeypot">
+                        <label>Don’t fill this out if you're human:
+                            <input name="bot-field"/>
+                        </label>
+                    </p>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="first_name">First Name *</label>
+                            <input id="first_name" name="first_name" type="text" required="required">
+                        </div>
+                        <div class="form__input">
+                            <label for="last_name">Last Name *</label>
+                            <input id="last_name" name="last_name" type="text" required="required">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="email">Email Address *</label>
+                            <input id="email" name="email" type="text" required="required">
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__input">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required="required"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Submit</div>
+                </form>
+            </div>
+        </section>
+    </article>
+{% endblock %}

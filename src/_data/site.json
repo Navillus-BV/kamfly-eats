@@ -1,0 +1,12 @@
+{
+  "name": "Kamfly",
+  "url": "https://kamfly.io",
+  "description": "Add touchless e-menus and online ordering to your restaurant website in minutes. Keep control of your menu items, pricing, and your customer experience.",
+  "author": "Kamfly.io",
+  "email": "info@kamfly.io",
+  "images": {
+    "social": "https://www.kamfly.io/images/kamfly-share.png",
+    "favicon": "/assets/favicon.svg",
+    "logo": "/assets/logo.svg"
+  }
+}
