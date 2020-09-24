@@ -106,7 +106,7 @@ class Slider {
     this.labelElem = document.createElement('label')
     this.labelElem.setAttribute('for', 'slider')
     this.labelElem.innerText = this.elem.dataset.label
-    this.labelElem.classList.add('sr-only')
+    this.labelElem.classList.add('slider__label')
 
     this.inputElem = document.createElement('input')
     this.inputElem.type = 'range'

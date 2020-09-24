@@ -1,4 +1,4 @@
-{% macro blockImage(src, title) %}
+{% macro blockImage(src, title, small = false) %}
     <picture>
         <source media="(min-width: 592px)" type="image/webp" data-srcset="{{ src | imgSrc(560, false, true) }}, {{ src | imgSrc(1120, false, true) }} 2x">
         <source media="(min-width: 592px)" type="image/png" data-srcset="{{ src | imgSrc(560) }}, {{ src | imgSrc(1120) }} 2x">
@@ -7,8 +7,8 @@
         <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
         <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
         <noscript>
-            <img class="block__img" srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" alt="{{ title }}"/>
+            <img class="block__img{% if small %} block__img--sm{% endif %}" srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" alt="{{ title }}"/>
         </noscript>
-        <img class="block__img lazyload blur-up" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
+        <img class="block__img lazyload blur-up{% if small %} block__img--sm{% endif %}" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
     </picture>
 {% endmacro %}

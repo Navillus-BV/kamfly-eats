@@ -94,6 +94,11 @@ svg {
   fill: currentColor;
 }
 
+picture {
+  display: flex;
+  justify-content: center;
+}
+
 h1,
 h2,
 h3 {
@@ -270,7 +275,6 @@ th:last-child {
 .pricing__comparison {
   margin: 0 auto;
   width: 100%;
-  max-width: 448px;
 }
 
 .pricing__comparison th[colspan='2'] {
@@ -312,6 +316,14 @@ th:last-child {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.slider__label {
+  margin-top: var(--spacing-4);
+  font-size: var(--text-base);
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
 }
 
 .form__row {
@@ -434,6 +446,11 @@ section:last-of-type {
   max-height: 35rem;
   margin: 0 auto;
   object-fit: contain;
+}
+
+.block__img.block__img--sm {
+  max-width: clamp(10rem, 33vw, 15rem);
+  max-height: clamp(10rem, 33vw, 15rem);
 }
 
 .block__img > *:not(:last-child) {
