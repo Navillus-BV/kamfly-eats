@@ -161,7 +161,7 @@ class Slider {
 
     const thumbCenter = this.inputElem.getBoundingClientRect().width * newValue
     const valueCenter = this.valueElem.getBoundingClientRect().width / 2
-    const thumbWidth = Slider.remToPx(1)
+    const thumbWidth = Slider.remToPx(1.5)
     const thumbOffset = thumbWidth / 2 - newValue * thumbWidth
 
     this.valueElem.style.transform = `translateX(${

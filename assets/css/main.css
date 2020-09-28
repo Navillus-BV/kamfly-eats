@@ -182,19 +182,19 @@ input[type='range']::-ms-track {
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: var(--border-lg) solid var(--primary);
-  height: 1em;
-  width: 1em;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: var(--radius-full);
   background: var(--bg);
   cursor: pointer;
-  margin-top: -0.25em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -0.375em; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 /* All the same stuff for Firefox */
 input[type='range']::-moz-range-thumb {
   border: var(--border-lg) solid var(--primary);
-  height: 1em;
-  width: 1em;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: var(--radius-full);
   background: var(--bg);
   cursor: pointer;
@@ -203,8 +203,8 @@ input[type='range']::-moz-range-thumb {
 /* All the same stuff for IE */
 input[type='range']::-ms-thumb {
   border: var(--border-lg) solid var(--primary);
-  height: 1em;
-  width: 1em;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: var(--radius-full);
   background: var(--bg);
   cursor: pointer;
@@ -212,10 +212,10 @@ input[type='range']::-ms-thumb {
 
 input[type='range']::-webkit-slider-runnable-track {
   width: 100%;
-  height: 0.5em;
+  height: 0.75rem;
   cursor: pointer;
   background: var(--bg-alt);
-  border-radius: 0.25em;
+  border-radius: var(--radius-full);
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
@@ -224,19 +224,19 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 
 input[type='range']::-moz-range-track {
   width: 100%;
-  height: 0.5em;
+  height: 0.75rem;
   cursor: pointer;
   background: var(--bg-alt);
-  border-radius: 0.25em;
+  border-radius: var(--radius-full);
 }
 
 input[type='range']::-ms-track {
   width: 100%;
-  height: 0.5em;
+  height: 0.75rem;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  border-width: 1em 0;
+  border-width: 1.5rem 0;
   color: transparent;
 }
 input[type='range']::-ms-fill-lower {
