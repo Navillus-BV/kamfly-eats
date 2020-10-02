@@ -466,6 +466,8 @@ section:last-of-type {
   grid-area: content;
   display: flex;
   flex-direction: column;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .block__content > *:not(:last-child) {
@@ -1080,6 +1082,7 @@ section:last-of-type {
   .steps {
     flex-direction: row;
     align-items: stretch;
+    justify-content: center;
   }
 
   .steps > *:not(:last-child) {
