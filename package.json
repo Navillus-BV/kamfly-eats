@@ -2,7 +2,6 @@
   "name": "kamfly-io",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf _site .cache",
     "prestart": "run-s make:images",
     "start": "eleventy --serve",
     "build": "run-s make:images make:site",

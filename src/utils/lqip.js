@@ -20,7 +20,7 @@ function fileWithSize(file, { w, h }) {
 module.exports = function (value, w, h = false) {
   const filename = path.join(
     process.cwd(),
-    '.cache',
+    '.kamfly',
     fileWithSize(value, { w, h })
   )
 
