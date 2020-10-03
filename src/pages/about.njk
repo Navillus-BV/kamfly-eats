@@ -1,0 +1,73 @@
+---
+title: About Us
+permalink: /about/
+---
+
+{% extends "layouts/base.njk" %}
+
+{% import "macros/blocks.njk" as blocks %}
+{% import "macros/cards.njk" as cards %}
+
+{% block content %}
+    <article class="container">
+        <div class="hero">
+            <h1>About us.</h1>
+        </div>
+
+        <section>
+            <div class="block block--img-left">
+                {{ blocks.blockImage("/images/blocks/open-sign.jpg", "Open sign hanging in restaurant window") }}
+                <div class="block__content">
+                    <h2 class="block__title">We want you to succeed.</h2>
+                    <p class="block__body">At Kamfly, we’re laser-focused on enabling your restaurant to stay open for business no matter what life throws your way. Our self-managed digital restaurant solutions are designed to help get you where you want to go without getting in your way.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Meet the team.</h2>
+                    <p class="block__body">We’re a small but passionate team looking to do some good in the world.</p>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        {{ cards.cardImage("/images/cards/tony.jpg", "Tony") }}
+
+                        <h3 class="card__title">Tony</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+
+                    <div class="card">
+                        {{ cards.cardImage("/images/cards/tony.jpg", "Sarah") }}
+
+                        <h3 class="card__title">Sarah</h3>
+                        <p class="card__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Our trusted partners.</h2>
+                    <p class="block__body">Trust is earned by delivering on the commitments you make – doing what you say you will. Each of Kamfly’s partners has earned our trust through doing what they do better than anyone else, and we couldn’t do what we do for you without each and every one of them.</p>
+                </div>
+
+                <!--<div class="partners"> <img src="/images/blocks/snipcart-logo.png" alt="Snipcart"/> <img src="/images/blocks/netlify-logo.png" alt="Netlify"/> <img src="/images/blocks/github-logo.png" alt="GitHub"/> </div>-->
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-right">
+                {{ blocks.blockImage("/images/blocks/coming-soon.jpg", "Person holding out a blank business card") }}
+                <div class="block__content">
+                    <h2 class="block__title">Success stories.</h2>
+                    <p class="block__body">Coming soon to a restaurant near you! … “See yourself here”</p>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}

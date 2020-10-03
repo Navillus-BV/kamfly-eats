@@ -1,0 +1,10 @@
+{% macro cardImage(src, title) %}
+    <picture>
+        <source type="image/webp" data-srcset="{{ src | imgSrc(214, false, true) }}, {{ src | imgSrc(428, false, true) }} 2x">
+        <source type="image/png" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x">
+        <noscript>
+            <img loading="lazy" class="card__img" srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" alt="{{ title }}"/>
+        </noscript>
+        <img loading="lazy" class="card__img lazyload blur-up" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
+    </picture>
+{% endmacro %}
