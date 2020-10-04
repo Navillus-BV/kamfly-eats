@@ -625,40 +625,9 @@ section:last-of-type {
   font-size: var(--text-lg);
 }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.features > *:not(:last-child) {
-  margin-bottom: var(--spacing-8);
-}
-
-.features__item {
-  width: 100%;
-  max-width: 15rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg);
-  padding: var(--spacing-8);
-  border-radius: var(--radius-sm);
-}
-
-.features__item > *:not(:last-child) {
-  margin-bottom: var(--spacing-6);
-}
-
 .feature__icon {
   height: 3rem;
   color: var(--primary);
-}
-
-.feature__title {
-  font-size: var(--text-lg);
 }
 
 .steps__counter {
@@ -707,6 +676,22 @@ section:last-of-type {
   width: 17rem;
   border-radius: var(--radius-full);
   object-fit: contain;
+}
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: -2rem;
+}
+
+.partners > * {
+  margin-right: 2rem;
+}
+
+.partner__img {
+  height: 2.5rem;
 }
 
 .pricing {
@@ -917,16 +902,6 @@ section:last-of-type {
     font-size: 16px;
   }
 
-  .features__item {
-    max-width: 18rem;
-    height: 18rem;
-    padding: var(--spacing-12);
-  }
-
-  .features__item > *:not(:last-child) {
-    margin-bottom: var(--spacing-8);
-  }
-
   .card.card--sm {
     max-width: 18rem;
     min-height: 18rem;
@@ -934,6 +909,10 @@ section:last-of-type {
 
   .card > *:not(:last-child) {
     margin-bottom: var(--spacing-8);
+  }
+
+  .partner__img {
+    height: 3rem;
   }
 }
 
@@ -953,6 +932,10 @@ section:last-of-type {
   .block__img.block__img--sm {
     max-width: 12.5rem;
     max-height: 12.5rem;
+  }
+
+  .partners > * {
+    margin-right: 3rem;
   }
 }
 
@@ -982,18 +965,8 @@ section:last-of-type {
     margin-bottom: var(--spacing-6);
   }
 
-  .features__item {
-    max-width: 20rem;
-    height: 20rem;
-    padding: var(--spacing-16);
-  }
-
   .feature__icon {
     height: 4rem;
-  }
-
-  .feature__title {
-    font-size: var(--text-xl);
   }
 
   .steps__counter {
@@ -1014,6 +987,10 @@ section:last-of-type {
 
   .card__title {
     font-size: var(--text-xl);
+  }
+
+  .partner__img {
+    height: 4rem;
   }
 }
 
@@ -1084,23 +1061,6 @@ section:last-of-type {
 
   section.alt {
     padding: var(--spacing-20);
-  }
-
-  .features {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .features > *:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: var(--spacing-20);
-  }
-
-  .features__item {
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 0px;
-    padding: var(--spacing-16) var(--spacing-8);
   }
 
   .cards {

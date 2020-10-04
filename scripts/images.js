@@ -32,6 +32,18 @@ const configs = [
     sizes: [{ w: 64 }],
     densities: [1],
   },
+  {
+    input: 'assets/images/partners/*.+(jpg|jpeg|png)',
+    output: '.kamfly/images/partners',
+    sizes: [{ h: 64 }],
+    densities: [1, 2, 3],
+  },
+  {
+    input: 'assets/images/partners/*.+(jpg|jpeg|png)',
+    output: '.kamfly/images/partners',
+    sizes: [{ w: 64 }],
+    densities: [1],
+  },
 ]
 
 function getFileHash(filename) {
