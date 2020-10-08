@@ -293,6 +293,7 @@ th:last-child {
   background: var(--primary);
   color: var(--bg);
   font-size: var(--text-sm);
+  text-align: center;
   padding: var(--spacing-2);
   display: flex;
   flex-direction: column;
@@ -306,6 +307,7 @@ th:last-child {
 
 .alert-banner__link {
   margin-left: var(--spacing-2);
+  white-space: nowrap;
 }
 
 .off-nav-is-active .alert-banner {
@@ -436,6 +438,7 @@ button[type='submit'] {
   line-height: var(--leading-xl);
   font-weight: bold;
   color: var(--secondary);
+  white-space: nowrap;
 }
 
 .link--sm {
@@ -772,6 +775,25 @@ section:last-of-type {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.pricing__banner {
+  font-size: var(--text-xl);
+  font-weight: bold;
+  padding: var(--spacing-2);
+  color: var(--bg);
+  background: var(--green);
+}
+
+.pricing__footer {
+  font-size: var(--text-sm);
+}
+
+.pricing__banner,
+.pricing__footer {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .pricing > *:not(:last-child) {
@@ -1212,6 +1234,11 @@ section:last-of-type {
 
   .pricing {
     flex-direction: row;
+  }
+
+  .pricing__banner,
+  .pricing__footer {
+    max-width: initial;
   }
 
   .pricing > *:not(:last-child) {
