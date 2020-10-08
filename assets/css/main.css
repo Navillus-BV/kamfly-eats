@@ -8,6 +8,7 @@
   --bg-alt-900: #1b2126;
   --primary: #003d73;
   --secondary: #028192;
+  --green: #6aba63;
 
   --border-sm: 1px;
   --border-lg: 3px;
@@ -270,6 +271,21 @@ th:last-child {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.strikethrough {
+  position: relative;
+}
+
+.strikethrough:after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 1rem);
+  height: 4px;
+  top: calc(50% - 2px);
+  right: -0.5rem;
+  background: var(--green);
+  transform: rotate(-30deg);
 }
 
 .alert-banner {
@@ -775,7 +791,7 @@ section:last-of-type {
 .pricing__plan.pricing__plan--highlighted {
   border: var(--border-lg) solid var(--primary);
 }
-.pricing__plan--highlighted:before {
+.pricing__plan--highlighted:after {
   content: 'MOST POPULAR';
   position: absolute;
   top: -0.125rem;
@@ -787,6 +803,34 @@ section:last-of-type {
   border-radius: var(--radius-full);
   padding: var(--spacing-1) var(--spacing-4);
   transform: translate3d(-50%, -50%, 0);
+}
+.pricing__plan--free:before {
+  content: '';
+  height: 15rem;
+  width: 45%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(/price-banner.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.pricing__plan--highlighted.pricing__plan--free:before {
+  left: calc(-1 * var(--border-lg));
+  top: calc(-1 * var(--border-lg));
+}
+
+.plan__banner {
+  font-size: var(--text-4xl);
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background: var(--green);
+  color: var(--bg);
+  transform: rotate(-30deg);
+  left: -38%;
+  top: 2%;
 }
 
 .plan__title {
@@ -842,7 +886,7 @@ section:last-of-type {
   transform: rotate(-45deg);
   border-style: solid;
   border-width: 0 0 0.125em 0.125em;
-  color: #6aba63;
+  color: var(--green);
   position: absolute;
   display: inline-block;
   margin-left: -1.75em;
@@ -993,6 +1037,10 @@ section:last-of-type {
 
   .partners > * {
     margin-right: 3rem;
+  }
+
+  .pricing__plan--free:before {
+    width: 40%;
   }
 }
 
@@ -1172,6 +1220,10 @@ section:last-of-type {
   .pricing__plan.pricing__plan--highlighted {
     transform: scale(1.05);
     z-index: 1;
+  }
+
+  .pricing__plan--free:before {
+    width: 45%;
   }
 }
 
