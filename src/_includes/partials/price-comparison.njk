@@ -1,19 +1,19 @@
 <table class="pricing__comparison">
     <tr class="sr-only">
-        <th id="c" scope="col">Company Name</th>
-        <th id="p" scope="col">Monthly Price</th>
+        <th id="c">Company Name</th>
+        <th id="p">Monthly Price</th>
     </tr>
     <tr class="sr-only">
-        <th id="s" colspan="2" scope="row">Price Slider</th>
+        <th id="s" colspan="2" scope="colgroup">Price Slider</th>
     </tr>
     <tr>
-        <td colspan="2" headers="s">
+        <td colspan="2" headers="c p s">
             <div class="slider" min="1000" max="25000" step="500" value="10000" data-label="Set the slider above to your estimated monthly online sales revenue to see how our fees compare to the competition."></div>
         </td>
     </tr>
     <tr>
-        <td headers="c">{{ site.images.logo | svgContents("pricing__logo") | safe }}</td>
-        <td headers="p">
+        <td headers="c s">{{ site.images.logo | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="kamfly-price">€ 300</strong>
                 <span>/ month</span>
@@ -21,8 +21,8 @@
         </td>
     </tr>
     <tr>
-        <td headers="c">{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</td>
-        <td headers="p">
+        <td headers="c s">{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="thuisbezorgd-price">€ 1.300</strong>
                 <span>/ month</span>
@@ -30,8 +30,8 @@
         </td>
     </tr>
     <tr>
-        <td headers="c">{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</td>
-        <td headers="p">
+        <td headers="c s">{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="ubereats-price">€ 1.500</strong>
                 <span>/ month</span>
