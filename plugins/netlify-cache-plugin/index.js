@@ -1,8 +1,22 @@
+const path = require('path')
+
+function getCacheDir(constants) {
+  return path.normalize(`${constants.PUBLISH_DIR}/../.kamfly`)
+}
+
 module.exports = {
-  async onPreBuild({ utils }) {
-    await utils.cache.restore('./kamfly')
+  async onPreBuild({ constants, utils }) {
+    if (await utils.cache.restore(getCacheDir(constants))) {
+      console.log('Found a Kamfly cache. We’re about to go FAST. ⚡️')
+    } else {
+      console.log('No Kamfly cache found. Building fresh.')
+    }
   },
-  async onPostBuild({ utils }) {
-    await utils.cache.save('./kamfly')
+  async onPostBuild({ constants, utils }) {
+    if (await utils.cache.save(getCacheDir(constants))) {
+      console.log('Stored the Kamfly cache to speed up future builds.')
+    } else {
+      console.log('No Kamfly build found.')
+    }
   },
 }
