@@ -13,3 +13,6 @@ package = "netlify-plugin-checklinks"
 
 [[plugins]]
 package = "netlify-plugin-a11y"
+
+[[plugins]]
+package = "netlify-plugin-subfont"
