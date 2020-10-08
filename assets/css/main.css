@@ -8,7 +8,7 @@
   --bg-alt-900: #1b2126;
   --primary: #003d73;
   --secondary: #028192;
-  --green: #6aba63;
+  --green: #51a749;
 
   --border-sm: 1px;
   --border-lg: 3px;
@@ -285,6 +285,7 @@ th:last-child {
   top: calc(50% - 2px);
   right: -0.5rem;
   background: var(--green);
+  border-radius: 2px;
   transform: rotate(-30deg);
 }
 
