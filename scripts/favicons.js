@@ -42,28 +42,11 @@ var favicons = require('favicons'),
       //   * overlayGlow - apply glow effect after mask has been applied (applied by default for firefox). `boolean`
       //   * overlayShadow - apply drop shadow after mask has been applied .`boolean`
       //
-      android: ['android-chrome-144x144.png', 'android-chrome-192x192.png'], // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
-      appleIcon: [
-        'apple-touch-icon-114x114.png',
-        'apple-touch-icon-120x120.png',
-        'apple-touch-icon-144x144.png',
-        'apple-touch-icon-152x152.png',
-        'apple-touch-icon-167x167.png',
-        'apple-touch-icon-180x180.png',
-        'apple-touch-icon-57x57.png',
-        'apple-touch-icon-60x60.png',
-        'apple-touch-icon-72x72.png',
-        'apple-touch-icon-76x76.png',
-      ], // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
+      android: true, // Create Android homescreen icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
+      appleIcon: true, // Create Apple touch icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
       appleStartup: false, // Create Apple startup images. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
       coast: false, // Create Opera Coast icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
-      favicons: [
-        'favicon-16x16.png',
-        'favicon-32x32.png',
-        'favicon-48x48.png',
-        'favicon-96x96.png',
-        'favicon.ico',
-      ], // Create regular favicons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
+      favicons: true, // Create regular favicons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
       firefox: false, // Create Firefox OS icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
       windows: true, // Create Windows 8 tile icons. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
       yandex: false, // Create Yandex browser icon. `boolean` or `{ offset, background, mask, overlayGlow, overlayShadow }` or an array of sources
