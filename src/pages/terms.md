@@ -23,13 +23,13 @@ The following definitions shall have the same meaning regardless of whether they
 For the purpose of these Terms and Conditions:
 
 - **Affiliate** means an entity that controls, iis controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for election of directors or other managing authority.
-- **Company** (referred to as either "the Company", "We", "Us", or "Our" in this Agreement) refers to Navillus B.V., 123 Fake Street, Dover, DE 19901.
-- **Country** refers to: Delaware, United States
+- **Company** (referred to as either "the Company", "We", "Us", or "Our" in this Agreement) refers to Navillus B.V., Zeilstraat 125, Den Haag 2586 RC, Netherlands.
+- **Country** refers to: Netherlands
 - **Device** means any device that can access the Service such as a computer, a cell phone, or a digital tablet.
 - **Service** refers to the Website.
 - **Terms and Conditions** (also referred to as "Terms") means these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the Terms and Conditions Generator.
 - **Third-party Social Media Service** means any services or content (including data, information, products, or services) provided by a third-party that may be displayed, included, oor made available by the Service.
-- **Website** refers to Navillus, accessible from https://navillus.nl.
+- **Website** refers to Navillus B.V. doing business as Kamfly, accessible from https://kamfly.io.
 - **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
 ## 2. Acknowledgement
@@ -60,11 +60,11 @@ Upon termination, Your right to use the Service will cease immediately.
 
 ## 5. Limitation of Liability
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 EUR if You haven't purchased anything through the Service.
 
 To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+Some localities and jurisdictions do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these localities and jurisdictions, each party's liability will be limited to the greatest extent permitted by law.
 
 ## 6. AS IS and AS AVAILABLE Disclaimer
 
@@ -84,13 +84,13 @@ If You have any concern or dispute about the Service, You agree to first try to 
 
 ## 9. For European Union (EU) Users
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident.
 
 ## 10. United States Legal Compliance
 
 You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
 
-## 11. Severability and Waiter
+## 11. Severability and Waiver
 
 ### 11.1. Severability
 
@@ -112,6 +112,4 @@ By continuing to access or use Our Service after those revisions become effectiv
 
 ## 14. Contact Us
 
-If you have any questions about these Terms and Conditions, You can contact us:
-
-- By email: {{ site.email }}
+If you have any questions about these Terms and Conditions, You can contact us at: {{ site.email }}

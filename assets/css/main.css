@@ -546,6 +546,12 @@ section:last-of-type {
   text-decoration: none;
 }
 
+.block__cta {
+  max-width: 25rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .header {
   width: 100%;
   max-width: 1440px;
@@ -858,6 +864,10 @@ section:last-of-type {
   line-height: var(--leading-header);
 }
 
+.plan__priceplus {
+  margin-top: var(--spacing-4);
+}
+
 .plan__price strong {
   font-size: var(--text-3xl);
   font-weight: bold;
@@ -1091,7 +1101,7 @@ section:last-of-type {
 
   .alert-banner__title {
     margin-bottom: 0;
-    margin-right: var(--spacing-4);
+    margin-right: var(--spacing-2);
   }
 
   .alert-banner__link {
@@ -1195,6 +1205,11 @@ section:last-of-type {
 
   .block__img {
     margin: 0;
+  }
+
+  .block__cta {
+    width: auto;
+    max-width: initial;
   }
 
   .pricing__comparison {
@@ -1326,7 +1341,7 @@ section:last-of-type {
   margin-top: var(--spacing-4);
 }
 
-.modal-content p:not(:last-child) {
+.modal-content p {
   margin-top: var(--spacing-2);
 }
 
