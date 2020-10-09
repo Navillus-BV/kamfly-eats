@@ -14,14 +14,15 @@
                     <a class="header__navlink" href="/pricing/">pricing</a>
                 </li>
                 <li class="header__navitem">
+                    <a class="header__navlink" href="/about/">about</a>
+                </li>
+                <li class="header__navitem">
                     <a class="header__navlink" href="/contact/">contact</a>
                 </li>
             </ul>
         </div>
         <div class="header__right">
-            {% if page.url != "/get-started/" %}
-                <a class="header__signup btn btn--primary btn--small" href="/get-started/">Sign Up</a>
-            {% endif %}
+            <a class="header__signup btn btn--primary btn--small" href="/get-started/">Sign Up</a>
 
             <button id="header-menu-toggle" aria-label="Open Menu" class="hamburger hamburger--squeeze header__hamburger">
                 <span class="hamburger-box">
@@ -43,12 +44,13 @@
                 <a class="header__navlink" href="/pricing/">pricing</a>
             </li>
             <li class="header__navitem">
+                <a class="header__navlink" href="/about/">about</a>
+            </li>
+            <li class="header__navitem">
                 <a class="header__navlink" href="/contact/">contact</a>
             </li>
         </ul>
 
-        {% if not page.url == "/get-started/" %}
-            <a class="header__cta btn btn--primary" href="/get-started/">Sign Up</a>
-        {% endif %}
+        <a class="header__cta btn btn--primary" href="/get-started/">Sign Up</a>
     </aside>
 </header>

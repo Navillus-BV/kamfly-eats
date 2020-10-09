@@ -13,7 +13,7 @@ sitemap:
     </script>
 {% endblock %}
 
-{% import "macros/blocks.njk" as blocks %}
+{% import "macros/images.njk" as images %}
 
 {% block content %}
     <article class="container">
@@ -27,18 +27,18 @@ sitemap:
 
         <section>
             <div class="block block--img-left">
-                {{ blocks.blockImage("/images/blocks/shopping.png", "Screenshots of Kamfly's menu and online ordering system") }}
+                {{ images.blockImage("/images/blocks/shopping.png", "Screenshots of Kamfly's menu and online ordering system") }}
                 <div class="block__content">
                     <h2 class="block__title">Reach more customers online.</h2>
                     <p class="block__body">From locally owned cafes to large-scale franchise operations, we have tools to help you take your restaurant business online. Create a digital menu for a touchless customer experience, and easily enable online ordering.</p>
-                    <a class="link block__link" href="https://demo.kamfly.io/" target="_blank">See it in action</a>
+                    <a class="link block__link" href="https://demo.kamfly.io/" target="_blank" rel="noopener">See it in action</a>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="block block--img-right">
-                {{ blocks.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
+                {{ images.blockImage("/images/blocks/cms.png", "Screenshots of Kamfly's menu management system") }}
                 <div class="block__content">
                     <h2 class="block__title">Own your customer experience.</h2>
                     <p class="block__body">Your brand should be front and center in every customer interaction. Your food and service speak for themselves - don't waste your efforts competing with hundreds of other restaurants on someone else's app.</p>
@@ -55,7 +55,19 @@ sitemap:
 
                 <div class="block__content">
                     <h2 class="block__title">Protect your profits.</h2>
-                    <p class="block__body">At Kamfly, we think restaurants should be able to offer online ordering without sacrificing their margins. Some of our competitors charge fees up to 15% of TOTAL sales... We think your business deserves better.</p>
+                    <p class="block__body">At Kamfly, we think restaurants should be able to offer online ordering without sacrificing their margins. Some of our competitors charge fees up to 15% of total sales... We think your business deserves better.</p>
+                    <a class="link block__link" href="/pricing/#plans">See our plans</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block block--img-right">
+                {{ images.blockImage("/images/blocks/covid-response.jpg", "Sign that says \"Not Today #Covid19\"") }}
+                <div class="block__content">
+                    <h2 class="block__title">COVID-19 pricing.</h2>
+                    <p class="block__body">We know that this is a tough time to be in the restaurant business. That's the whole reason we started Kamfly - to help as many restaurants as possible keep their doors open through this mess.</p>
+                    <p class="block__body">So... Until things start to pick back up, we will not be charging any monthly base fees. That's a savings of $25/month on our Standard Plan or $100/month on our Pro Plan! Check out our pricing page to learn more and see how you can get started.</p>
                     <a class="link block__link" href="/pricing/">See our pricing</a>
                 </div>
             </div>
@@ -67,18 +79,18 @@ sitemap:
                     <h2 class="block__title">Focus on the stuff that matters.</h2>
                     <p class="block__body">Kamfly gives you an easy-to-use platform with the features you need so you can give your customers the experience they want.</p>
                 </div>
-                <div class="features">
-                    <div class="features__item">
+                <div class="cards">
+                    <div class="card card--sm">
                         {{ "/assets/clipboard.svg" | svgContents("feature__icon") | safe }}
-                        <h3 class="feature__title">Menu Management</h3>
+                        <h3 class="card__title">Menu Management</h3>
                     </div>
-                    <div class="features__item">
+                    <div class="card card--sm">
                         {{ "/assets/group.svg" | svgContents("feature__icon") | safe }}
-                        <h3 class="feature__title">Online Ordering</h3>
+                        <h3 class="card__title">Online Ordering</h3>
                     </div>
-                    <div class="features__item">
+                    <div class="card card--sm">
                         {{ "/assets/currencies.svg" | svgContents("feature__icon") | safe }}
-                        <h3 class="feature__title">Multi-Currency & Localization</h3>
+                        <h3 class="card__title">Multi-Currency & Localization</h3>
                     </div>
                 </div>
             </div>
@@ -86,7 +98,7 @@ sitemap:
 
         <section>
             <div class="block block--img-left">
-                {{ blocks.blockImage("/images/blocks/snipcart-logo.png", "Snipcart logo", true) }}
+                {{ images.blockImage("/images/blocks/snipcart-logo.png", "Snipcart logo", true) }}
                 <div class="block__content">
                     <h2 class="block__title">Accept every kind of payment.</h2>
                     <p class="block__body">We partner with Snipcart to enable a full e-commerce experience for your restaurant - including safe and secure online transactions with trusted payment service providers around the world.</p>

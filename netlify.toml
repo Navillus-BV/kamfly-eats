@@ -1,6 +1,18 @@
 [build]
-  command = "npm run build"
-  publish = "_site"
+command = "npm run build"
+publish = "_site"
 
 [dev]
-  command = "npm run start"
+command = "npm run start"
+
+[[plugins]]
+package = "/plugins/netlify-cache-plugin"
+
+[[plugins]]
+package = "netlify-plugin-checklinks"
+
+[[plugins]]
+package = "netlify-plugin-a11y"
+
+[[plugins]]
+package = "netlify-plugin-subfont"

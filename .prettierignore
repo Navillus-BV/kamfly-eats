@@ -1,6 +1,6 @@
 _site
 node_modules
-.cache
+.kamfly
 netlify.toml
 src/pages/robots.njk
 src/pages/sitemap.njk

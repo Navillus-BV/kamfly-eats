@@ -1,35 +1,42 @@
 <table class="pricing__comparison">
-    <tr>
-        <th colspan="2">
-            <div class="slider" min="1000" max="25000" step="500" value="10000" data-label="Set the slider above to your estimated monthly online sales revenue to see how our fees compare to the competition."></div>
-        </th>
+    <tr class="sr-only">
+        <th id="c">Company Name</th>
+        <th id="p">Monthly Price</th>
+    </tr>
+    <tr class="sr-only">
+        <th id="s" colspan="2" scope="colgroup">Price Slider</th>
     </tr>
     <tr>
-        <th>{{ site.images.logo | svgContents("pricing__logo") | safe }}</th>
-        <th>
+        <td colspan="2" headers="c p s">
+            <div class="slider" min="1000" max="25000" step="500" value="10000" data-label="Set the slider above to your estimated monthly online sales revenue to see how our fees compare to the competition."></div>
+        </td>
+    </tr>
+    <tr>
+        <td headers="c s">{{ site.images.logo | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="kamfly-price">€ 300</strong>
                 <span>/ month</span>
             </p>
-        </th>
+        </td>
     </tr>
     <tr>
-        <th>{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</th>
-        <th>
+        <td headers="c s">{{ "/assets/thuisbezorgd.svg" | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="thuisbezorgd-price">€ 1.300</strong>
                 <span>/ month</span>
             </p>
-        </th>
+        </td>
     </tr>
     <tr>
-        <th>{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</th>
-        <th>
+        <td headers="c s">{{ "/assets/ubereats.svg" | svgContents("pricing__logo") | safe }}</td>
+        <td headers="p s">
             <p class="plan__price">
                 <strong id="ubereats-price">€ 1.500</strong>
                 <span>/ month</span>
             </p>
-        </th>
+        </td>
     </tr>
 </table>
 
@@ -43,9 +50,9 @@
 
             <h3>Kamfly</h3>
             <p>Our prices are calculated based on our
-                <a href="/pricing/#plans">Pro Plan</a>. Payment gateways are not included in the comparison estimate as they depend on the payment processor and payment service used.
-                <a href="https://snipcart.com/list-ecommerce-payment-gateways" target="_blank" rel="noopener">Visit Snipcart</a>
-                for more details on the supported payment gateways. Payment gateway fees vary by region and type of payment, in general you can expect a per transaction fee of less than €0.50 and a fee of 1-3% for credit cards.</p>
+                <a href="/pricing/#plans">Pro Plan</a>
+                - $100 monthly base fee + a 2% transaction fee.</p>
+            <p>For a limited time, due to COVID-19, we are waiving our monthly base fee - so all you pay are the 2% transaction fees.</p>
 
             <h3>Thuisbezorgd</h3>
             <p>Thuisbezorgd charges 13% of total sales through their platform, there is no additional monthly fee. They increased their rates to 13% in 2019 but annouced that they
@@ -56,6 +63,12 @@
             <p>For all pickup orders or orders using a restaurant's own delivery drivers,
                 <a href="https://restaurants.ubereats.com/us/en/pricing/" target="_blank" rel="nofollow noopener">Uber Eats charges 15%</a>
                 of total sales through their platform. An additional 15% is charged when restaurants opt-in to use Uber Eats' delivery service - we did not include the additional 15% fee in this comparison since we do not offer a comparable delivery service.</p>
+
+            <h3>A note about payment processing fees:</h3>
+            <p>These are fees charged by the company/companies you use to process your customers' payments (e.g. Square, Visa, iDeal). These are not included in Kamfly's pricing, because the actual fees vary from processor to processor.</p>
+            <p>
+                <a href="https://snipcart.com/list-ecommerce-payment-gateways" target="_blank" rel="noopener">Visit Snipcart</a>
+                for more details on the supported payment processors/gateways. Payment processing fees vary by region and type of payment, but in general you can expect a per transaction fee of less than €0.50 and a fee of 1-3% for credit cards.</p>
         </div>
     </div>
 </div>

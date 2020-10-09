@@ -1,0 +1,71 @@
+---
+title: About Us
+permalink: /about/
+---
+
+{% extends "layouts/base.njk" %}
+
+{% import "macros/images.njk" as images %}
+
+{% block content %}
+    <article class="container">
+        <div class="hero">
+            <h1>About us.</h1>
+        </div>
+
+        <section>
+            <div class="block block--img-left">
+                {{ images.blockImage("/images/blocks/open-sign.jpg", "Open sign hanging in restaurant window") }}
+                <div class="block__content">
+                    <h2 class="block__title">We want you to succeed.</h2>
+                    <p class="block__body">At Kamfly, we’re laser-focused on enabling your restaurant to stay open for business no matter what life throws your way. Our self-managed digital restaurant solutions are designed to help get you where you want to go without getting in your way.</p>
+                    <a class="link block__link" href="/how-it-works/" target="_blank" rel="noopener">See how it works</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="alt">
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Nice to meet you.</h2>
+                    <p class="block__body">We’re a small but passionate team looking to do some good in the world.</p>
+                </div>
+
+                <div class="cards">
+                    <div class="card">
+                        {{ images.cardImage("/images/cards/tony.jpg", "Tony") }}
+
+                        <h3 class="card__title">Tony</h3>
+                        <h4 class="card__subtitle">Founder & CTO</h4>
+                        <p class="card__body">A creative problem solver in search of simple solutions to complex challanges.</p>
+                        <a class="link card__link" href="https://www.linkedin.com/in/tony-sull/" target="_blank" rel="nofollow noopener">Connect on LinkedIn</a>
+                    </div>
+
+                    <div class="card">
+                        {{ images.cardImage("/images/cards/sarah.jpg", "Sarah") }}
+
+                        <h3 class="card__title">Sarah</h3>
+                        <h4 class="card__subtitle">Founder & Managing Partner</h4>
+                        <p class="card__body">A pragmatic visionary with a passion for helping others get where they want to go.</p>
+                        <a class="link card__link" href="https://www.linkedin.com/in/sarahsu-alwayslearning/" target="_blank" rel="nofollow noopener">Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <div class="block__content">
+                    <h2 class="block__title">Our trusted partners.</h2>
+                    <p class="block__body">Trust is earned by delivering on the commitments you make – doing what you say you will. Our partners have earned our trust by doing what they do better than anyone else, and we couldn’t do what we do for you without them.</p>
+                </div>
+
+                <div class="partners">
+                    {{ images.partnerImage("/images/partners/snipcart-logo.png", "Snipcart") }}
+                    {{ images.partnerImage("/images/partners/netlify-logo.png", "Netlify") }}
+                    {{ images.partnerImage("/images/partners/github-logo.png", "GitHub") }}
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
