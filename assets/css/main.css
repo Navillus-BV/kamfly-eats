@@ -531,8 +531,7 @@ section:last-of-type {
 }
 
 .block__link,
-.card__link,
-.alert-banner__link {
+.card__link {
   text-decoration: none;
 }
 
@@ -1331,7 +1330,7 @@ section:last-of-type {
 }
 
 .modal-content {
-  padding: 48px 16px;
+  padding: 24px 16px;
   text-align: start;
 }
 
@@ -1392,10 +1391,7 @@ section:last-of-type {
   }
 
   .modal-content {
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 48px 32px;
   }
 }
 

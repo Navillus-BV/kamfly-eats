@@ -1,6 +1,7 @@
 ---
 title: Contact
 permalink: /contact/
+layout_script: assets/js/contact.js
 ---
 
 {% extends "layouts/base.njk" %}
@@ -17,7 +18,7 @@ permalink: /contact/
                         </span>
                     </p>
                 </div>
-                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <form name="contact" method="POST" action="/contact/?success" netlify-honeypot="bot-field" data-netlify="true">
                     <p class="honeypot">
                         <label>Don’t fill this out if you're human:
                             <input name="bot-field"/>
@@ -46,4 +47,14 @@ permalink: /contact/
             </div>
         </section>
     </article>
+
+    <div id="modal-01" class="modal">
+        <div class="modal-inner">
+            <button class="modal-close modal-close-trigger" aria-label="close"></button>
+            <div class="modal-content">
+                <h2>Thank You!</h2>
+                <p>Your message has been sent, and we will be in touch soon.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

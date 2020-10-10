@@ -49,6 +49,12 @@
     }
   }
 
+  for (let i = 0; i < modals.length; i++) {
+    let modal = modals[i]
+    modal.open = () => openModal(modal)
+    modal.close = () => closeModals()
+  }
+
   if (modals.length > 0 && modalTriggers.length > 0) {
     for (let i = 0; i < modalTriggers.length; i++) {
       let modalTrigger = modalTriggers[i]
