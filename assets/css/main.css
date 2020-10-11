@@ -658,7 +658,37 @@ section:last-of-type {
 
 .footer__logo {
   height: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-3);
+}
+
+.footer__social {
+  margin-bottom: var(--spacing-8);
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__social > *:not(:last-child) {
+  margin-right: var(--spacing-2);
+}
+
+.footer__sociallink {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: var(--radius-full);
+  padding: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 150ms background-color ease-in;
+}
+
+.footer__sociallink:hover {
+  background: var(--primary);
+}
+
+.footer__socialicon {
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 .footer__links {
