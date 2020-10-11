@@ -3,8 +3,14 @@
         {{ site.images.logo | svgContents('footer__logo') | safe }}
 
         <div class="footer__social">
-            <a class="footer__sociallink" href="https://www.linkedin.com/company/kamfly/" target="_blank" rel="noopener">{{ "/assets/linkedin.svg" | svgContents('footer__socialicon') | safe }}</a>
-            <a class="footer__sociallink" href="https://twitter.com/kamflyio" target="_blank" rel="noopener">{{ "/assets/twitter.svg" | svgContents('footer__socialicon') | safe }}</a>
+            <a class="footer__sociallink" href="https://www.linkedin.com/company/kamfly/" target="_blank" rel="noopener">
+                {{ "/assets/linkedin.svg" | svgContents('footer__socialicon') | safe }}
+                <span class="sr-only">LinkedIn</span>
+            </a>
+            <a class="footer__sociallink" href="https://twitter.com/kamflyio" target="_blank" rel="noopener">
+                {{ "/assets/twitter.svg" | svgContents('footer__socialicon') | safe }}
+                <span class="sr-only">Twitter</span>
+            </a>
         </div>
 
         <span>©{{ build.now | dateDisplay('yyyy') }}
