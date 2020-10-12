@@ -7,6 +7,36 @@ sitemap:
 
 {% extends "layouts/base.njk" %}
 
+{% block jsonld %}
+    <script type="application/ld+json">
+        [
+            {
+                "@context": "https://schema.org/",
+                "@type": "Organization",
+                "@id": "{{ site.url }}",
+                "url": "{{ site.url }}",
+                "logo": "{{ site.url }}{{ site.images.logo }}",
+                "name": "{{ site.name }}",
+                "description": "{{ site.description }}",
+                "image": "{{ site.images.social | url }}",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "Sales",
+                    "email": "info@kamfly.io"
+                },
+                "sameAs": ["https://www.facebook.com/kamflyio", "https://www.linkedin.com/company/kamfly", "https://www.instagram.com/kamfly.io", "https://twitter.com/kamflyio"]
+            }, {
+                "@context": "http://schema.org",
+                "@type": "Website",
+                "name": "Kamfly",
+                "url": "https://kamfly.io",
+                "keywords": "Touchless menus, online ordering, restaurants, digital restaurant tools",
+                "sameAs": ["https://www.facebook.com/kamflyio", "https://www.linkedin.com/company/kamfly", "https://www.instagram.com/kamfly.io", "https://twitter.com/kamflyio"]
+            }
+        ]
+    </script>
+{% endblock %}
+
 {% block scripts %}
     <script>
         new window.PriceComparison()

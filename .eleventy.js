@@ -115,6 +115,7 @@ module.exports = function (eleventyConfig) {
     image: site.images.social,
     ogtype: 'website',
     options: { titleDivider: '|' },
+    twitter: 'kamflyio',
   })
 
   /**
