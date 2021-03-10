@@ -549,9 +549,6 @@ section:last-of-type {
 
 .header {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: var(--spacing-4);
   background: var(--bg);
   position: sticky;
   top: 0;
@@ -563,6 +560,10 @@ section:last-of-type {
 }
 
 .header__nav {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
   display: flex;
   align-items: center;
 }
@@ -1180,7 +1181,7 @@ section:last-of-type {
 }
 
 @media (min-width: 1024px) {
-  .header {
+  .header__nav {
     padding: var(--spacing-4) var(--spacing-20);
   }
 
