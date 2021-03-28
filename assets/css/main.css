@@ -1314,7 +1314,7 @@ section:last-of-type {
   justify-content: center;
   overflow: hidden;
   position: fixed;
-  z-index: 40;
+  z-index: 999;
 }
 
 .modal::before,
