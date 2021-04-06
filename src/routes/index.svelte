@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import PriceComparison from '$lib/PriceComparison.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
 </script>
@@ -52,7 +53,7 @@
 	}}
 >
 	<div slot="graphic">
-		<h1>ADD PRICING CHART</h1>
+		<PriceComparison />
 	</div>
 
 	<p slot="summary">
