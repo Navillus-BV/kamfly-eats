@@ -29,6 +29,7 @@
 
 <style>
 	article {
+		max-width: 25rem;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
