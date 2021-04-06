@@ -1,4 +1,6 @@
 <script>
+	import AppFooter from '$lib/shell/AppFooter.svelte';
+	import AppHeader from '$lib/shell/AppHeader.svelte';
 	import '$assets/css/app.css';
 </script>
 
@@ -9,9 +11,13 @@
 	/>
 </svelte:head>
 
+<AppHeader />
+
 <main>
 	<slot />
 </main>
+
+<AppFooter />
 
 <style>
 	main {
