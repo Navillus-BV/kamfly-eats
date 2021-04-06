@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import { browser } from '$app/env';
 	import AlertBanner from '$lib/AlertBanner.svelte';
 	import AppFooter from '$lib/shell/AppFooter.svelte';
 	import AppHeader from '$lib/shell/AppHeader.svelte';
@@ -12,6 +13,13 @@
 			title: 'See our plans'
 		}
 	};
+
+	let menuOpen: boolean;
+
+	$: if (browser)
+		menuOpen
+			? document.body.classList.add('off-nav-is-active')
+			: document.body.classList.remove('off-nav-is-active');
 </script>
 
 <svelte:head>
@@ -21,11 +29,11 @@
 	/>
 </svelte:head>
 
-{#if alert}
+{#if !menuOpen}
 	<AlertBanner {...alert} />
 {/if}
 
-<AppHeader />
+<AppHeader bind:menuOpen />
 
 <main>
 	<slot />
@@ -41,7 +49,11 @@
 		flex-direction: column;
 	}
 
-	main > :global(*:not(:last-child)) {
+	main > :global(*:last-child) {
 		margin-bottom: var(--spacing-24);
+	}
+
+	:global(body.off-nav-is-active) {
+		overflow: hidden;
 	}
 </style>

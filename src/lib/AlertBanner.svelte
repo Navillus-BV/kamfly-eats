@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
 	import Link from './Link.svelte';
 
 	export let title: string;
@@ -6,7 +7,7 @@
 	export let cta: CallToAction;
 </script>
 
-<aside>
+<aside out:slide={{ duration: 300 }}>
 	<strong class="title">{title}</strong>
 	<p class="content">
 		<span>{description}</span>
