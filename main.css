@@ -266,24 +266,6 @@ button[type='submit'] {
 	display: none;
 }
 
-.link {
-	background: transparent;
-	border: none;
-	font-size: var(--text-base);
-	line-height: var(--leading-xl);
-	font-weight: bold;
-	color: var(--secondary);
-	white-space: nowrap;
-}
-
-.link--sm {
-	font-size: var(--text-sm);
-}
-
-.link--alt {
-	color: var(--bg);
-}
-
 section {
 	width: 100%;
 	padding: 0 var(--spacing-4);
