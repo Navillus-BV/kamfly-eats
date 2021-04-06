@@ -1,5 +1,6 @@
 const sveltePreprocess = require('svelte-preprocess');
 const static = require('@sveltejs/adapter-static');
+const { resolve } = require('path');
 const pkg = require('./package.json');
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -17,6 +18,11 @@ module.exports = {
 		target: '#svelte',
 
 		vite: {
+			resolve: {
+				alias: {
+					$assets: resolve('src/assets')
+				}
+			},
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
 			}
