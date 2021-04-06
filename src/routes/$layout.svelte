@@ -1,7 +1,17 @@
 <script>
+	import AlertBanner from '$lib/AlertBanner.svelte';
 	import AppFooter from '$lib/shell/AppFooter.svelte';
 	import AppHeader from '$lib/shell/AppHeader.svelte';
 	import '$assets/css/app.css';
+
+	const alert = {
+		title: 'COVID-19 Pricing:',
+		description: "We're waiving our monthly fee until things start picking back up.",
+		cta: {
+			href: 'pricing/#plans',
+			title: 'See our plans'
+		}
+	};
 </script>
 
 <svelte:head>
@@ -10,6 +20,10 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+{#if alert}
+	<AlertBanner {...alert} />
+{/if}
 
 <AppHeader />
 

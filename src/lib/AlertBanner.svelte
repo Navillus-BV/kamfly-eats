@@ -1,0 +1,59 @@
+<script lang="ts">
+	import Link from './Link.svelte';
+
+	export let title: string;
+	export let description: string;
+	export let cta: CallToAction;
+</script>
+
+<aside>
+	<strong class="title">{title}</strong>
+	<p class="content">
+		<span>{description}</span>
+		{#if cta}
+			<Link {cta} small alt />
+		{/if}
+	</p>
+</aside>
+
+<style>
+	aside {
+		background: var(--primary);
+		color: var(--bg);
+		font-size: var(--text-sm);
+		text-align: center;
+		padding: var(--spacing-2);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.title {
+		margin-bottom: var(--spacing-2);
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: var(--spacing-2);
+	}
+
+	@media (min-width: 768px) {
+		aside {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.title {
+			margin-bottom: 0;
+			margin-right: var(--spacing-2);
+		}
+
+		.content {
+			justify-content: flex-start;
+			gap: var(--spacing-4);
+		}
+	}
+</style>

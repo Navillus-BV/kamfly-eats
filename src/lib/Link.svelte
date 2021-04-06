@@ -23,7 +23,6 @@
 		font-weight: bold;
 		color: var(--secondary);
 		white-space: nowrap;
-		text-decoration: none;
 	}
 
 	a.small {
@@ -39,5 +38,6 @@
 		display: inline-block;
 		margin-left: var(--spacing-1);
 		pointer-events: none;
+		text-decoration: none;
 	}
 </style>
