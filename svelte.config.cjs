@@ -1,5 +1,6 @@
 const sveltePreprocess = require('svelte-preprocess');
 const static = require('@sveltejs/adapter-static');
+const imagetools = require('vite-imagetools');
 const { resolve } = require('path');
 const pkg = require('./package.json');
 
@@ -18,6 +19,9 @@ module.exports = {
 		target: '#svelte',
 
 		vite: {
+			plugins: [
+				imagetools({ force: true })
+			],
 			resolve: {
 				alias: {
 					$assets: resolve('src/assets')
