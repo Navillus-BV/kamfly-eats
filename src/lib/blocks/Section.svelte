@@ -34,6 +34,7 @@
 
 	section.alt {
 		padding: var(--spacing-20);
+		background: var(--bg-alt);
 	}
 
 	:global([slot='graphic']) {
@@ -81,6 +82,14 @@
 
 		.row_reverse .section__container {
 			grid-template-areas: 'summary graphic' 'details details';
+		}
+
+		.section__summary {
+			grid-column: 1 / 3;
+		}
+
+		:global([slot='graphic'] + .section__summary) {
+			grid-column: unset !important;
 		}
 	}
 </style>

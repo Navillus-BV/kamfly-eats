@@ -1,9 +1,14 @@
 <script lang="ts">
+	import CardList from '$lib/cards/CardList.svelte';
+	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
 	import PriceComparison from '$lib/PriceComparison.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
+	import clipboardIcon from '$assets/icons/clipboard.svg?raw';
+	import groupIcon from '$assets/icons/group.svg?raw';
+	import currenciesIcon from '$assets/icons/currencies.svg?raw';
 </script>
 
 <Hero
@@ -83,3 +88,18 @@
 		page to learn more and see how you can get started.
 	</p>
 </ImageSection>
+
+<Section alt title="Focus on the stuff that matters.">
+	<p slot="summary">
+		Kamfly gives you an easy-to-use platform with the features you need so you can give your
+		customers the experience they want.
+	</p>
+
+	<div slot="details">
+		<CardList>
+			<FeatureCard title="Menu Management" icon={clipboardIcon} />
+			<FeatureCard title="Online Ordering" icon={groupIcon} />
+			<FeatureCard title="Multi-Currency & Localization" icon={currenciesIcon} />
+		</CardList>
+	</div>
+</Section>
