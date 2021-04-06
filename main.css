@@ -372,100 +372,6 @@ section:last-of-type {
 	margin: 0 auto;
 }
 
-.header {
-	width: 100%;
-	background: var(--bg);
-	position: sticky;
-	top: 0;
-	z-index: 99;
-}
-
-.header__nav > .header__middle {
-	display: none;
-}
-
-.header__nav {
-	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: var(--spacing-4);
-	display: flex;
-	align-items: center;
-}
-
-.header__nav > * {
-	display: flex;
-	align-items: center;
-}
-
-.header__left,
-.header__right {
-	width: 100%;
-	flex: 0 1 auto;
-}
-
-.header__left {
-	justify-content: flex-start;
-}
-
-.header__right {
-	justify-content: flex-end;
-}
-
-.header__logo {
-	height: 1.25rem;
-	color: var(--primary);
-	display: block;
-}
-
-.header__signup {
-	display: none;
-}
-
-.header__sidenav {
-	height: 100%;
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	padding: var(--spacing-8) 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--bg);
-	opacity: 0;
-	transform: translate3d(0, var(--spacing-8), 0);
-	transition: opacity ease-in-out 300ms, transform ease-in-out 300ms;
-	pointer-events: none;
-	will-change: opacity, transform;
-}
-
-.header__sidenav--open {
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-	pointer-events: auto;
-}
-
-.hero {
-	max-width: 55rem;
-	margin-left: auto;
-	margin-right: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0 var(--spacing-4);
-	text-align: center;
-}
-
-.hero > *:not(:last-child) {
-	margin-bottom: var(--spacing-12);
-}
-
-.hero__subtitle {
-	font-size: var(--text-lg);
-}
-
 .feature__icon {
 	height: 3rem;
 	color: var(--primary);
@@ -718,10 +624,6 @@ section:last-of-type {
 		margin-right: var(--spacing-2);
 	}
 
-	.hero {
-		padding: 0 var(--spacing-8);
-	}
-
 	.block__img.block__img--sm {
 		max-width: 12.5rem;
 		max-height: 12.5rem;
@@ -799,23 +701,6 @@ section:last-of-type {
 }
 
 @media (min-width: 1024px) {
-	.header__nav {
-		padding: var(--spacing-4) var(--spacing-20);
-	}
-
-	.header__nav > .header__middle {
-		display: block;
-	}
-
-	.hamburger.header__hamburger,
-	.header__sidenav {
-		display: none;
-	}
-
-	.header__signup {
-		display: initial;
-	}
-
 	.block {
 		gap: var(--spacing-20);
 	}
