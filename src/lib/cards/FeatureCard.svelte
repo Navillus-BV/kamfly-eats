@@ -3,9 +3,10 @@
 
 	export let icon: string;
 	export let title: string;
+	export let subtitle: string;
 </script>
 
-<Card small {title}>
+<Card small {title} {subtitle}>
 	<div slot="header" class="feature__icon">
 		{@html icon}
 	</div>

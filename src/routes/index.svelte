@@ -20,11 +20,13 @@
 <ImageSection
 	title="Reach more customers online."
 	image={images.blocks.shopping}
-	cta={{
-		href: 'https://demo.kamfly.io/',
-		title: 'See it in action',
-		external: true
-	}}
+	links={[
+		{
+			href: 'https://demo.kamfly.io/',
+			title: 'See it in action',
+			external: true
+		}
+	]}
 >
 	<p>
 		From locally owned cafes to large-scale franchise operations, we have tools to help you take
@@ -37,10 +39,12 @@
 	imageRight
 	image={images.blocks.cms}
 	title="Own your customer experience."
-	cta={{
-		href: 'contact',
-		title: 'Find out how to get started'
-	}}
+	links={[
+		{
+			href: 'contact',
+			title: 'Find out how to get started'
+		}
+	]}
 >
 	<p>
 		Your brand should be front and center in every customer interaction. Your food and service speak
@@ -52,10 +56,12 @@
 <Section
 	title="Protect your profits."
 	colReverse
-	cta={{
-		href: 'pricing#plans',
-		title: 'See our plans'
-	}}
+	links={[
+		{
+			href: 'pricing#plans',
+			title: 'See our plans'
+		}
+	]}
 >
 	<div slot="graphic">
 		<PriceComparison />
@@ -72,10 +78,12 @@
 	imageRight
 	image={images.blocks.covid}
 	title="COVID-19 pricing."
-	cta={{
-		href: 'pricing',
-		title: 'See our pricing'
-	}}
+	links={[
+		{
+			href: 'pricing',
+			title: 'See our pricing'
+		}
+	]}
 >
 	<p>
 		We know that this is a tough time to be in the restaurant business. That's the whole reason we

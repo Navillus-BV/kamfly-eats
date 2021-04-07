@@ -159,29 +159,29 @@ const covid = blockImage(
     'Sign that says "Not Today #Covid19"'
 );
 
-import snipcartAvif342 from '$assets/blocks/snipcart-logo.png?width=342;684&avif&srcset';
-import snipcartWebp342 from '$assets/blocks/snipcart-logo.png?width=342;684&webp&srcset';
-import snipcartPng342 from '$assets/blocks/snipcart-logo.png?width=342;684&jpg&srcset';
-import snipcartAvif447 from '$assets/blocks/snipcart-logo.png?width=447;894&avif&srcset';
-import snipcartWebp447 from '$assets/blocks/snipcart-logo.png?width=447;894&webp&srcset';
-import snipcartPng447 from '$assets/blocks/snipcart-logo.png?width=447;894&jpg&srcset';
-import snipcartAvif560 from '$assets/blocks/snipcart-logo.png?width=560;1120&avif&srcset';
-import snipcartWebp560 from '$assets/blocks/snipcart-logo.png?width=560;1120&webp&srcset';
-import snipcartPng560 from '$assets/blocks/snipcart-logo.png?width=560;1120&jpg&srcset';
+import dashboardAvif342 from '$assets/blocks/dashboard.png?width=342;684&avif&srcset';
+import dashboardWebp342 from '$assets/blocks/dashboard.png?width=342;684&webp&srcset';
+import dashboardPng342 from '$assets/blocks/dashboard.png?width=342;684&jpg&srcset';
+import dashboardAvif447 from '$assets/blocks/dashboard.png?width=447;894&avif&srcset';
+import dashboardWebp447 from '$assets/blocks/dashboard.png?width=447;894&webp&srcset';
+import dashboardPng447 from '$assets/blocks/dashboard.png?width=447;894&jpg&srcset';
+import dashboardAvif560 from '$assets/blocks/dashboard.png?width=560;1120&avif&srcset';
+import dashboardWebp560 from '$assets/blocks/dashboard.png?width=560;1120&webp&srcset';
+import dashboardPng560 from '$assets/blocks/dashboard.png?width=560;1120&jpg&srcset';
 
-const snipcart = blockImage(
+const dashboard = blockImage(
     {
-        webp560: snipcartWebp560,
-        webp447: snipcartWebp447,
-        webp342: snipcartWebp342,
-        png560: snipcartPng560,
-        png447: snipcartPng447,
-        png342: snipcartPng342,
-        avif560: snipcartAvif560,
-        avif447: snipcartAvif447,
-        avif342: snipcartAvif342
+        webp560: dashboardWebp560,
+        webp447: dashboardWebp447,
+        webp342: dashboardWebp342,
+        png560: dashboardPng560,
+        png447: dashboardPng447,
+        png342: dashboardPng342,
+        avif560: dashboardAvif560,
+        avif447: dashboardAvif447,
+        avif342: dashboardAvif342
     },
-    'Snipcart logo'
+    "Screenshots of Kamfly's menu management system"
 );
 
 import openAvif342 from '$assets/blocks/open-sign.jpg?width=342;684&avif&srcset';
@@ -209,8 +209,34 @@ const open = blockImage(
     'Open sign hanging in restaurant window'
 );
 
+import snipcartAvif342 from '$assets/blocks/snipcart-logo.png?width=342;684&avif&srcset';
+import snipcartWebp342 from '$assets/blocks/snipcart-logo.png?width=342;684&webp&srcset';
+import snipcartPng342 from '$assets/blocks/snipcart-logo.png?width=342;684&jpg&srcset';
+import snipcartAvif447 from '$assets/blocks/snipcart-logo.png?width=447;894&avif&srcset';
+import snipcartWebp447 from '$assets/blocks/snipcart-logo.png?width=447;894&webp&srcset';
+import snipcartPng447 from '$assets/blocks/snipcart-logo.png?width=447;894&jpg&srcset';
+import snipcartAvif560 from '$assets/blocks/snipcart-logo.png?width=560;1120&avif&srcset';
+import snipcartWebp560 from '$assets/blocks/snipcart-logo.png?width=560;1120&webp&srcset';
+import snipcartPng560 from '$assets/blocks/snipcart-logo.png?width=560;1120&jpg&srcset';
+
+const snipcart = blockImage(
+    {
+        webp560: snipcartWebp560,
+        webp447: snipcartWebp447,
+        webp342: snipcartWebp342,
+        png560: snipcartPng560,
+        png447: snipcartPng447,
+        png342: snipcartPng342,
+        avif560: snipcartAvif560,
+        avif447: snipcartAvif447,
+        avif342: snipcartAvif342
+    },
+    'Snipcart logo'
+);
+
 const blocks = {
     cms,
+    dashboard,
     covid,
     open,
     shopping,

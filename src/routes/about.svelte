@@ -37,10 +37,12 @@
 
 <ImageSection
 	title="We want you to succeed."
-	cta={{
-		href: 'how-it-works',
-		title: 'See how it works'
-	}}
+	links={[
+		{
+			href: 'how-it-works',
+			title: 'See how it works'
+		}
+	]}
 	image={images.blocks.open}
 >
 	<p>

@@ -3,7 +3,7 @@
 
 	export let title: string;
 	export let alt = false;
-	export let cta: CallToAction;
+	export let links: CallToAction[] = [];
 	export let rowReverse = false;
 	export let colReverse = false;
 </script>
@@ -19,9 +19,9 @@
 
 			<slot name="summary" />
 
-			{#if cta}
+			{#each links as cta}
 				<Link {cta} />
-			{/if}
+			{/each}
 		</div>
 		<slot name="details" />
 	</div>
@@ -33,7 +33,7 @@
 	}
 
 	section.alt {
-		padding: var(--spacing-20);
+		padding: var(--spacing-24) var(--spacing-20);
 		background: var(--bg-alt);
 	}
 
@@ -55,6 +55,9 @@
 
 	:global([slot='details']) {
 		grid-area: details;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-6);
 	}
 
 	.section__container {
@@ -86,10 +89,15 @@
 
 		.section__summary {
 			grid-column: 1 / 3;
+			text-align: start;
 		}
 
 		:global([slot='graphic'] + .section__summary) {
 			grid-column: unset !important;
+		}
+
+		:global([slot='details']) {
+			gap: var(--spacing-20);
 		}
 	}
 </style>

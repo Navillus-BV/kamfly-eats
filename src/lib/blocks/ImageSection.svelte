@@ -6,12 +6,12 @@
 	export let alt = false;
 	export let title: string;
 	export let image: ResponsiveImage;
-	export let cta: CallToAction;
+	export let links: CallToAction[] = [];
 	export let imageRight = false;
 	export let small = false;
 </script>
 
-<Section {alt} {title} {cta} rowReverse={imageRight}>
+<Section {alt} {title} {links} rowReverse={imageRight}>
 	<div slot="graphic">
 		<Image {image} class={small ? 'section__img section__img--sm' : 'section__img'} />
 	</div>
