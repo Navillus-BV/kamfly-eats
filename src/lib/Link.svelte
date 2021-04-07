@@ -34,7 +34,7 @@
 	}
 
 	a::after {
-		content: '›';
+		content: '\203A';
 		display: inline-block;
 		margin-left: var(--spacing-1);
 		pointer-events: none;
