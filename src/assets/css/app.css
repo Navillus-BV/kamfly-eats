@@ -2,6 +2,7 @@
 
 :root {
 	font-size: 14px;
+	scroll-behavior: smooth;
 
 	--fg: #000000;
 	--fg-alt: #ffffff;
@@ -107,6 +108,10 @@ h3 {
 h4 {
 	font-size: var(--text-lg);
 	font-weight: normal;
+}
+
+p + p {
+	margin-top: var(--spacing-3);
 }
 
 a {

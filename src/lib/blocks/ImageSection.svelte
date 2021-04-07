@@ -3,6 +3,7 @@
 	import Section from './Section.svelte';
 	import type { ResponsiveImage } from '../../images';
 
+	export let id: string = undefined;
 	export let alt = false;
 	export let title: string;
 	export let image: ResponsiveImage;
@@ -11,7 +12,7 @@
 	export let small = false;
 </script>
 
-<Section {alt} {title} {links} rowReverse={imageRight}>
+<Section {id} {alt} {title} {links} rowReverse={imageRight}>
 	<div slot="graphic">
 		<Image {image} class={small ? 'section__img section__img--sm' : 'section__img'} />
 	</div>

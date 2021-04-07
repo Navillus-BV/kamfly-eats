@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Link from '$lib/Link.svelte';
 
+	export let id: string = undefined;
 	export let title: string;
 	export let alt = false;
 	export let links: CallToAction[] = [];
@@ -8,7 +9,7 @@
 	export let colReverse = false;
 </script>
 
-<section class:alt class:row_reverse={rowReverse} class:col_reverse={colReverse}>
+<section {id} class:alt class:row_reverse={rowReverse} class:col_reverse={colReverse}>
 	<div class="section__container">
 		<slot name="graphic" />
 
@@ -89,11 +90,11 @@
 
 		.section__summary {
 			grid-column: 1 / 3;
-			text-align: start;
 		}
 
 		:global([slot='graphic'] + .section__summary) {
 			grid-column: unset !important;
+			text-align: start;
 		}
 
 		:global([slot='details']) {

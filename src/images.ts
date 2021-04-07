@@ -184,6 +184,56 @@ const dashboard = blockImage(
     "Screenshots of Kamfly's menu management system"
 );
 
+import deliveryAvif342 from '$assets/blocks/food-delivery.jpg?width=342;684&avif&srcset';
+import deliveryWebp342 from '$assets/blocks/food-delivery.jpg?width=342;684&webp&srcset';
+import deliveryPng342 from '$assets/blocks/food-delivery.jpg?width=342;684&png&srcset';
+import deliveryAvif447 from '$assets/blocks/food-delivery.jpg?width=447;894&avif&srcset';
+import deliveryWebp447 from '$assets/blocks/food-delivery.jpg?width=447;894&webp&srcset';
+import deliveryPng447 from '$assets/blocks/food-delivery.jpg?width=447;894&png&srcset';
+import deliveryAvif560 from '$assets/blocks/food-delivery.jpg?width=560;1120&avif&srcset';
+import deliveryWebp560 from '$assets/blocks/food-delivery.jpg?width=560;1120&webp&srcset';
+import deliveryPng560 from '$assets/blocks/food-delivery.jpg?width=560;1120&png&srcset';
+
+const delivery = blockImage(
+    {
+        webp560: deliveryWebp560,
+        webp447: deliveryWebp447,
+        webp342: deliveryWebp342,
+        png560: deliveryPng560,
+        png447: deliveryPng447,
+        png342: deliveryPng342,
+        avif560: deliveryAvif560,
+        avif447: deliveryAvif447,
+        avif342: deliveryAvif342
+    },
+    "Delivery driver picking up an order."
+);
+
+import menusAvif342 from '$assets/blocks/menus.png?width=342;684&avif&srcset';
+import menusWebp342 from '$assets/blocks/menus.png?width=342;684&webp&srcset';
+import menusPng342 from '$assets/blocks/menus.png?width=342;684&jpg&srcset';
+import menusAvif447 from '$assets/blocks/menus.png?width=447;894&avif&srcset';
+import menusWebp447 from '$assets/blocks/menus.png?width=447;894&webp&srcset';
+import menusPng447 from '$assets/blocks/menus.png?width=447;894&jpg&srcset';
+import menusAvif560 from '$assets/blocks/menus.png?width=560;1120&avif&srcset';
+import menusWebp560 from '$assets/blocks/menus.png?width=560;1120&webp&srcset';
+import menusPng560 from '$assets/blocks/menus.png?width=560;1120&jpg&srcset';
+
+const menus = blockImage(
+    {
+        webp560: menusWebp560,
+        webp447: menusWebp447,
+        webp342: menusWebp342,
+        png560: menusPng560,
+        png447: menusPng447,
+        png342: menusPng342,
+        avif560: menusAvif560,
+        avif447: menusAvif447,
+        avif342: menusAvif342
+    },
+    "Kamfly menus showing the light and dark theme options"
+);
+
 import openAvif342 from '$assets/blocks/open-sign.jpg?width=342;684&avif&srcset';
 import openWebp342 from '$assets/blocks/open-sign.jpg?width=342;684&webp&srcset';
 import openPng342 from '$assets/blocks/open-sign.jpg?width=342;684&jpg&srcset';
@@ -237,7 +287,9 @@ const snipcart = blockImage(
 const blocks = {
     cms,
     dashboard,
+    delivery,
     covid,
+    menus,
     open,
     shopping,
     snipcart
