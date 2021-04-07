@@ -3,6 +3,7 @@
 	import AlertBanner from '$lib/AlertBanner.svelte';
 	import AppFooter from '$lib/shell/AppFooter.svelte';
 	import AppHeader from '$lib/shell/AppHeader.svelte';
+	import SEO from '$lib/seo/SEO.svelte';
 	import '$assets/css/app.css';
 
 	const alert = {
@@ -28,6 +29,8 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+<SEO />
 
 {#if !menuOpen}
 	<AlertBanner {...alert} />
