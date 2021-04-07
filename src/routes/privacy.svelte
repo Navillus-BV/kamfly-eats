@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Meta from '$lib/seo/Meta.svelte';
 	import { attributes, html } from '$assets/pages/privacy.md';
 
 	const { title, last_updated } = attributes;
@@ -6,9 +7,7 @@
 	const lastUpdated = last_updated && new Date(last_updated).toDateString();
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-</svelte:head>
+<Meta {title} />
 
 <article>
 	{#if last_updated}

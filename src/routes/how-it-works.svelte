@@ -4,6 +4,7 @@
 	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
 	import discountsIcon from '$assets/icons/discounts.svg?raw';
@@ -14,15 +15,15 @@
 	import taxesIcon from '$assets/icons/taxes.svg?raw';
 </script>
 
+<Meta title="How it Works" />
+
 <Hero
 	title="Online made easy."
 	subtitle="Self-managed digital restaurant solutions without the headaches."
-	links={[
-		{
-			title: 'Get Started',
-			href: 'contact'
-		}
-	]}
+	cta={{
+		title: 'Get Started',
+		href: 'contact'
+	}}
 />
 
 <Section alt title="Getting started with Kamfly is a piece of cake.">

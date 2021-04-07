@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Hero from '$lib/blocks/Hero.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 </script>
+
+<Meta title="Get Started" />
 
 <Hero
 	title="Ready to get started?"

@@ -2,6 +2,7 @@
 	import CardList from '$lib/cards/CardList.svelte';
 	import ContactCard from '$lib/cards/ContactCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
@@ -32,6 +33,8 @@
 		}
 	];
 </script>
+
+<Meta title="About Us" />
 
 <Hero title="About us." />
 

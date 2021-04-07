@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Button, { ButtonType } from '$lib/Button.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 </script>
+
+<Meta title="Contact Us" />
 
 <Section title="Send us an email.">
 	<p slot="summary">

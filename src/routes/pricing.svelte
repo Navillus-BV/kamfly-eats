@@ -1,11 +1,14 @@
 <script lang="ts">
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import PriceComparison from '$lib/PriceComparison.svelte';
 	import PricePlans from '$lib/PricePlans.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
 </script>
+
+<Meta title="Pricing" />
 
 <Hero title="Kick the margin moochers to the curb." />
 
