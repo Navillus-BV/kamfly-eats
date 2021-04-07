@@ -10,7 +10,7 @@
 		title: 'COVID-19 Pricing:',
 		description: "We're waiving our monthly fee until things start picking back up.",
 		cta: {
-			href: 'pricing/#plans',
+			href: 'pricing#plans',
 			title: 'See our plans'
 		}
 	};
@@ -22,13 +22,6 @@
 			? document.body.classList.add('off-nav-is-active')
 			: document.body.classList.remove('off-nav-is-active');
 </script>
-
-<svelte:head>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
 
 <SEO />
 

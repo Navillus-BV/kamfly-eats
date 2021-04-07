@@ -14,7 +14,7 @@
 	{/if}
 
 	{#if cta}
-		<a class="btn btn--primary" href={cta.href}>
+		<a href={cta.href}>
 			<Button type={ButtonType.Primary}>
 				{cta.title}
 			</Button>

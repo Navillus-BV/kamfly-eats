@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Favicon from './Favicon.svelte';
 	import Meta from './Meta.svelte';
 
 	const title = 'Self-managed Online Ordering for Your Business | Kamfly';
@@ -9,8 +8,6 @@
 
 	$: url = `https://kamfly.io${$page.path}`;
 </script>
-
-<Favicon />
 
 <svelte:head>
 	<Meta {title} {description} />
