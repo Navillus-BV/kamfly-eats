@@ -6,9 +6,6 @@ publish = "build"
 command = "npm run start"
 
 [[plugins]]
-package = "netlify-plugin-checklinks"
-
-[[plugins]]
 package = "netlify-plugin-a11y"
 
 [[plugins]]
