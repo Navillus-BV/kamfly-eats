@@ -30,7 +30,7 @@
 <header role="banner">
 	<div class="header__content">
 		<div class="header__left">
-			<a href="." alt="Kamfly" aria-label="Site logo" class="header__brand">
+			<a href="." alt="Kamfly" aria-label="Site logo" class="header__brand" sveltekit:prefetch>
 				{@html logoIcon}
 			</a>
 		</div>

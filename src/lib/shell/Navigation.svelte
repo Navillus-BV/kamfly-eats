@@ -11,7 +11,7 @@
 	<ul class:vertical>
 		{#each routes as { route, title } (route)}
 			<li>
-				<a href={route} class:p-2={vertical}>{title}</a>
+				<a href={route} class:p-2={vertical} sveltekit:prefetch>{title}</a>
 			</li>
 		{/each}
 	</ul>
