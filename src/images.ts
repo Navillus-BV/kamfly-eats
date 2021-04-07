@@ -296,14 +296,19 @@ const blocks = {
 }
 
 interface CardImageParams {
+    avif214: string,
     webp214: string,
     jpg214: string
 }
 function cardImage(params: CardImageParams, alt: string): ResponsiveImage {
-    const { webp214, jpg214 } = params;
+    const { avif214, webp214, jpg214 } = params;
 
     return {
         sources: [
+            {
+                type: 'image/avif',
+                srcset: combineDensities(avif214)
+            },
             {
                 type: 'image/webp',
                 srcset: combineDensities(webp214)
@@ -323,22 +328,26 @@ function cardImage(params: CardImageParams, alt: string): ResponsiveImage {
 
 import sarahWebp214 from '$assets/cards/sarah.jpg?width=214;428&webp&srcset';
 import sarahJpg214 from '$assets/cards/sarah.jpg?width=214;428&srcset';
+import sarahAvif214 from '$assets/cards/sarah.jpg?width=214;428&avif&srcset';
 
 const sarah = cardImage(
     {
         webp214: sarahWebp214,
-        jpg214: sarahJpg214
+        jpg214: sarahJpg214,
+        avif214: sarahAvif214
     },
     "Sarah"
 )
 
 import tonyWebp214 from '$assets/cards/tony.jpg?width=214;428&webp&srcset';
 import tonyJpg214 from '$assets/cards/tony.jpg?width=214;428&srcset';
+import tonyAvif214 from '$assets/cards/tony.jpg?width=214;428&avif&srcset';
 
 const tony = cardImage(
     {
         webp214: tonyWebp214,
-        jpg214: tonyJpg214
+        jpg214: tonyJpg214,
+        avif214: tonyAvif214
     },
     "Tony"
 )
