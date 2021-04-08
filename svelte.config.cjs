@@ -1,6 +1,6 @@
 const sveltePreprocess = require('svelte-preprocess');
 const static = require('@sveltejs/adapter-static');
-const {imagetools} = require('vite-imagetools');
+const { imagetools } = require('vite-imagetools');
 const mdPlugin = require('vite-plugin-markdown');
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')

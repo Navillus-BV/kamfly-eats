@@ -356,9 +356,9 @@ function cardImage(params: CardImageParams, alt: string): ResponsiveImage {
 }
 
 import sarahWebp214 from '$assets/cards/sarah.jpg?width=214;428&webp&srcset';
-import sarahJpg214 from '$assets/cards/sarah.jpg?width=214;428&srcset';
+import sarahJpg214 from '$assets/cards/sarah.jpg?width=214;428&jpg&srcset';
 import sarahAvif214 from '$assets/cards/sarah.jpg?width=214;428&avif&srcset';
-import sarahMeta from '$assets/cards/sarah.jpg?width=214&srcset';
+import sarahMeta from '$assets/cards/sarah.jpg?width=214&metadata';
 
 const sarah = cardImage(
     {
@@ -371,7 +371,7 @@ const sarah = cardImage(
 )
 
 import tonyWebp214 from '$assets/cards/tony.jpg?width=214;428&webp&srcset';
-import tonyJpg214 from '$assets/cards/tony.jpg?width=214;428&srcset';
+import tonyJpg214 from '$assets/cards/tony.jpg?width=214;428&jpg&srcset';
 import tonyAvif214 from '$assets/cards/tony.jpg?width=214;428&avif&srcset';
 import tonyMeta from '$assets/cards/tony.jpg?width=214&metadata';
 
