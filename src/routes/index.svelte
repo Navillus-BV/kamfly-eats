@@ -111,3 +111,20 @@
 		</CardList>
 	</div>
 </Section>
+
+<ImageSection
+	small
+	image={images.blocks.snipcart}
+	title="Accept every kind of payment."
+	links={[
+		{
+			title: 'Learn more about Snipcart',
+			href: 'how-it-works/#snipcart'
+		}
+	]}
+>
+	<p>
+		We partner with Snipcart to enable a full e-commerce experience for your restaurant - including
+		safe and secure online transactions with trusted payment service providers around the world.
+	</p>
+</ImageSection>

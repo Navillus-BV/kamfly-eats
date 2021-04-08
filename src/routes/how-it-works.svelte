@@ -88,6 +88,7 @@
 </Section>
 
 <ImageSection
+	id="snipcart"
 	small
 	title="What is Snipcart?"
 	image={images.blocks.snipcart}
