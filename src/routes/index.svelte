@@ -14,7 +14,7 @@
 <Hero
 	title="Your restaurant. Your future. Your call."
 	subtitle="The digital experience your customers want. The freedom you deserve."
-	cta={{ href: 'contact', title: 'Get Started' }}
+	cta={{ href: '/contact', title: 'Get Started' }}
 />
 
 <ImageSection
@@ -41,7 +41,7 @@
 	title="Own your customer experience."
 	links={[
 		{
-			href: 'contact',
+			href: '/contact',
 			title: 'Find out how to get started'
 		}
 	]}
@@ -58,7 +58,7 @@
 	colReverse
 	links={[
 		{
-			href: 'pricing#plans',
+			href: '/pricing/#plans',
 			title: 'See our plans'
 		}
 	]}
@@ -80,7 +80,7 @@
 	title="COVID-19 pricing."
 	links={[
 		{
-			href: 'pricing',
+			href: '/pricing',
 			title: 'See our pricing'
 		}
 	]}
@@ -119,7 +119,7 @@
 	links={[
 		{
 			title: 'Learn more about Snipcart',
-			href: 'how-it-works/#snipcart'
+			href: '/how-it-works/#snipcart'
 		}
 	]}
 >

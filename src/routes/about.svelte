@@ -42,7 +42,7 @@
 	title="We want you to succeed."
 	links={[
 		{
-			href: 'how-it-works',
+			href: '/how-it-works',
 			title: 'See how it works'
 		}
 	]}

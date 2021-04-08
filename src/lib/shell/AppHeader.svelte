@@ -11,16 +11,16 @@
 	$: if (innerWidth >= 1024) menuOpen = false;
 
 	const mobileNavItems = [
-		{ route: '.', title: 'home' },
-		{ route: 'how-it-works', title: 'how it works' },
-		{ route: 'pricing', title: 'pricing' },
-		{ route: 'about', title: 'about' }
+		{ route: '/', title: 'home' },
+		{ route: '/how-it-works', title: 'how it works' },
+		{ route: '/pricing', title: 'pricing' },
+		{ route: '/about', title: 'about' }
 	];
 
 	const navItems = mobileNavItems.slice(1);
 
 	const cta = {
-		route: 'contact',
+		route: '/contact',
 		title: 'get in touch'
 	};
 </script>
@@ -30,7 +30,7 @@
 <header role="banner">
 	<div class="header__content">
 		<div class="header__left">
-			<a href="." alt="Kamfly" aria-label="Site logo" class="header__brand" sveltekit:prefetch>
+			<a href="/" alt="Kamfly" aria-label="Site logo" class="header__brand" sveltekit:prefetch>
 				{@html logoIcon}
 			</a>
 		</div>

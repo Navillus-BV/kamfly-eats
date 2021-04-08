@@ -27,7 +27,7 @@
 			<li class="plan__feature">Unlimited number of locations</li>
 		</ul>
 
-		<a href="contact">
+		<a href="/contact">
 			<Button type={ButtonType.Hollow}>get started</Button>
 		</a>
 	</div>
@@ -63,7 +63,7 @@
 			<li class="plan__feature">Online ordering analytics</li>
 		</ul>
 
-		<a href="contact">
+		<a href="/contact">
 			<Button type={ButtonType.Primary}>get started</Button>
 		</a>
 	</div>
@@ -87,7 +87,7 @@
 			<li class="plan__feature">Search engine optimization</li>
 		</ul>
 
-		<a href="contact">
+		<a href="/contact">
 			<Button type={ButtonType.Hollow}>get started</Button>
 		</a>
 	</div>

@@ -17,7 +17,7 @@
 	links={[
 		{
 			title: 'Get Started',
-			href: 'contact'
+			href: '/contact'
 		}
 	]}
 >
@@ -39,7 +39,7 @@
 	links={[
 		{
 			title: 'See our pricing',
-			href: 'pricing'
+			href: '/pricing'
 		}
 	]}
 >

@@ -22,7 +22,7 @@
 	subtitle="Self-managed digital restaurant solutions without the headaches."
 	cta={{
 		title: 'Get Started',
-		href: 'contact'
+		href: '/contact'
 	}}
 />
 
@@ -39,7 +39,7 @@
 			<FeatureCard title="Multi-Currency & Localization" icon={step3Icon} />
 		</CardList>
 
-		<a href="contact">
+		<a href="/contact">
 			<Button type={ButtonType.Primary}>Get started</Button>
 		</a>
 	</div>
@@ -51,7 +51,7 @@
 	links={[
 		{
 			title: 'Get started now',
-			href: 'contact'
+			href: '/contact'
 		}
 	]}
 >
@@ -65,7 +65,7 @@
 <ImageSection imageRight title="Managing your online orders." image={images.blocks.dashboard}>
 	<p>
 		Don't miss a beat with our
-		<a href="pricing#plans">Pro Plan's</a>
+		<a href="/pricing/#plans">Pro Plan's</a>
 		online ordering. Order notifications will be emailed to you and show up in your Admin Dashboard in
 		real time. Already using a point-of-sale system? No problem! Let us know what system you are using
 		today - we're always looking to add new point-of-sale integrations to Kamfly.
@@ -120,7 +120,7 @@
 	links={[
 		{
 			title: 'Set up time with us to find out more',
-			href: 'contact'
+			href: '/contact'
 		}
 	]}
 >

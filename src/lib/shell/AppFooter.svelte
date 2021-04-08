@@ -26,15 +26,15 @@
 
 	const routeLinks = [
 		{
-			href: 'privacy',
+			href: '/privacy',
 			title: 'Privacy Policy'
 		},
 		{
-			href: 'terms',
+			href: '/terms',
 			title: 'Terms & Conditions'
 		},
 		{
-			href: 'contact',
+			href: '/contact',
 			title: 'Contact'
 		}
 	];
