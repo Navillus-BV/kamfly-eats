@@ -3,6 +3,7 @@
 	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import PriceComparison from '$lib/PriceComparison.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
@@ -10,6 +11,8 @@
 	import groupIcon from '$assets/icons/group.svg?raw';
 	import currenciesIcon from '$assets/icons/currencies.svg?raw';
 </script>
+
+<Meta title="Self-Managed Online Ordering for Your Restaurant" />
 
 <Hero
 	title="Your restaurant. Your future. Your call."

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import shareImage from '$assets/kamfly-share.png';
 
-	export let title = 'Self-Managed Online Ordering for Your Business';
+	export let title = 'Self-Managed Online Ordering for Your Restaurant';
 	export let description =
 		'Add touchless e-menus and online ordering to your restaurant website in minutes. Keep control of your menu items, pricing, and your customer experience.';
 	export let image = shareImage;
