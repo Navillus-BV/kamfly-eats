@@ -4,7 +4,7 @@
 	export let small = false;
 	export let title: string = undefined;
 	export let subtitle: string = undefined;
-	export let cta: CallToAction;
+	export let cta: CallToAction = undefined;
 </script>
 
 <article class:small>

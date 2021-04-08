@@ -3,7 +3,7 @@
 
 	export let icon: string;
 	export let title: string;
-	export let subtitle: string;
+	export let subtitle: string = undefined;
 </script>
 
 <Card small {title} {subtitle}>
