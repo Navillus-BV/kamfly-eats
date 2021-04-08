@@ -10,10 +10,12 @@
 <aside out:slide={{ duration: 300 }}>
 	<strong class="title">{title}</strong>
 	<p class="content">
-		<span>{description}</span>
-		{#if cta}
-			<Link {cta} small alt />
-		{/if}
+		<span>
+			{description}
+			{#if cta}
+				<Link {cta} small alt />
+			{/if}
+		</span>
 	</p>
 </aside>
 
@@ -40,6 +42,10 @@
 		gap: var(--spacing-2);
 	}
 
+	.content :global(a) {
+		margin-left: var(--spacing-2);
+	}
+
 	@media (min-width: 768px) {
 		aside {
 			flex-direction: row;
@@ -55,6 +61,10 @@
 		.content {
 			justify-content: flex-start;
 			gap: var(--spacing-4);
+		}
+
+		.content :global(a) {
+			margin-left: var(--spacing-4);
 		}
 	}
 </style>
