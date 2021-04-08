@@ -69,6 +69,7 @@ module.exports = {
 			],
 			resolve: {
 				alias: {
+					$actions: resolve('src/actions'),
 					$assets: resolve('src/assets')
 				}
 			},
