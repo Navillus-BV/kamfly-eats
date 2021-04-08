@@ -9,7 +9,7 @@
 	class:alt
 	href={cta.href}
 	target={cta.external ? '_blank' : undefined}
-	rel={cta.external ? 'nooopener' : undefined}
+	rel={cta.external ? 'noopener' : undefined}
 >
 	{cta.title}
 </a>
