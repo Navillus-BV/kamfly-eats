@@ -212,7 +212,7 @@ import deliveryPng447 from '$assets/blocks/food-delivery.jpg?width=447;894&png&s
 import deliveryAvif560 from '$assets/blocks/food-delivery.jpg?width=560;1120&avif&srcset';
 import deliveryWebp560 from '$assets/blocks/food-delivery.jpg?width=560;1120&webp&srcset';
 import deliveryPng560 from '$assets/blocks/food-delivery.jpg?width=560;1120&png&srcset';
-import deliveryMeta from '$assets/blocks/food-delivery.jpg?widht=342&metadata';
+import deliveryMeta from '$assets/blocks/food-delivery.jpg?width=342&metadata';
 
 const delivery = blockImage(
     {
