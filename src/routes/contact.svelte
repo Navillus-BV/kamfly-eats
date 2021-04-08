@@ -1,7 +1,30 @@
 <script lang="ts">
 	import Button, { ButtonType } from '$lib/Button.svelte';
+	import Link from '$lib/Link.svelte';
+	import Modal from '$lib/Modal.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
+
+	let modalOpen = false;
+
+	const openModal = () => (modalOpen = true);
+	const closeModal = () => (modalOpen = false);
+
+	let formElem: HTMLFormElement;
+
+	async function onSubmit() {
+		try {
+			await fetch('/contact/#contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+				body: new URLSearchParams(formData).toString()
+			});
+
+			openModal();
+		} catch (err) {
+			console.log(err);
+		}
+	}
 </script>
 
 <Meta title="Contact Us" />
@@ -15,13 +38,12 @@
 	</p>
 
 	<form
+		bind:this={formElem}
 		slot="details"
 		name="contact"
-		action="/contact/#contact"
-		method="POST"
+		on:submit|preventDefault={onSubmit}
 		netlify-honeypot="bot-field"
 		data-netlify="true"
-		class="w-full max-w-xl mx-auto"
 	>
 		<input type="hidden" name="form-name" value="contact" />
 		<p class="honeypot">
@@ -53,10 +75,18 @@
 	</form>
 </Section>
 
+{#if modalOpen}
+	<Modal on:close={closeModal}>
+		<h2>Thank You!</h2>
+		<p>Your message has been sent, and we will be in touch soon.</p>
+	</Modal>
+{/if}
+
 <style>
 	form {
 		width: 100%;
 		max-width: 36rem;
+		gap: 0 !important;
 	}
 
 	form label {

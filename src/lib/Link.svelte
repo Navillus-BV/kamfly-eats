@@ -8,6 +8,7 @@
 	class:small
 	class:alt
 	href={cta.href}
+	on:click
 	target={cta.external ? '_blank' : undefined}
 	rel={cta.external ? 'noopener noreferrer' : undefined}
 >
