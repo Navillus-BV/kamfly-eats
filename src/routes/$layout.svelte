@@ -45,7 +45,7 @@
 		flex-direction: column;
 	}
 
-	main > :global(*:not(:last-child)) {
+	main > :global(*) {
 		margin-bottom: var(--spacing-24);
 	}
 
