@@ -104,7 +104,7 @@ import shoppingPng447 from '$assets/blocks/shopping.png?width=447;894&png&srcset
 import shoppingAvif560 from '$assets/blocks/shopping.png?width=560;1120&avif&srcset';
 import shoppingWebp560 from '$assets/blocks/shopping.png?width=560;1120&webp&srcset';
 import shoppingPng560 from '$assets/blocks/shopping.png?width=560;1120&png&srcset';
-import shoppingMeta from '$assets/blocks/shopping.png?width=342&png&metadata';
+import shoppingMeta from '$assets/blocks/shopping.png?width=560&png&metadata';
 
 const shopping = blockImage(
     {
@@ -131,7 +131,7 @@ import cmsPng447 from '$assets/blocks/cms.png?width=447;894&png&srcset';
 import cmsAvif560 from '$assets/blocks/cms.png?width=560;1120&avif&srcset';
 import cmsWebp560 from '$assets/blocks/cms.png?width=560;1120&webp&srcset';
 import cmsPng560 from '$assets/blocks/cms.png?width=560;1120&png&srcset';
-import cmsMeta from '$assets/blocks/cms.png?width=342&png&metadata'
+import cmsMeta from '$assets/blocks/cms.png?width=560&png&metadata'
 
 const cms = blockImage(
     {
@@ -158,7 +158,7 @@ import covidPng447 from '$assets/blocks/covid-response.jpg?width=447;894&jpg&src
 import covidAvif560 from '$assets/blocks/covid-response.jpg?width=560;1120&avif&srcset';
 import covidWebp560 from '$assets/blocks/covid-response.jpg?width=560;1120&webp&srcset';
 import covidPng560 from '$assets/blocks/covid-response.jpg?width=560;1120&jpg&srcset';
-import covidMeta from '$assets/blocks/covid-response.jpg?width=342&jpg&metadata';
+import covidMeta from '$assets/blocks/covid-response.jpg?width=560&jpg&metadata';
 
 const covid = blockImage(
     {
@@ -185,7 +185,7 @@ import dashboardPng447 from '$assets/blocks/dashboard.png?width=447;894&png&srcs
 import dashboardAvif560 from '$assets/blocks/dashboard.png?width=560;1120&avif&srcset';
 import dashboardWebp560 from '$assets/blocks/dashboard.png?width=560;1120&webp&srcset';
 import dashboardPng560 from '$assets/blocks/dashboard.png?width=560;1120&png&srcset';
-import dashboardMeta from '$assets/blocks/dashboard.png?width=342&png&metadata';
+import dashboardMeta from '$assets/blocks/dashboard.png?width=560&png&metadata';
 
 const dashboard = blockImage(
     {
@@ -212,7 +212,7 @@ import deliveryPng447 from '$assets/blocks/food-delivery.jpg?width=447;894&jpg&s
 import deliveryAvif560 from '$assets/blocks/food-delivery.jpg?width=560;1120&avif&srcset';
 import deliveryWebp560 from '$assets/blocks/food-delivery.jpg?width=560;1120&webp&srcset';
 import deliveryPng560 from '$assets/blocks/food-delivery.jpg?width=560;1120&jpg&srcset';
-import deliveryMeta from '$assets/blocks/food-delivery.jpg?width=342&jpg&metadata';
+import deliveryMeta from '$assets/blocks/food-delivery.jpg?width=560&jpg&metadata';
 
 const delivery = blockImage(
     {
@@ -239,7 +239,7 @@ import menusPng447 from '$assets/blocks/menus.png?width=447;894&png&srcset';
 import menusAvif560 from '$assets/blocks/menus.png?width=560;1120&avif&srcset';
 import menusWebp560 from '$assets/blocks/menus.png?width=560;1120&webp&srcset';
 import menusPng560 from '$assets/blocks/menus.png?width=560;1120&png&srcset';
-import menusMeta from '$assets/blocks/menus.png?width=342&png&metadata';
+import menusMeta from '$assets/blocks/menus.png?width=560&png&metadata';
 
 const menus = blockImage(
     {
@@ -266,7 +266,7 @@ import openPng447 from '$assets/blocks/open-sign.jpg?width=447;894&jpg&srcset';
 import openAvif560 from '$assets/blocks/open-sign.jpg?width=560;1120&avif&srcset';
 import openWebp560 from '$assets/blocks/open-sign.jpg?width=560;1120&webp&srcset';
 import openPng560 from '$assets/blocks/open-sign.jpg?width=560;1120&jpg&srcset';
-import openMeta from '$assets/blocks/open-sign.jpg?width=342&jpg&metadata';
+import openMeta from '$assets/blocks/open-sign.jpg?width=560&jpg&metadata';
 
 const open = blockImage(
     {
@@ -293,7 +293,7 @@ import snipcartPng447 from '$assets/blocks/snipcart-logo.png?width=447;894&png&s
 import snipcartAvif560 from '$assets/blocks/snipcart-logo.png?width=560;1120&avif&srcset';
 import snipcartWebp560 from '$assets/blocks/snipcart-logo.png?width=560;1120&webp&srcset';
 import snipcartPng560 from '$assets/blocks/snipcart-logo.png?width=560;1120&png&srcset';
-import snipcartMeta from '$assets/blocks/snipcart-logo.png?width=342&png&metadata';
+import snipcartMeta from '$assets/blocks/snipcart-logo.png?width=560&png&metadata';
 
 const snipcart = blockImage(
     {

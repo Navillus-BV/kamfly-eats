@@ -4,6 +4,10 @@
 
 	let customClass = '';
 	export { customClass as class };
+
+	let imgElem: HTMLImageElement;
+
+	let loaded = false;
 </script>
 
 <picture>
@@ -11,12 +15,14 @@
 		<source {media} {type} {srcset} />
 	{/each}
 	<img
+		bind:this={imgElem}
+		on:load={() => (loaded = true)}
 		loading="lazy"
 		class={customClass}
 		srcset={image.defaultSource.srcset}
 		src={image.defaultSource.src}
 		alt={image.alt}
-		height={image.metadata.height}
-		width={image.metadata.width}
+		height={loaded ? undefined : image.metadata.height}
+		width={loaded ? undefined : image.metadata.width}
 	/>
 </picture>
