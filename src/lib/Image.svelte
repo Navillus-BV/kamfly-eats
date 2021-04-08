@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/env';
 	import type { ResponsiveImage } from '../images';
 	export let image: ResponsiveImage;
 
@@ -8,6 +9,7 @@
 	let imgElem: HTMLImageElement;
 
 	let loaded = false;
+	const onLoad = () => (loaded = browser && true);
 </script>
 
 <picture>

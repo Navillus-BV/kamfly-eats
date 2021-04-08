@@ -19,7 +19,7 @@ export interface ResponsiveImage {
 
 function combineDensities(srcset: string) {
     const [a, b] = srcset.split(', ');
-    return `${a}, ${b} 2x`;
+    return `${a}, ${b}`;
 };
 
 export type BlockImageParams = {
