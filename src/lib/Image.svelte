@@ -16,5 +16,7 @@
 		srcset={image.defaultSource.srcset}
 		src={image.defaultSource.src}
 		alt={image.alt}
+		height={image.metadata.height}
+		width={image.metadata.width}
 	/>
 </picture>
