@@ -140,7 +140,7 @@ async function processJob(job) {
     .toFile(job.output)
 }
 
-async function addWebp(jobs) {
+async function addFormats(jobs) {
   const withWebp = jobs.reduce((acc, next) => {
     acc.push(next)
 
@@ -149,6 +149,11 @@ async function addWebp(jobs) {
     acc.push({
       ...next,
       output: next.output.replace(ext, '.webp'),
+    })
+
+    acc.push({
+      ...next,
+      output: next.output.replace(ext, '.avif')
     })
 
     return acc
@@ -161,7 +166,7 @@ async function getJob(config) {
   return getPattern(config)
     .then(getMatches)
     .then(getJobs)
-    .then(addWebp)
+    .then(addFormats)
     .then(removeCachedJobs)
 }
 

@@ -1,36 +1,36 @@
 {% macro blockImage(src, title, small = false) %}
     <picture>
-        <source media="(min-width: 592px)" type="image/webp" data-srcset="{{ src | imgSrc(560, false, true) }}, {{ src | imgSrc(1120, false, true) }} 2x">
-        <source media="(min-width: 592px)" type="image/png" data-srcset="{{ src | imgSrc(560) }}, {{ src | imgSrc(1120) }} 2x">
-        <source media="(min-width: 374px)" type="image/webp" data-srcset="{{ src | imgSrc(447, false, true) }}, {{ src | imgSrc(894, false, true) }} 2x">
-        <source media="(min-width: 374px)" type="image/png" data-srcset="{{ src | imgSrc(447) }}, {{ src | imgSrc(894) }} 2x">
-        <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
-        <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
-        <noscript>
-            <img loading="lazy" class="block__img{% if small %} block__img--sm{% endif %}" srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" alt="{{ title }}"/>
-        </noscript>
-        <img loading="lazy" class="block__img lazyload blur-up{% if small %} block__img--sm{% endif %}" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
-    </picture>
-{% endmacro %}
-
-{% macro cardImage(src, title) %}
-    <picture>
-        <source type="image/webp" data-srcset="{{ src | imgSrc(214, false, true) }}, {{ src | imgSrc(428, false, true) }} 2x">
-        <source type="image/png" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x">
-        <noscript>
-            <img loading="lazy" class="card__img" srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" alt="{{ title }}"/>
-        </noscript>
-        <img loading="lazy" class="card__img lazyload blur-up" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
-    </picture>
-{% endmacro %}
-
-{% macro partnerImage(src, title) %}
-    <picture>
-        <source type="image/webp" data-srcset="{{ src | imgSrc(false, 64, true) }}, {{ src | imgSrc(false, 128, true) }} 2x">
-        <source type="image/png" data-srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x">
-        <noscript>
-            <img loading="lazy" class="partner__img" srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x" alt="{{ title }}"/>
-        </noscript>
-        <img loading="lazy" class="partner__img lazyload blur-up" data-srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}">
-    </picture>
-{% endmacro %}
+        <source media="(min-width: 592px)" type="image/avif" data-srcset="{{ src | imgSrc(560, false, false, true) }}, {{ src | imgSrc(1120, false, false, true) }} 2x">
+            <source media="(min-width: 592px)" type="image/webp" data-srcset="{{ src | imgSrc(560, false, true) }}, {{ src | imgSrc(1120, false, true) }} 2x">
+                <source media="(min-width: 592px)" type="image/png" data-srcset="{{ src | imgSrc(560) }}, {{ src | imgSrc(1120) }} 2x">
+                    <source media="(min-width: 374px)" type="image/avif" data-srcset="{{ src | imgSrc(447, false, false, true) }}, {{ src | imgSrc(894, false, false, true) }} 2x">
+                        <source media="(min-width: 374px)" type="image/webp" data-srcset="{{ src | imgSrc(447, false, true) }}, {{ src | imgSrc(894, false, true) }} 2x">
+                            <source media="(min-width: 374px)" type="image/png" data-srcset="{{ src | imgSrc(447) }}, {{ src | imgSrc(894) }} 2x">
+                                <source type="image/avif" data-srcset="{{ src | imgSrc(342, false, false, true) }}, {{ src | imgSrc(684, false, false, true) }} 2x">
+                                    <source type="image/webp" data-srcset="{{ src | imgSrc(342, false, true) }}, {{ src | imgSrc(684, false, true) }} 2x">
+                                        <source type="image/png" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x">
+                                            <noscript>
+                                                <img loading="lazy" class="block__img{% if small %} block__img--sm{% endif %}" srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" alt="{{ title }}"/>
+                                            </noscript>
+                                            <img loading="lazy" class="block__img lazyload blur-up{% if small %} block__img--sm{% endif %}" data-srcset="{{ src | imgSrc(342) }}, {{ src | imgSrc(684) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}"></picture>
+                                        {% endmacro %}
+                                        {% macro cardImage(src, title) %}
+                                            <picture>
+                                                <source type="image/avif" data-srcset="{{ src | imgSrc(214, false, false, true) }}, {{ src | imgSrc(428, false, false, true) }} 2x">
+                                                    <source type="image/webp" data-srcset="{{ src | imgSrc(214, false, true) }}, {{ src | imgSrc(428, false, true) }} 2x">
+                                                        <source type="image/png" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x">
+                                                            <noscript>
+                                                                <img loading="lazy" class="card__img" srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" alt="{{ title }}"/>
+                                                            </noscript>
+                                                            <img loading="lazy" class="card__img lazyload blur-up" data-srcset="{{ src | imgSrc(214) }}, {{ src | imgSrc(428) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}"></picture>
+                                                        {% endmacro %}
+                                                        {% macro partnerImage(src, title) %}
+                                                            <picture>
+                                                                <source type="image/avif" data-srcset="{{ src | imgSrc(false, 64, false, true) }}, {{ src | imgSrc(false, 128, false, true) }} 2x">
+                                                                    <source type="image/webp" data-srcset="{{ src | imgSrc(false, 64, true) }}, {{ src | imgSrc(false, 128, true) }} 2x">
+                                                                        <source type="image/png" data-srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x">
+                                                                            <noscript>
+                                                                                <img loading="lazy" class="partner__img" srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x" alt="{{ title }}"/>
+                                                                            </noscript>
+                                                                            <img loading="lazy" class="partner__img lazyload blur-up" data-srcset="{{ src | imgSrc(false, 64) }}, {{ src | imgSrc(false, 128) }} 2x" src="{{ src | lqip(64) }}" alt="{{ title }}"></picture>
+                                                                        {% endmacro %}
