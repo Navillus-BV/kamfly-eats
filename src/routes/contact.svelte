@@ -14,6 +14,8 @@
 
 	async function onSubmit() {
 		try {
+			const formData = new FormData(formElem);
+
 			await fetch('/contact/#contact', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
