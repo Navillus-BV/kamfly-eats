@@ -30,11 +30,11 @@
 
 <style>
 	section {
-		padding: 0 var(--spacing-20);
+		padding: 0 var(--spacing-4);
 	}
 
 	section.alt {
-		padding: var(--spacing-24) var(--spacing-20);
+		padding: var(--spacing-24) var(--spacing-4);
 		background: var(--bg-alt);
 	}
 
@@ -77,6 +77,14 @@
 	}
 
 	@media (min-width: 1024px) {
+		section {
+			padding: 0 var(--spacing-20);
+		}
+
+		section.alt {
+			padding: var(--spacing-24) var(--spacing-20);
+		}
+
 		.section__container,
 		.col_reverse .section__container {
 			gap: var(--spacing-20);
