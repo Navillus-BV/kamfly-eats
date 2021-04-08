@@ -1,8 +1,12 @@
 const path = require('path')
 
-module.exports = function (value, width = false, height = false, webp = false) {
+module.exports = function (value, width = false, height = false, webp = false, avif = false) {
   const ext = path.extname(value)
-  const newExt = webp ? '.webp' : ext
+  const newExt = webp
+    ? '.webp'
+    : avif
+      ? '.avif'
+      : ext
 
   if (width && height) {
     return value.replace(ext, `-${width}x${height}${newExt}`)
