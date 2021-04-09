@@ -50,7 +50,7 @@
 	</tr>
 	<tr>
 		<td headers="c s">
-			<div class="logo">
+			<div class="logo kamfly">
 				{@html kamflyIcon}
 			</div>
 		</td>
@@ -163,6 +163,10 @@
 		height: 1.25rem;
 		vertical-align: middle;
 		margin: var(--spacing-2) 0;
+	}
+
+	.logo.kamfly {
+		fill: var(--primary);
 	}
 
 	.estimate {
