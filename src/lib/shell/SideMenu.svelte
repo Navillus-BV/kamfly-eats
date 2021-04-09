@@ -20,10 +20,7 @@
 	};
 </script>
 
-<aside
-	transition:fly={{ duration: 300, y: 32, easing: cubicInOut }}
-	on:introend={() => onIntroEnd()}
->
+<aside transition:fly={{ duration: 150, y: 32 }} on:introend={() => onIntroEnd()}>
 	<Navigation {routes} vertical />
 
 	{#if cta}

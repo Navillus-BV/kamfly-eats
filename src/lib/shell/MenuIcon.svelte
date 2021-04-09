@@ -22,7 +22,7 @@
    * @link https://github.com/jonsuh/hamburgers
    */
 	.hamburger {
-		display: inline-block;
+		display: flex;
 		cursor: pointer;
 		border-width: 0;
 		background-color: transparent;

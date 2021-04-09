@@ -7,7 +7,7 @@
 	export let cta: CallToAction;
 </script>
 
-<aside out:slide={{ duration: 300 }}>
+<aside transition:slide={{ duration: 150 }}>
 	<strong class="title">{title}</strong>
 	<p class="content">
 		<span>
