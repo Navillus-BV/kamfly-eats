@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { prefetchRoutes } from '$app/navigation';
 	import { fly } from 'svelte/transition';
 	import { cubicInOut } from 'svelte/easing';
 	import Button, { ButtonType } from '$lib/Button.svelte';
@@ -13,9 +14,16 @@
 		route: string;
 		title: string;
 	};
+
+	const onIntroEnd = () => {
+		setTimeout(prefetchRoutes, 100);
+	};
 </script>
 
-<aside transition:fly={{ duration: 300, y: 32, easing: cubicInOut }}>
+<aside
+	transition:fly={{ duration: 300, y: 32, easing: cubicInOut }}
+	on:introend={() => onIntroEnd()}
+>
 	<Navigation {routes} vertical />
 
 	{#if cta}
