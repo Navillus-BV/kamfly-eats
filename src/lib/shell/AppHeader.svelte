@@ -53,7 +53,7 @@
 	</div>
 
 	{#if menuOpen}
-		<SideMenu routes={mobileNavItems} {cta} />
+		<SideMenu routes={mobileNavItems} {cta} on:click={() => (menuOpen = false)} />
 	{/if}
 </header>
 

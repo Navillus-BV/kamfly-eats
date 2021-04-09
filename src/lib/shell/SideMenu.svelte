@@ -21,11 +21,11 @@
 </script>
 
 <aside transition:fly={{ duration: 150, y: 32 }} on:introend={() => onIntroEnd()}>
-	<Navigation {routes} vertical />
+	<Navigation on:click {routes} vertical />
 
 	{#if cta}
 		<a href={cta.route}>
-			<Button type={ButtonType.Primary}>
+			<Button type={ButtonType.Primary} on:click>
 				{cta.title}
 			</Button>
 		</a>
