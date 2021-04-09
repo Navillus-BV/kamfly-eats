@@ -2,8 +2,9 @@
 	import CardList from '$lib/cards/CardList.svelte';
 	import ContactCard from '$lib/cards/ContactCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
-	import Meta from '$lib/seo/Meta.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import LogoList from '$lib/LogoList.svelte';
+	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
 	import images from '../images';
 
@@ -64,5 +65,17 @@
 				<ContactCard {...person} />
 			{/each}
 		</CardList>
+	</div>
+</Section>
+
+<Section title="Our trusted partners.">
+	<p slot="summary">
+		Trust is earned by delivering on the commitments you make – doing what you say you will. Our
+		partners have earned our trust by doing what they do better than anyone else, and we couldn’t do
+		what we do for you without them.
+	</p>
+
+	<div slot="details">
+		<LogoList logos={[images.partners.snipcart, images.partners.netlify, images.partners.github]} />
 	</div>
 </Section>
