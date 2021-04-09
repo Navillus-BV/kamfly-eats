@@ -8,7 +8,7 @@
 
 	let revenue = 10000;
 
-	$: kamflyPrice = formatCurrency(100 + revenue * 0.2);
+	$: kamflyPrice = formatCurrency(100 + revenue * 0.02);
 	$: thuisbezorgdPrice = formatCurrency(revenue * 0.13);
 	$: uberPrice = formatCurrency(revenue * 0.15);
 
@@ -89,7 +89,7 @@
 	</tr>
 </table>
 
-<Link cta={{ title: 'How did we calculate this?', href: '.' }} on:click={openModal} />
+<Link cta={{ title: 'How did we calculate this?', href: '' }} on:click={openModal} />
 
 {#if modalOpen}
 	<Modal on:close={closeModal}>

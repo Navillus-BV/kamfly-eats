@@ -19,9 +19,10 @@
 
 	let inputElem: HTMLInputElement;
 	let valueElem: HTMLDivElement;
+	let innerWidth: number;
 
-	$: inputElemWidth = inputElem && inputElem.getBoundingClientRect().width;
-	$: valueElemWidth = valueElem && valueElem.getBoundingClientRect().width;
+	$: inputElemWidth = innerWidth && inputElem && inputElem.getBoundingClientRect().width;
+	$: valueElemWidth = innerWidth && valueElem && valueElem.getBoundingClientRect().width;
 
 	let valueTransform = 0;
 	$: transformMax = inputElemWidth && inputElemWidth - valueElemWidth / 2;
@@ -37,6 +38,8 @@
 		}
 	}
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="slider">
 	<div
