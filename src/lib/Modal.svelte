@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { navigating } from '$app/stores';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	import ClickOutside from '$actions/clickOutside';
@@ -10,8 +9,6 @@
 
 	let mounted = false;
 	onMount(() => (mounted = true));
-
-	$: if ($navigating) onClose();
 </script>
 
 {#if mounted}

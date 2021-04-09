@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { navigating } from '$app/stores';
 	import Button, { ButtonType } from '$lib/Button.svelte';
 	import MenuIcon from './MenuIcon.svelte';
 	import Navigation from './Navigation.svelte';
@@ -10,7 +9,6 @@
 
 	let innerWidth: number;
 	$: if (innerWidth >= 1024) menuOpen = false;
-	$: if ($navigating) menuOpen = false;
 
 	const mobileNavItems = [
 		{ route: '/', title: 'home' },
@@ -32,7 +30,7 @@
 <header role="banner">
 	<div class="header__content">
 		<div class="header__left">
-			<a href="/" alt="Kamfly" aria-label="Site logo" class="header__brand" sveltekit:prefetch>
+			<a href="/" alt="Kamfly" aria-label="Site logo" class="header__brand">
 				{@html logoIcon}
 			</a>
 		</div>
