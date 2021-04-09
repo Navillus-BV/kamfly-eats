@@ -82,9 +82,10 @@
 		opacity: 0.5;
 	}
 
-	.footer__brand {
+	.footer__brand :global(svg) {
 		height: 2rem;
 		margin-bottom: var(--spacing-3);
+		fill: currentColor;
 	}
 
 	.footer__social {
@@ -112,9 +113,10 @@
 		background: var(--primary);
 	}
 
-	.footer__socialicon {
+	.footer__socialicon :global(svg) {
 		height: 1.25rem;
 		width: 1.25rem;
+		fill: currentColor;
 	}
 
 	.footer__links {

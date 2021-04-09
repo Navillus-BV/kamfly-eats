@@ -13,13 +13,12 @@
 </Card>
 
 <style>
-	.feature__icon {
+	.feature__icon :global(svg) {
 		height: 3rem;
-		color: var(--primary);
 	}
 
 	@media (min-width: 768px) {
-		.feature__icon {
+		.feature__icon :global(svg) {
 			height: 4rem;
 		}
 	}

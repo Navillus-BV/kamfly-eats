@@ -159,13 +159,13 @@
 		padding-bottom: var(--spacing-6);
 	}
 
-	.logo {
+	.logo :global(svg) {
 		height: 1.25rem;
 		vertical-align: middle;
 		margin: var(--spacing-2) 0;
 	}
 
-	.logo.kamfly {
+	.logo.kamfly :global(svg) {
 		fill: var(--primary);
 	}
 

@@ -80,10 +80,10 @@
 		justify-content: flex-start;
 	}
 
-	.header__brand {
+	.header__brand :global(svg) {
 		display: block;
 		height: 1.25rem;
-		color: var(--primary);
+		fill: var(--primary);
 	}
 
 	.header__middle {
