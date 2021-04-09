@@ -57,7 +57,7 @@
 		overflow: auto;
 		position: relative;
 		width: calc(100% - (var(--spacing-4) * 2));
-		max-width: 480px;
+		max-width: 50rem;
 		margin-left: var(--spacing-4);
 		margin-right: var(--spacing-4);
 		background: var(--bg);
@@ -123,11 +123,11 @@
 	@media (min-width: 641px) {
 		.modal__inner {
 			margin: 0 auto;
-			max-height: calc(100vh - 48px * 2);
+			max-height: calc(100vh - 3rem * 2);
 		}
 
 		.modal__content {
-			padding: 48px 32px;
+			padding: 3rem 2rem;
 		}
 	}
 </style>
