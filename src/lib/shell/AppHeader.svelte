@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
 	import Button, { ButtonType } from '$lib/Button.svelte';
 	import MenuIcon from './MenuIcon.svelte';
 	import Navigation from './Navigation.svelte';
@@ -9,6 +10,7 @@
 
 	let innerWidth: number;
 	$: if (innerWidth >= 1024) menuOpen = false;
+	$: if ($navigating) menuOpen = false;
 
 	const mobileNavItems = [
 		{ route: '/', title: 'home' },
