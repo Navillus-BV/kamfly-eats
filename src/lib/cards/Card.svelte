@@ -20,12 +20,7 @@
 
 	{#if cta}
 		<div class="card__link">
-			<a
-				class="link"
-				href={cta.href}
-				target={cta.external ? '_blank' : undefined}
-				rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
-			>
+			<a class="link" href={cta.href}>{cta.title}</a>
 		</div>
 	{/if}
 </article>

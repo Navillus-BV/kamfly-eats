@@ -19,12 +19,7 @@
 			<slot name="summary" />
 
 			{#each links as cta}
-				<a
-					class="link"
-					href={cta.href}
-					target={cta.external ? '_blank' : undefined}
-					rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
-				>
+				<a class="link" href={cta.href}>{cta.title}</a>
 			{/each}
 		</div>
 		<slot name="details" />

@@ -12,12 +12,7 @@
 		<span>
 			{description}
 			{#if cta}
-				<a
-					class="link link--sm link--alt"
-					href={cta.href}
-					target={cta.external ? '_blank' : undefined}
-					rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
-				>
+				<a class="link link--sm link--alt" href={cta.href}>{cta.title}</a>
 			{/if}
 		</span>
 	</p>

@@ -92,13 +92,11 @@
 	links={[
 		{
 			title: 'Learn more about Snipcart',
-			href: 'https://snipcart.com/',
-			external: true
+			href: 'https://snipcart.com/'
 		},
 		{
 			title: 'See payment processing options',
-			href: 'https://snipcart.com/list-ecommerce-payment-gateways',
-			external: true
+			href: 'https://snipcart.com/list-ecommerce-payment-gateways'
 		}
 	]}
 >

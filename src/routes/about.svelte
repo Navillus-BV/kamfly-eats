@@ -16,8 +16,7 @@
 			image: images.cards.tony,
 			cta: {
 				title: 'Connect on LinkedIn',
-				href: 'https://www.linkedin.com/in/tony-sull/',
-				external: true
+				href: 'https://www.linkedin.com/in/tony-sull/'
 			}
 		},
 		{
@@ -28,8 +27,7 @@
 			image: images.cards.sarah,
 			cta: {
 				title: 'Connect on LinkedIn',
-				href: 'https://www.linkedin.com/in/sarahsu-alwayslearning/',
-				external: true
+				href: 'https://www.linkedin.com/in/sarahsu-alwayslearning/'
 			}
 		}
 	];

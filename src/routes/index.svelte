@@ -26,8 +26,7 @@
 	links={[
 		{
 			href: 'https://demo.kamfly.io/',
-			title: 'See it in action',
-			external: true
+			title: 'See it in action'
 		}
 	]}
 >
