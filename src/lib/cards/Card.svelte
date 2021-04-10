@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Link from '$lib/Link.svelte';
-
 	export let small = false;
 	export let title: string = undefined;
 	export let subtitle: string = undefined;
@@ -22,7 +20,12 @@
 
 	{#if cta}
 		<div class="card__link">
-			<Link {cta} />
+			<a
+				class="link"
+				href={cta.href}
+				target={cta.external ? '_blank' : undefined}
+				rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
+			>
 		</div>
 	{/if}
 </article>

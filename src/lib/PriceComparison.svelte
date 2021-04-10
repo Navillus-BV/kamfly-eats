@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Link from './Link.svelte';
 	import Modal from './Modal.svelte';
 	import Slider from './Slider.svelte';
 	import kamflyIcon from '$assets/icons/logo.svg?raw';
@@ -89,7 +88,7 @@
 	</tr>
 </table>
 
-<Link cta={{ title: 'How did we calculate this?', href: '' }} on:click={openModal} />
+<button class="link" on:click={openModal}>How did we calculate this?</button>
 
 {#if modalOpen}
 	<Modal on:close={closeModal}>

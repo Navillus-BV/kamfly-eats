@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Button, { ButtonType } from '$lib/Button.svelte';
-
 	export let title: string;
 	export let subtitle: string;
 	export let cta: CallToAction;
@@ -14,11 +12,7 @@
 	{/if}
 
 	{#if cta}
-		<a href={cta.href}>
-			<Button type={ButtonType.Primary}>
-				{cta.title}
-			</Button>
-		</a>
+		<a href={cta.href} class="btn btn--primary">{cta.title}</a>
 	{/if}
 </div>
 

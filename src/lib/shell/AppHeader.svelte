@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Button, { ButtonType } from '$lib/Button.svelte';
 	import MenuIcon from './MenuIcon.svelte';
 	import Navigation from './Navigation.svelte';
 	import SideMenu from './SideMenu.svelte';
@@ -38,11 +37,7 @@
 			<Navigation routes={navItems} />
 		</div>
 		<div class="header__right">
-			<a class="header__cta" href={cta.route}>
-				<Button type={ButtonType.Primary} small>
-					{cta.title}
-				</Button>
-			</a>
+			<a class="header__cta btn btn--primary btn--sm" href={cta.route}>{cta.title}</a>
 
 			<div class="header__menu">
 				<MenuIcon bind:menuOpen />

@@ -1,7 +1,3 @@
-<script lang="ts">
-	import Button, { ButtonType } from '$lib/Button.svelte';
-</script>
-
 <aside role="banner">Special COVID Pricing*</aside>
 
 <div class="plans">
@@ -27,9 +23,7 @@
 			<li class="plan__feature">Unlimited number of locations</li>
 		</ul>
 
-		<a href="/contact">
-			<Button type={ButtonType.Hollow}>get started</Button>
-		</a>
+		<a href="/contact" class="btn btn--hollow">get started</a>
 	</div>
 
 	<div class="plan plan--highlighted plan--free">
@@ -63,9 +57,7 @@
 			<li class="plan__feature">Online ordering analytics</li>
 		</ul>
 
-		<a href="/contact">
-			<Button type={ButtonType.Primary}>get started</Button>
-		</a>
+		<a href="/contact" class="btn btn--primary">get started</a>
 	</div>
 	<div class="plan">
 		<h3 class="plan__title">Custom</h3>
@@ -87,9 +79,7 @@
 			<li class="plan__feature">Search engine optimization</li>
 		</ul>
 
-		<a href="/contact">
-			<Button type={ButtonType.Hollow}>get started</Button>
-		</a>
+		<a href="/contact" class="btn btn--hollow">get started</a>
 	</div>
 </div>
 

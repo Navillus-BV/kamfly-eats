@@ -26,7 +26,7 @@
 	.section__img {
 		width: 100%;
 		max-width: 35rem;
-		max-height: 35rem;
+		max-height: 25rem;
 		margin: 0 auto;
 		object-fit: contain;
 	}

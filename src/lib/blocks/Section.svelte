@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Link from '$lib/Link.svelte';
-
 	export let id: string = undefined;
 	export let title: string;
 	export let alt = false;
@@ -21,7 +19,12 @@
 			<slot name="summary" />
 
 			{#each links as cta}
-				<Link {cta} />
+				<a
+					class="link"
+					href={cta.href}
+					target={cta.external ? '_blank' : undefined}
+					rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
+				>
 			{/each}
 		</div>
 		<slot name="details" />

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Button, { ButtonType } from '$lib/Button.svelte';
 	import CardList from '$lib/cards/CardList.svelte';
 	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
@@ -39,9 +38,7 @@
 			<FeatureCard title="Multi-Currency & Localization" icon={step3Icon} />
 		</CardList>
 
-		<a href="/contact">
-			<Button type={ButtonType.Primary}>Get started</Button>
-		</a>
+		<a href="/contact" class="btn btn--primary cta__btn">Get started</a>
 	</div>
 </Section>
 
@@ -131,3 +128,11 @@
 		comprehensive, digital solutions that won't break the bank.
 	</p>
 </ImageSection>
+
+<style>
+	@media (min-width: 768px) {
+		.cta__btn {
+			align-self: center;
+		}
+	}
+</style>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import Link from './Link.svelte';
 
 	export let title: string;
 	export let description: string;
@@ -13,7 +12,12 @@
 		<span>
 			{description}
 			{#if cta}
-				<Link {cta} small alt />
+				<a
+					class="link link--sm link--alt"
+					href={cta.href}
+					target={cta.external ? '_blank' : undefined}
+					rel={cta.external ? 'noreferrer' : undefined}>{cta.title}</a
+				>
 			{/if}
 		</span>
 	</p>

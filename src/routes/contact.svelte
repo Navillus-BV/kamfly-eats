@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Button, { ButtonType } from '$lib/Button.svelte';
-	import Link from '$lib/Link.svelte';
 	import Modal from '$lib/Modal.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
@@ -73,7 +71,7 @@
 			</div>
 		</div>
 
-		<Button submit type={ButtonType.Primary}>Submit</Button>
+		<button type="submit" class="btn btn--primary">submit</button>
 	</form>
 </Section>
 

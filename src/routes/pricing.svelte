@@ -12,15 +12,7 @@
 
 <Hero title="Kick the margin moochers to the curb." />
 
-<Section
-	title="Protect your profits."
-	links={[
-		{
-			title: 'Get Started',
-			href: '/contact'
-		}
-	]}
->
+<Section title="Protect your profits.">
 	<div slot="graphic">
 		<PriceComparison />
 	</div>
@@ -32,17 +24,7 @@
 	</p>
 </Section>
 
-<ImageSection
-	imageRight
-	title="COVID-19 pricing."
-	image={images.blocks.covid}
-	links={[
-		{
-			title: 'See our pricing',
-			href: '/pricing'
-		}
-	]}
->
+<ImageSection imageRight title="COVID-19 pricing." image={images.blocks.covid}>
 	<p>
 		We know that this is a tough time to be in the restaurant business. That's the whole reason we
 		started Kamfly - to help as many restaurants as possible keep their doors open through this

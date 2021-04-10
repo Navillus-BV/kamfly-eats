@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
-	import Button, { ButtonType } from '$lib/Button.svelte';
 	import Navigation from './Navigation.svelte';
 
 	export let routes: {
@@ -19,11 +17,7 @@
 	<Navigation on:click {routes} vertical />
 
 	{#if cta}
-		<a href={cta.route}>
-			<Button type={ButtonType.Primary} on:click>
-				{cta.title}
-			</Button>
-		</a>
+		<a href={cta.route} class="btn btn--primary" on:click>{cta.title}</a>
 	{/if}
 </aside>
 
