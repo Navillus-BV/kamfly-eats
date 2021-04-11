@@ -1,17 +1,14 @@
 <script lang="ts">
-	export let routes: {
-		route: string;
-		title: string;
-	}[];
+	export let routes: CallToAction[];
 
 	export let vertical = false;
 </script>
 
 <nav>
 	<ul class:vertical>
-		{#each routes as { route, title } (route)}
+		{#each routes as { href, title } (title)}
 			<li>
-				<a on:click href={route} class:p-2={vertical}>{title}</a>
+				<a on:click {href} class:p-2={vertical}>{title}</a>
 			</li>
 		{/each}
 	</ul>

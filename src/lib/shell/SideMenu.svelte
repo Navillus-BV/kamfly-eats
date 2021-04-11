@@ -2,22 +2,16 @@
 	import { fly } from 'svelte/transition';
 	import Navigation from './Navigation.svelte';
 
-	export let routes: {
-		route: string;
-		title: string;
-	}[];
+	export let routes: CallToAction[];
 
-	export let cta: {
-		route: string;
-		title: string;
-	};
+	export let cta: CallToAction;
 </script>
 
 <aside transition:fly={{ duration: 150, y: 32 }}>
 	<Navigation on:click {routes} vertical />
 
 	{#if cta}
-		<a href={cta.route} class="btn btn--primary" on:click>{cta.title}</a>
+		<a href={cta.href} class="btn btn--primary" on:click>{cta.title}</a>
 	{/if}
 </aside>
 

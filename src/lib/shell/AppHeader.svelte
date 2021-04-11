@@ -9,17 +9,17 @@
 	let innerWidth: number;
 	$: if (innerWidth >= 1024) menuOpen = false;
 
-	const mobileNavItems = [
-		{ route: '/', title: 'home' },
-		{ route: '/how-it-works', title: 'how it works' },
-		{ route: '/pricing', title: 'pricing' },
-		{ route: '/about', title: 'about' }
+	const mobileNavItems: CallToAction[] = [
+		{ href: '/', title: 'home' },
+		{ href: '/how-it-works', title: 'how it works' },
+		{ href: '/pricing', title: 'pricing' },
+		{ href: '/about', title: 'about' }
 	];
 
 	const navItems = mobileNavItems.slice(1);
 
-	const cta = {
-		route: '/contact',
+	const cta: CallToAction = {
+		href: '/contact',
 		title: 'get in touch'
 	};
 </script>
@@ -37,7 +37,7 @@
 			<Navigation routes={navItems} />
 		</div>
 		<div class="header__right">
-			<a class="header__cta btn btn--primary btn--sm" href={cta.route}>{cta.title}</a>
+			<a class="header__cta btn btn--primary btn--sm" href={cta.href}>{cta.title}</a>
 
 			<div class="header__menu">
 				<MenuIcon bind:menuOpen />
