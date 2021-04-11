@@ -247,3 +247,9 @@ form label {
 		font-size: var(--text-xl);
 	}
 }
+
+@media (min-width: 1024px) {
+	:root {
+		font-size: 18px;
+	}
+}
