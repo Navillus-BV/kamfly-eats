@@ -28,12 +28,13 @@
 		text-align: center;
 	}
 
-	.hero > *:not(:last-child) {
-		margin-bottom: var(--spacing-12);
+	h1 {
+		margin-bottom: var(--spacing-16);
 	}
 
 	p {
 		font-size: var(--text-lg);
+		margin-bottom: var(--spacing-6);
 	}
 
 	@media (min-width: 480px) {
