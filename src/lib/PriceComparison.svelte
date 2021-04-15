@@ -180,7 +180,7 @@
 	}
 
 	@media (min-width: 375px) {
-		.price strong {
+		.estimate strong {
 			font-size: var(--text-4xl);
 		}
 	}

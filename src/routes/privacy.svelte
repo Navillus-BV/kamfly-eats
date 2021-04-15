@@ -2,7 +2,8 @@
 	import Meta from '$lib/seo/Meta.svelte';
 	import { attributes, html } from '$assets/pages/privacy.md';
 
-	const { title, last_updated } = attributes;
+	const title = attributes.title as string;
+	const last_updated = attributes.last_updated as string;
 
 	const lastUpdated = last_updated && new Date(last_updated).toDateString();
 </script>

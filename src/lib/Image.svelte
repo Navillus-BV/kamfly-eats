@@ -18,7 +18,7 @@
 	{/each}
 	<img
 		bind:this={imgElem}
-		on:load={() => (loaded = true)}
+		on:load={onLoad}
 		loading="lazy"
 		class={customClass}
 		srcset={image.defaultSource.srcset}

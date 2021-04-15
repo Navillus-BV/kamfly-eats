@@ -2,10 +2,10 @@ const sveltePreprocess = require('svelte-preprocess');
 const static = require('@sveltejs/adapter-static');
 const { imagetools } = require('vite-imagetools');
 const mdPlugin = require('vite-plugin-markdown');
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
-const markdownItToc = require('markdown-it-table-of-contents')
-const slugify = require('slugify')
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdownItToc = require('markdown-it-table-of-contents');
+const slugify = require('slugify');
 const { resolve } = require('path');
 const pkg = require('./package.json');
 
@@ -13,37 +13,37 @@ const pkg = require('./package.json');
  * Override default markdown library
  */
 function removeExtraText(s) {
-    let newStr = String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, '')
-    newStr = newStr.replace(/⚠️/g, '')
-    newStr = newStr.replace(/[?!]/g, '')
-    newStr = newStr.replace(/<[^>]*>/g, '')
-    return newStr
+	let newStr = String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, '');
+	newStr = newStr.replace(/⚠️/g, '');
+	newStr = newStr.replace(/[?!]/g, '');
+	newStr = newStr.replace(/<[^>]*>/g, '');
+	return newStr;
 }
 
 function markdownItSlugify(s) {
-    return slugify(removeExtraText(s), { lower: true, remove: /[:’'`,]/g })
+	return slugify(removeExtraText(s), { lower: true, remove: /[:’'`,]/g });
 }
 
 const md = markdownIt({ html: true, breaks: true, linkify: true })
-    .use(markdownItAnchor, {
+	.use(markdownItAnchor, {
 		permalink: true,
 		slugify: markdownItSlugify,
 		permalinkBefore: false,
 		permalinkClass: 'direct-link',
 		permalinkSymbol: '',
-		level: [1, 2, 3, 4],
-    })
-    .use(markdownItToc, {
+		level: [1, 2, 3, 4]
+	})
+	.use(markdownItToc, {
 		includeLevel: [2, 3],
 		slugify: markdownItSlugify,
 		format: function (header) {
-			return removeExtraText(header)
+			return removeExtraText(header);
 		},
 		transformLink: function (link) {
 			// remove backticks from markdown code
-			return link.replace(/\%60/g, '')
-		},
-    });
+			return link.replace(/\%60/g, '');
+		}
+	});
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {

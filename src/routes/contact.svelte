@@ -13,11 +13,12 @@
 	async function onSubmit() {
 		try {
 			const formData = new FormData(formElem);
+			const params = new URLSearchParams(formData as any);
 
 			await fetch('/contact/#contact', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-				body: new URLSearchParams(formData).toString()
+				body: params.toString()
 			});
 
 			openModal();

@@ -195,12 +195,4 @@
 	input[type='range']:focus::-ms-fill-upper {
 		background: var(--primary);
 	}
-
-	td:first-child {
-		text-align: start;
-	}
-
-	td:last-child {
-		text-align: end;
-	}
 </style>

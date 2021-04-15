@@ -13,9 +13,13 @@
 
 {#if mounted}
 	<aside transition:fade={{ duration: 150 }}>
-		<div class="modal__inner" transition:fly={{ y: -32, duration: 150 }}>
+		<div
+			class="modal__inner"
+			transition:fly={{ y: -32, duration: 150 }}
+			use:ClickOutside={{ onClickOutside: onClose }}
+		>
 			<button aria-label="close" on:click|stopPropagation={onClose} />
-			<div class="modal__content" use:ClickOutside on:clickOutside={onClose}>
+			<div class="modal__content">
 				<slot />
 			</div>
 		</div>
