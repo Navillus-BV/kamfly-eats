@@ -224,9 +224,78 @@ form label {
 	text-decoration: none;
 }
 
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	--card-spacing: var(--spacing-6);
+	row-gap: var(--spacing-8);
+	column-gap: var(--spacing-8);
+}
+
+.card {
+	max-width: 25rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--bg);
+	padding: var(--spacing-8);
+	border-radius: var(--radius-sm);
+}
+
+.card.card--sm {
+	max-width: 15rem;
+	min-height: 15rem;
+	justify-content: center;
+}
+
+.card__title {
+	margin-top: var(--card-spacing);
+	line-height: var(--leading-normal);
+}
+
+.card__subtitle {
+	font-size: var(--text-base);
+	font-weight: bold;
+	opacity: 0.67;
+	line-height: var(--leading-normal);
+}
+
+.card .link {
+	margin-top: var(--card-spacing);
+}
+
+.card__icon {
+	height: 3rem;
+}
+
+.card__img {
+	max-width: 67%;
+	width: 17rem;
+	object-fit: contain;
+}
+
+.card__img.card__img--round {
+	border-radius: var(--radius-full);
+}
+
+.card p {
+	margin-top: var(--card-spacing);
+}
+
 @media (min-width: 375px) {
 	:root {
 		font-size: 16px;
+	}
+
+	.cards {
+		--card-spacing: var(--spacing-8);
+	}
+
+	.card.card--sm {
+		max-width: 18rem;
+		min-height: 18rem;
 	}
 }
 
@@ -246,10 +315,54 @@ form label {
 	h4 {
 		font-size: var(--text-xl);
 	}
+
+	.card {
+		padding: var(--spacing-16);
+	}
+
+	.card.card--sm {
+		max-width: 20rem;
+		min-height: 20rem;
+	}
+
+	.card__title {
+		font-size: var(--text-xl);
+	}
+
+	.card__subtitle {
+		font-size: var(--text-base);
+	}
+
+	.card__icon {
+		height: 4rem;
+	}
 }
 
 @media (min-width: 1024px) {
 	:root {
 		font-size: 18px;
+	}
+
+	.cards {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: center;
+	}
+
+	.card {
+		flex: 1;
+		padding: var(--spacing-16) var(--spacing-12);
+	}
+
+	.card.card--sm {
+		max-width: 100%;
+		min-height: 0;
+		justify-content: unset;
+	}
+}
+
+@media (min-width: 1440px) {
+	.cards {
+		column-gap: var(--spacing-16);
 	}
 }

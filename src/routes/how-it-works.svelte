@@ -1,6 +1,4 @@
 <script lang="ts">
-	import CardList from '$lib/cards/CardList.svelte';
-	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
@@ -32,11 +30,37 @@
 	</p>
 
 	<div slot="details">
-		<CardList>
-			<FeatureCard title="Menu Management" icon={step1Icon} />
-			<FeatureCard title="Online Ordering" icon={step2Icon} />
-			<FeatureCard title="Multi-Currency & Localization" icon={step3Icon} />
-		</CardList>
+		<div class="cards">
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html step1Icon}
+				</div>
+				<h3 class="card__title">Get in touch</h3>
+				<p>
+					We'll find a time for a quick call to give you a demo and answer any questions you may
+					have.
+				</p>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html step2Icon}
+				</div>
+				<h3 class="card__title">Get set up</h3>
+				<p>Our team will partner with you to ensure a smooth set-up and launch.</p>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html step3Icon}
+				</div>
+				<h3 class="card__title">Go live!</h3>
+				<p>
+					We'll walk you through your finished solution and make sure everything is just the way you
+					want it.
+				</p>
+			</div>
+		</div>
 
 		<a href="/contact" class="btn btn--primary cta__btn">Get started</a>
 	</div>
@@ -76,11 +100,28 @@
 	</p>
 
 	<div slot="details">
-		<CardList>
-			<FeatureCard title="Tax Management" icon={taxesIcon} />
-			<FeatureCard title="Customer Discounts" icon={discountsIcon} />
-			<FeatureCard title="Payment Gateways" icon={paymentIcon} />
-		</CardList>
+		<div class="cards">
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html taxesIcon}
+				</div>
+				<h3 class="card__title">Tax Management</h3>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html discountsIcon}
+				</div>
+				<h3 class="card__title">Customer Discounts</h3>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html paymentIcon}
+				</div>
+				<h3 class="card__title">Payment Gateway</h3>
+			</div>
+		</div>
 	</div>
 </Section>
 

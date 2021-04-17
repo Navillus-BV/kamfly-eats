@@ -1,8 +1,7 @@
 <script lang="ts">
-	import CardList from '$lib/cards/CardList.svelte';
-	import ContactCard from '$lib/cards/ContactCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
+	import Image from '$lib/Image.svelte';
 	import LogoList from '$lib/LogoList.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import Section from '$lib/blocks/Section.svelte';
@@ -58,11 +57,17 @@
 	<p slot="summary">We’re a small but passionate team looking to do some good in the world.</p>
 
 	<div slot="details">
-		<CardList>
+		<div class="cards">
 			{#each team as person (person.title)}
-				<ContactCard {...person} />
+				<div class="card">
+					<Image image={person.image} class="card__img card__img--round" />
+					<h3 class="card__title">{person.title}</h3>
+					<h4 class="card__subtitle">{person.subtitle}</h4>
+					<p>{person.description}</p>
+					<a href={person.cta.href} class="link">{person.cta.title}</a>
+				</div>
 			{/each}
-		</CardList>
+		</div>
 	</div>
 </Section>
 

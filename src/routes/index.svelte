@@ -1,6 +1,4 @@
 <script lang="ts">
-	import CardList from '$lib/cards/CardList.svelte';
-	import FeatureCard from '$lib/cards/FeatureCard.svelte';
 	import Hero from '$lib/blocks/Hero.svelte';
 	import ImageSection from '$lib/blocks/ImageSection.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
@@ -106,11 +104,28 @@
 	</p>
 
 	<div slot="details">
-		<CardList>
-			<FeatureCard title="Menu Management" icon={clipboardIcon} />
-			<FeatureCard title="Online Ordering" icon={groupIcon} />
-			<FeatureCard title="Multi-Currency & Localization" icon={currenciesIcon} />
-		</CardList>
+		<div class="cards">
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html clipboardIcon}
+				</div>
+				<h3 class="card__title">Menu Management</h3>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html groupIcon}
+				</div>
+				<h3 class="card__title">Online Ordering</h3>
+			</div>
+
+			<div class="card card--sm">
+				<div class="card__icon">
+					{@html currenciesIcon}
+				</div>
+				<h3 class="card__title">Multi-Currency & Localization</h3>
+			</div>
+		</div>
 	</div>
 </Section>
 
