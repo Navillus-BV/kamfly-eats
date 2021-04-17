@@ -78,7 +78,7 @@
 		margin-bottom: 1rem;
 	}
 
-	#value::after {
+	#value:after {
 		content: '';
 		position: absolute;
 		border-top: 0.5rem solid var(--primary);

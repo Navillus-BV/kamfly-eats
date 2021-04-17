@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Modal from '$lib/Modal.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
-	import Section from '$lib/blocks/Section.svelte';
 
 	let modalOpen = false;
 
@@ -30,51 +29,58 @@
 
 <Meta title="Contact Us" />
 
-<Section title="Send us an email.">
-	<p slot="summary">
-		<span
-			>Just fill out the form below or email us here:
-			<a class="link" href="mailto:info@kamfly.io">info@kamfly.io</a>
-		</span>
-	</p>
+<section class="section">
+	<div class="block">
+		<div class="block__summary">
+			<h2>Send us an email.</h2>
 
-	<form
-		bind:this={formElem}
-		slot="details"
-		name="contact"
-		on:submit|preventDefault={onSubmit}
-		netlify-honeypot="bot-field"
-		data-netlify="true"
-	>
-		<input type="hidden" name="form-name" value="contact" />
-		<p class="honeypot">
-			<label
-				>Don’t fill this out if you're human:
-				<input name="bot-field" />
-			</label>
-		</p>
-		<div>
-			<div>
-				<label for="name">Your Name *</label>
-				<input id="name" name="name" type="text" required />
-			</div>
-		</div>
-		<div>
-			<div>
-				<label for="email">Your Email Address *</label>
-				<input id="email" name="email" type="email" required />
-			</div>
-		</div>
-		<div>
-			<div>
-				<label for="message">Your Message *</label>
-				<textarea id="message" name="message" rows="6" required />
-			</div>
+			<p>
+				<span
+					>Just fill out the form below or email us here:
+					<a class="link" href="mailto:info@kamfly.io">info@kamfly.io</a>
+				</span>
+			</p>
 		</div>
 
-		<button type="submit" class="btn btn--primary">submit</button>
-	</form>
-</Section>
+		<div class="block__details">
+			<form
+				bind:this={formElem}
+				name="contact"
+				on:submit|preventDefault={onSubmit}
+				netlify-honeypot="bot-field"
+				data-netlify="true"
+			>
+				<input type="hidden" name="form-name" value="contact" />
+				<p class="honeypot">
+					<label
+						>Don’t fill this out if you're human:
+						<input name="bot-field" />
+					</label>
+				</p>
+				<div>
+					<div>
+						<label for="name">Your Name *</label>
+						<input id="name" name="name" type="text" required />
+					</div>
+				</div>
+				<div>
+					<div>
+						<label for="email">Your Email Address *</label>
+						<input id="email" name="email" type="email" required />
+					</div>
+				</div>
+				<div>
+					<div>
+						<label for="message">Your Message *</label>
+						<textarea id="message" name="message" rows="6" required />
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn--primary">submit</button>
+			</form>
+		</div>
+	</div>
+</section>
 
 {#if modalOpen}
 	<Modal on:close={closeModal}>

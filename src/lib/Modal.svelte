@@ -28,7 +28,7 @@
 
 <style>
 	aside,
-	aside::before {
+	aside:before {
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -47,7 +47,7 @@
 		z-index: 999;
 	}
 
-	aside::before {
+	aside:before {
 		content: '';
 		position: absolute;
 		background-color: rgba(22, 23, 27, 0.88);
@@ -94,8 +94,8 @@
 		height: 16px;
 	}
 
-	button::before,
-	button::after {
+	button:before,
+	button:after {
 		content: '';
 		display: block;
 		position: absolute;
@@ -108,16 +108,16 @@
 		background: #6a6f82;
 	}
 
-	button::before {
+	button:before {
 		transform: rotate(225deg);
 	}
 
-	button::after {
+	button:after {
 		transform: rotate(-45deg);
 	}
 
-	button:hover::before,
-	button:hover::after {
+	button:hover:before,
+	button:hover:after {
 		background: #959cb1;
 	}
 

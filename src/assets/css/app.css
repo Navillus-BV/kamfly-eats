@@ -216,12 +216,69 @@ form label {
 	color: var(--bg);
 }
 
-.link::after {
+.link:after {
 	content: '›';
 	pointer-events: none;
 	display: inline-block;
 	margin-left: var(--spacing-1);
 	text-decoration: none;
+}
+
+.section {
+	padding: 0 var(--spacing-4);
+}
+
+.section.section--alt {
+	padding: var(--spacing-24) var(--spacing-4);
+	background: var(--bg-alt);
+}
+
+.block {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: 'graphic' 'summary' 'details';
+	gap: var(--spacing-6);
+	align-items: center;
+	text-align: center;
+}
+
+.block.block--col-reverse {
+	grid-template-areas: 'summary' 'graphic' 'details';
+}
+
+.block__graphic {
+	grid-area: graphic;
+}
+
+.block__summary {
+	grid-area: summary;
+	display: flex;
+	flex-direction: column;
+	max-width: 50rem;
+	margin: 0 auto;
+	row-gap: var(--spacing-3);
+}
+
+.block__details {
+	grid-area: details;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-6);
+}
+
+.block__image {
+	width: 100%;
+	max-width: 35rem;
+	max-height: 25rem;
+	margin: 0 auto;
+	object-fit: contain;
+}
+
+.block__image.block__image--sm {
+	max-width: 10rem;
+	max-height: 10rem;
 }
 
 .cards {
@@ -299,6 +356,13 @@ form label {
 	}
 }
 
+@media (min-width: 480px) {
+	.block__image.block__image--sm {
+		max-width: 12.5rem;
+		max-height: 12.5rem;
+	}
+}
+
 @media (min-width: 768px) {
 	h1 {
 		font-size: var(--text-5xl);
@@ -314,6 +378,11 @@ form label {
 
 	h4 {
 		font-size: var(--text-xl);
+	}
+
+	.block__image.block__image--sm {
+		max-width: 15rem;
+		max-height: 15rem;
 	}
 
 	.card {
@@ -341,6 +410,42 @@ form label {
 @media (min-width: 1024px) {
 	:root {
 		font-size: 18px;
+	}
+
+	.section {
+		padding: 0 var(--spacing-20);
+	}
+
+	.section.section--alt {
+		padding: var(--spacing-24) var(--spacing-20);
+	}
+
+	.block,
+	.block.block--col-reverse {
+		gap: var(--spacing-20);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 'graphic summary' 'details details';
+	}
+
+	.block.block--row-reverse {
+		grid-template-areas: 'summary graphic' 'details details';
+	}
+
+	.block__summary {
+		grid-column: 1 / 3;
+	}
+
+	.block__graphic + .block__summary {
+		grid-column: unset;
+		text-align: start;
+	}
+
+	.block__details {
+		gap: var(--spacing-20);
+	}
+
+	.block__image {
+		margin: 0;
 	}
 
 	.cards {

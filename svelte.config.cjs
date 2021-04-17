@@ -62,6 +62,9 @@ module.exports = {
 		router: false,
 
 		vite: {
+			build: {
+				cssCodeSplit: false
+			},
 			plugins: [
 				imagetools({ force: true }),
 				mdPlugin.plugin({
