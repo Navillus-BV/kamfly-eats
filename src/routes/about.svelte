@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import LogoList from '$lib/LogoList.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import images from '../images';
 
@@ -27,6 +26,8 @@
 			}
 		}
 	];
+
+	const partners = [images.partners.snipcart, images.partners.netlify, images.partners.github];
 </script>
 
 <Meta title="About Us" />
@@ -91,10 +92,10 @@
 			</p>
 		</div>
 
-		<div class="block__details">
-			<LogoList
-				logos={[images.partners.snipcart, images.partners.netlify, images.partners.github]}
-			/>
+		<div class="block__details partners">
+			{#each partners as partner, i (i)}
+				<Image image={partner} class="partner__logo" />
+			{/each}
 		</div>
 	</div>
 </section>
