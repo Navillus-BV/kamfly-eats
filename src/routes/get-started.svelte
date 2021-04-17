@@ -1,14 +1,17 @@
 <script lang="ts">
-	import Hero from '$lib/blocks/Hero.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 </script>
 
 <Meta title="Get Started" />
 
-<Hero
-	title="Ready to get started?"
-	subtitle="Let's chat! Pick a time below that fits your schedule, and share a few details about your restaurant. We can't wait to talk with you!"
-/>
+<section class="hero">
+	<h1>Ready to get started?</h1>
+
+	<p>
+		Let's chat! Pick a time below that fits your schedule, and share a few details about your
+		restaurant. We can't wait to talk with you!
+	</p>
+</section>
 
 <section class="section">
 	<div class="block">

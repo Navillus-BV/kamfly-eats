@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import Hero from '$lib/blocks/Hero.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import PriceComparison from '$lib/PriceComparison.svelte';
 	import PricePlans from '$lib/PricePlans.svelte';
@@ -9,7 +8,9 @@
 
 <Meta title="Pricing" />
 
-<Hero title="Kick the margin moochers to the curb." />
+<section class="hero">
+	<h1>Kick the margin moochers to the curb.</h1>
+</section>
 
 <section class="section">
 	<div class="block">

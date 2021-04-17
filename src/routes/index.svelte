@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Hero from '$lib/blocks/Hero.svelte';
 	import Image from '$lib/Image.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import PriceComparison from '$lib/PriceComparison.svelte';
@@ -11,11 +10,13 @@
 
 <Meta title="Self-Managed Online Ordering for Your Restaurant" />
 
-<Hero
-	title="Your restaurant. Your future. Your call."
-	subtitle="The digital experience your customers want. The freedom you deserve."
-	cta={{ href: '/contact', title: 'Get Started' }}
-/>
+<section class="hero">
+	<h1>Your restaurant. Your future. Your call.</h1>
+
+	<p>The digital experience your customers want. The freedom you deserve.</p>
+
+	<a href="/contact" class="btn btn--primary">Get Started</a>
+</section>
 
 <section class="section">
 	<div class="block">

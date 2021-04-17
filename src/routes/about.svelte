@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Hero from '$lib/blocks/Hero.svelte';
 	import Image from '$lib/Image.svelte';
 	import LogoList from '$lib/LogoList.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
@@ -32,7 +31,9 @@
 
 <Meta title="About Us" />
 
-<Hero title="About us." />
+<section class="hero">
+	<h1>About Us.</h1>
+</section>
 
 <section class="section">
 	<div class="block">

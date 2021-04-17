@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Image from '$lib/Image.svelte';
-	import Hero from '$lib/blocks/Hero.svelte';
 	import Meta from '$lib/seo/Meta.svelte';
 	import images from '../images';
 	import discountsIcon from '$assets/icons/discounts.svg?raw';
@@ -13,14 +12,13 @@
 
 <Meta title="How it Works" />
 
-<Hero
-	title="Online made easy."
-	subtitle="Self-managed digital restaurant solutions without the headaches."
-	cta={{
-		title: 'Get Started',
-		href: '/contact'
-	}}
-/>
+<section class="hero">
+	<h1>Online made easy.</h1>
+
+	<p>Self-managed digital restaurant solutions without the headaches.</p>
+
+	<a href="/contact" class="btn btn--primary">Get Started</a>
+</section>
 
 <section class="section section--alt">
 	<div class="block">
