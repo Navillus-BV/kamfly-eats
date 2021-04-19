@@ -179,6 +179,14 @@
 		color: var(--primary);
 	}
 
+	td:first-of-type {
+		text-align: start;
+	}
+
+	td:last-of-type {
+		text-align: end;
+	}
+
 	@media (min-width: 375px) {
 		.estimate strong {
 			font-size: var(--text-4xl);
