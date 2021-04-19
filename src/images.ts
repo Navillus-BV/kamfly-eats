@@ -128,27 +128,6 @@ const cms = blockImage(
 	"Screenshots of Kamfly's menu management system."
 );
 
-import covidWebp342 from '$assets/blocks/covid-response.jpg?width=342;684&webp&srcset';
-import covidPng342 from '$assets/blocks/covid-response.jpg?width=342;684&jpg&srcset';
-import covidWebp447 from '$assets/blocks/covid-response.jpg?width=447;894&webp&srcset';
-import covidPng447 from '$assets/blocks/covid-response.jpg?width=447;894&jpg&srcset';
-import covidWebp560 from '$assets/blocks/covid-response.jpg?width=560;1120&webp&srcset';
-import covidPng560 from '$assets/blocks/covid-response.jpg?width=560;1120&jpg&srcset';
-import covidMeta from '$assets/blocks/covid-response.jpg?width=560&jpg&metadata';
-
-const covid = blockImage(
-	{
-		webp560: covidWebp560,
-		webp447: covidWebp447,
-		webp342: covidWebp342,
-		png560: covidPng560,
-		png447: covidPng447,
-		png342: covidPng342,
-		metadata: covidMeta
-	},
-	'Sign that says "Not Today #Covid19"'
-);
-
 import dashboardWebp342 from '$assets/blocks/dashboard.png?width=342;684&webp&srcset';
 import dashboardPng342 from '$assets/blocks/dashboard.png?width=342;684&png&srcset';
 import dashboardWebp447 from '$assets/blocks/dashboard.png?width=447;894&webp&srcset';
@@ -258,7 +237,6 @@ const blocks = {
 	cms,
 	dashboard,
 	delivery,
-	covid,
 	menus,
 	open,
 	shopping,
