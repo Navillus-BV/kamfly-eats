@@ -73,7 +73,7 @@
 				business deserves better.
 			</p>
 
-			<a href="/pricing/#plans" class="link">See our plans</a>
+			<a href="/pricing#plans" class="link">See our plans</a>
 		</div>
 	</div>
 </section>
@@ -156,7 +156,7 @@
 				the world.
 			</p>
 
-			<a href="/how-it-works/#snipcart" class="link">Learn more about Snipcart</a>
+			<a href="/how-it-works#snipcart" class="link">Learn more about Snipcart</a>
 		</div>
 	</div>
 </section>

@@ -10,7 +10,7 @@
 		title: 'COVID-19 Pricing:',
 		description: "We're waiving our monthly fee until things start picking back up.",
 		cta: {
-			href: '/pricing/#plans',
+			href: '/pricing#plans',
 			title: 'See our plans'
 		}
 	};

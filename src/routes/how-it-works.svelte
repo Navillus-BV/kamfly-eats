@@ -100,7 +100,7 @@
 
 			<p>
 				Don't miss a beat with our
-				<a href="/pricing/#plans">Pro Plan's</a>
+				<a href="/pricing#plans">Pro Plan's</a>
 				online ordering. Order notifications will be emailed to you and show up in your Admin Dashboard
 				in real time. Already using a point-of-sale system? No problem! Let us know what system you are
 				using today - we're always looking to add new point-of-sale integrations to Kamfly.
@@ -192,11 +192,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	@media (min-width: 768px) {
-		.block__details + .btn {
-			align-self: center;
-		}
-	}
-</style>
