@@ -1,12 +1,10 @@
-<aside role="banner">Special COVID Pricing*</aside>
-
 <div class="plans">
-	<div class="plan plan--free">
+	<div class="plan">
 		<h3 class="plan__title">Standard</h3>
 		<p class="plan__price">
 			<strong>
 				<span>€</span>
-				<span class="plan__priceamt strikethrough">25</span>
+				<span class="plan__priceamt">25</span>
 			</strong>
 			<span>/ month</span>
 			<br />
@@ -26,12 +24,12 @@
 		<a href="/contact" class="btn btn--hollow">get started</a>
 	</div>
 
-	<div class="plan plan--highlighted plan--free">
+	<div class="plan plan--highlighted">
 		<h3 class="plan__title">Pro</h3>
 		<p class="plan__price">
 			<strong>
 				<span>€</span>
-				<span class="plan__priceamt strikethrough">100</span>
+				<span class="plan__priceamt">100</span>
 			</strong>
 			<span>/ month</span>
 			<br />
@@ -90,17 +88,6 @@
 </footer>
 
 <style>
-	aside {
-		font-size: var(--text-xl);
-		font-weight: bold;
-		padding: var(--spacing-2);
-		color: var(--bg);
-		background: var(--green);
-		width: 100%;
-		max-width: 480px;
-		margin: 0 auto;
-	}
-
 	footer {
 		font-size: var(--text-sm);
 		width: 100%;
@@ -154,6 +141,10 @@
 
 	.plan__priceplus {
 		margin-top: var(--spacing-4);
+	}
+
+	.plan__priceplus + p {
+		margin-top: 0;
 	}
 
 	.plan hr {
@@ -210,37 +201,13 @@
 		transform: translate3d(-50%, -50%, 0);
 	}
 
-	.plan--free:before {
-		content: '';
-		height: 15rem;
-		width: 45%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-image: url(/price-banner.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-
-	.plan--highlighted.plan--free:before {
-		left: calc(-1 * var(--border-lg));
-		top: calc(-1 * var(--border-lg));
-	}
-
 	@media (min-width: 375px) {
 		.plan__price strong {
 			font-size: var(--text-4xl);
 		}
 	}
 
-	@media (min-width: 480px) {
-		.plan--free:before {
-			width: 40%;
-		}
-	}
-
 	@media (min-width: 1024px) {
-		aside,
 		footer {
 			max-width: initial;
 		}
@@ -256,10 +223,6 @@
 		.plan.plan--highlighted {
 			transform: scale(1.05);
 			z-index: 1;
-		}
-
-		.plan--free:before {
-			width: 45%;
 		}
 	}
 </style>

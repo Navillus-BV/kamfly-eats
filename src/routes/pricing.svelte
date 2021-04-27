@@ -30,29 +30,6 @@
 	</div>
 </section>
 
-<section class="section">
-	<div class="block block--row-reverse">
-		<div class="block__graphic">
-			<Image image={images.blocks.covid} class="block__image" />
-		</div>
-
-		<div class="block__summary">
-			<h2>COVID-19 pricing.</h2>
-
-			<p>
-				We know that this is a tough time to be in the restaurant business. That's the whole reason
-				we started Kamfly - to help as many restaurants as possible keep their doors open through
-				this mess.
-			</p>
-			<p>
-				So... Until things start to pick back up, we will not be charging any monthly base fees.
-				That's a savings of $25/month on our Standard Plan or $100/month on our Pro Plan! Check out
-				our pricing page to learn more and see how you can get started.
-			</p>
-		</div>
-	</div>
-</section>
-
 <section id="plans" class="section section--alt">
 	<div class="block">
 		<div class="block__summary">
