@@ -5,19 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% seo "" %}
         {% include "partials/favicon.njk" %}
-
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
         {% set css %}
         {% include "assets/css/normalize.css" %}
         {% include "assets/css/main.css" %}
         {% endset %}
         <style>
-            {{css | cssmin | safe}}
-        </style>
-
+            {{css | cssmin | safe}}</style>
         {% block styles %}{% endblock %}
-
         {% block jsonld %}{% endblock %}
     </head>
     <body class="no-js">
@@ -27,17 +22,11 @@
                 .classList
                 .remove("no-js")
         </script>
-
-        {% include "partials/alert-banner.njk" %}
-
         {% include "partials/header.njk" %}
-
         <main>
             {% block content %}{% endblock %}
         </main>
-
         {% include "partials/footer.njk" %}
-
         {% set js %}
         {% include "assets/js/lazysizes.min.js" %}
         {% include "assets/js/main.js" %}
@@ -46,8 +35,7 @@
         {% endif %}
         {% endset %}
         <script>
-            {{ js | jsmin | safe }}
-        </script>
+            {{ js | jsmin | safe }}</script>
         {% block scripts %}{% endblock %}
     </body>
 </html>

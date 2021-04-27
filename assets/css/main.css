@@ -867,21 +867,6 @@ section:last-of-type {
   padding: var(--spacing-1) var(--spacing-4);
   transform: translate3d(-50%, -50%, 0);
 }
-.pricing__plan--free:before {
-  content: '';
-  height: 15rem;
-  width: 45%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-image: url(/price-banner.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-.pricing__plan--highlighted.pricing__plan--free:before {
-  left: calc(-1 * var(--border-lg));
-  top: calc(-1 * var(--border-lg));
-}
 
 .plan__title {
   line-height: var(--leading-xl);
@@ -1100,10 +1085,6 @@ section:last-of-type {
   .pricing__logo {
     height: 1.5rem;
   }
-
-  .pricing__plan--free:before {
-    width: 40%;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1292,10 +1273,6 @@ section:last-of-type {
   .pricing__plan.pricing__plan--highlighted {
     transform: scale(1.05);
     z-index: 1;
-  }
-
-  .pricing__plan--free:before {
-    width: 45%;
   }
 }
 
