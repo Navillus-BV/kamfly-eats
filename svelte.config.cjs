@@ -7,7 +7,6 @@ const markdownItAnchor = require('markdown-it-anchor');
 const markdownItToc = require('markdown-it-table-of-contents');
 const slugify = require('slugify');
 const { resolve } = require('path');
-const pkg = require('./package.json');
 
 /**
  * Override default markdown library
@@ -77,9 +76,6 @@ module.exports = {
 					$actions: resolve('src/actions'),
 					$assets: resolve('src/assets')
 				}
-			},
-			ssr: {
-				noExternal: Object.keys(pkg.dependencies || {})
 			}
 		}
 	}

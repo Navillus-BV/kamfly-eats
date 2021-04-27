@@ -98,7 +98,7 @@
 		<h3>Kamfly</h3>
 		<p>
 			Our prices are calculated based on our
-			<a href="/pricing/#plans">Pro Plan</a>
+			<a href="/pricing#plans">Pro Plan</a>
 			- $100 monthly base fee + a 2% transaction fee.
 		</p>
 		<p>
