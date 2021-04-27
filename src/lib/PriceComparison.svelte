@@ -203,5 +203,9 @@
 		table {
 			margin: 0 0 var(--spacing-6);
 		}
+
+		button.link {
+			text-align: start;
+		}
 	}
 </style>

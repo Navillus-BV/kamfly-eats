@@ -61,7 +61,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		max-width: 80vw;
 		margin: 0 auto;
 		width: 100%;
 	}

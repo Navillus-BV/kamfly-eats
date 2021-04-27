@@ -207,6 +207,7 @@ form label {
 	font-weight: bold;
 	color: var(--secondary);
 	white-space: nowrap;
+	cursor: pointer;
 }
 
 .link--sm {
@@ -251,6 +252,9 @@ form label {
 
 .block__graphic {
 	grid-area: graphic;
+	display: flex;
+	flex-direction: column;
+
 }
 
 .block__summary {
