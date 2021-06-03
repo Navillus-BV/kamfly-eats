@@ -1,12 +1,12 @@
-const sveltePreprocess = require('svelte-preprocess');
-const static = require('@sveltejs/adapter-static');
-const { imagetools } = require('vite-imagetools');
-const mdPlugin = require('vite-plugin-markdown');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
-const markdownItToc = require('markdown-it-table-of-contents');
-const slugify = require('slugify');
-const { resolve } = require('path');
+import sveltePreprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
+import { imagetools } from 'vite-imagetools';
+import mdPlugin from 'vite-plugin-markdown';
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+import markdownItToc from 'markdown-it-table-of-contents';
+import slugify from 'slugify';
+import { resolve } from 'path';
 
 /**
  * Override default markdown library
@@ -45,7 +45,7 @@ const md = markdownIt({ html: true, breaks: true, linkify: true })
 	});
 
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
+const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: sveltePreprocess(),
@@ -53,7 +53,7 @@ module.exports = {
 		// By default, `npm run build` will create a standard Node app.
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
-		adapter: static(),
+		adapter: adapter(),
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
@@ -80,3 +80,5 @@ module.exports = {
 		}
 	}
 };
+
+export default config;
