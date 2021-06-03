@@ -57,6 +57,10 @@
 			{/each}
 		</div>
 
+		<p class="footer_builtby">
+			Build with ♥ by <a href="https://navillus.dev">navillus.dev</a>
+		</p>
+
 		<span>© {year} Navillus B.V.</span>
 
 		<div class="footer__links">
@@ -84,12 +88,12 @@
 
 	.footer__brand :global(svg) {
 		height: 2rem;
-		margin-bottom: var(--spacing-3);
 		fill: currentColor;
+		margin-bottom: var(--spacing-2);
 	}
 
 	.footer__social {
-		margin-bottom: var(--spacing-8);
+		margin-bottom: var(--spacing-6);
 		display: flex;
 		flex-direction: row;
 	}
@@ -117,6 +121,10 @@
 		height: 1.25rem;
 		width: 1.25rem;
 		fill: currentColor;
+	}
+
+	.footer_builtby {
+		margin-bottom: var(--spacing-8);
 	}
 
 	.footer__links {
