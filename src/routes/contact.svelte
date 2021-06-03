@@ -35,10 +35,7 @@
 			<h2>Send us an email.</h2>
 
 			<p>
-				<span
-					>Just fill out the form below or email us here:
-					<a class="link" href="mailto:info@kamfly.io">info@kamfly.io</a>
-				</span>
+				<span>Fill out the form below, we'll be in touch soon!</span>
 			</p>
 		</div>
 
@@ -52,8 +49,8 @@
 			>
 				<input type="hidden" name="form-name" value="contact" />
 				<p class="honeypot">
-					<label
-						>Don’t fill this out if you're human:
+					<label>
+						Don’t fill this out if you're human:
 						<input name="bot-field" />
 					</label>
 				</p>
