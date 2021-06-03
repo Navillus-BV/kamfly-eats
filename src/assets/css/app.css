@@ -254,7 +254,6 @@ form label {
 	grid-area: graphic;
 	display: flex;
 	flex-direction: column;
-
 }
 
 .block__summary {

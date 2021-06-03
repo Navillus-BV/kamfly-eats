@@ -36,15 +36,7 @@ export type BlockImageParams = {
 };
 
 function blockImage(params: BlockImageParams, alt: string): ResponsiveImage {
-	const {
-		webp342,
-		png342,
-		webp447,
-		png447,
-		webp560,
-		png560,
-		metadata
-	} = params;
+	const { webp342, png342, webp447, png447, webp560, png560, metadata } = params;
 
 	return {
 		sources: [
