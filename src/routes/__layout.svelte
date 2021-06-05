@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+	import { browser, dev } from '$app/env';
 	import AppFooter from '$lib/shell/AppFooter.svelte';
 	import AppHeader from '$lib/shell/AppHeader.svelte';
+	import Analytics from '$lib/seo/Analytics.svelte';
 	import SEO from '$lib/seo/SEO.svelte';
 	import '$assets/css/app.css';
 
@@ -12,6 +13,10 @@
 			? document.body.classList.add('off-nav-is-active')
 			: document.body.classList.remove('off-nav-is-active');
 </script>
+
+{#if !dev}
+	<Analytics />
+{/if}
 
 <SEO />
 
