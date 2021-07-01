@@ -8,11 +8,6 @@
 
 	const socialLinks = [
 		{
-			href: 'https://www.linkedin.com/company/kamfly',
-			title: 'LinkedIn',
-			icon: linkedinIcon
-		},
-		{
 			href: 'https://www.instagram.com/kamfly.io',
 			title: 'Instagram',
 			icon: instagramIcon
